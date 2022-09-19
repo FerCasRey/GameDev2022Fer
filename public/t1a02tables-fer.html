@@ -48,12 +48,13 @@
     </table>
 
     <h2>Advanced</h2>
-    Load an image and get it to move 10 pixels to the left using the button below
+    Load an image and get it to move 10 pixels to the left using the button below<br>
     <image id="myImage01" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe8fUDefvoldr3fa4o47UPYrAc_ooNtuVwDg&usqp=CAU" style="position:relative; left:100; top:0; width:50; height:50; "><br>
     <input type=button value="9. Classes" onclick="{
                                                      document.getElementById('myDiv01').innerHTML = `
                                                      It went left!<br>
                                                      `
+                                                     document.getElementById('myImage01').style.left = "-10px"
                                                    }">
     <div id="myDiv01">...</div>  
       

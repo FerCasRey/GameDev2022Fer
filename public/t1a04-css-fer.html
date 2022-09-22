@@ -27,15 +27,13 @@
     <input type=button value=Change onclick="{
       document.getElementById('myB1').style.color = 'red'
       document.getElementById('myB1').style.backgroundColor = 'yellow'
-    }"><br>
+    }">
     <input type=button value="Change Again"  onclick="{
       document.getElementById('myB1').style.color = 'green'
       document.getElementById('myB1').style.backgroundColor = 'blue'
     }"><br>
     
-    <textarea style="position:relative; left:0; top:0; width:200; height:50; ">
-      Advanced: see if you move this textarea
-    </textarea><br>
+    <textarea style="position:relative; left:0; top:0; width:200; height:50; ">Advanced: see if you move this textarea</textarea><br>
     <input type=button value="MOVE" onclick="{
                                              document.getElementById(textarea).style.left = parseInt(document.getElementById(textarea).style.left) - 10 + 'px';
                                              }"

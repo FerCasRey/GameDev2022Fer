@@ -52,12 +52,6 @@
     Load an image and get it to move 10 pixels to the left using the button below<br>
     <image id="myImage01" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe8fUDefvoldr3fa4o47UPYrAc_ooNtuVwDg&usqp=CAU" style="position: relative; width: 100px; height: 100px; top: 0px; left: 100px;"><br>
     <input type=button value="Go left" onclick="{
-                                                  x = x++
-                                                  if(x<18){
-                                                   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 10 + 'px';
-                                                 }else{
-                                                   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 100 + 'px';
-                                                 }
                                                   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 10 + 'px';
                                                   document.getElementById('myDiv01').innerHTML = `
                                                   It went left! Bye bye~<br>

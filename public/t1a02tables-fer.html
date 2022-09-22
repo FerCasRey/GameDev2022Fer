@@ -54,7 +54,12 @@
                                                  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 10 + 'px';
                                                  document.getElementById('myDiv01').innerHTML = `
                                                  It went left! Bye bye~<br>
-                                                 `}"
+                                                 `}">
+    <input type=button value="Teleport" onclick="{
+                                                 document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 100 + 'px';
+                                                 document.getElementById('myDiv01').innerHTML = `
+                                                 It went right! Bye bye~<br>
+                                                 `}">
     <!--- Agora si --->
     <!---<input type=button value="??" onclick="{
                                             document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 100 + 'px';
@@ -63,11 +68,7 @@
                                             `
     --->
     <div id="myDiv01">...</div>  
-    <input type=button value="Teleport" onclick="{
-                                                 document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 100 + 'px';
-                                                 document.getElementById('myDiv01').innerHTML = `
-                                                 It went right! Bye bye~<br>
-                                                 `}"
+    
   </body>
 </html>                                                                                                
                                                                                                  

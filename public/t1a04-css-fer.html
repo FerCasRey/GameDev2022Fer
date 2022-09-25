@@ -3,7 +3,7 @@
     <title>CSS</title>
   </head>  
   <body>
-    <h5>Version 0.0.8</h5>
+    <h5>Version 0.0.9</h5>
     <h1 align=center>T1A04 CSS By Fer</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a>
     Reference Link: 
@@ -23,8 +23,8 @@
     I do CSS inside the tag. It overpowers all other methods<br>
     
     <b>This is bold</b><br>
-    <b id="myB1" style="color:light_green; background-Color:blue; ">This is bold</b>
-    <input type=button value=Change onclick="{changeColor()}">
+    <b id="myB1" style="color:white; background-Color:blue; ">This is bold</b>
+    <input type=button value=Change onclick="{changeColor()}"><br>
     
       <!--                                             
       document.getElementById('myB1').style.color = 'red'
@@ -44,12 +44,12 @@
   </body>
   <script>
     changeColor(){
-      if document.getElementById('myB1').style.color == "green"{
-        document.getElementById('myB1').style.color = "light_green";
-        document.getElementById('myB1').style.backgroundColor = 'blue';
-      }else{
+      if document.getElementById('myB1').style.color = "green"{
         document.getElementById('myB1').style.color = "red";
         document.getElementById('myB1').style.backgroundColor = 'yellow';
+      }else{
+        document.getElementById('myB1').style.color = "white";
+        document.getElementById('myB1').style.backgroundColor = 'blue';
       }  
     }
   </script>  

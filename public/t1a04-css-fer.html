@@ -3,7 +3,7 @@
     <title>CSS</title>
   </head>  
   <body>
-    <h5>Version 0.0.17</h5>
+    <h5>Version 0.0.18</h5>
     <h1 align=center>T1A04 CSS By Fer</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     Reference Link: 
@@ -24,7 +24,7 @@
     
     <b>This is bold</b><br>
     <b id="myB1" style="color:white; background-Color:blue; ">This is bold</b>
-    <input type=button value=Change onclick="{changeColorVar()}"><br>
+    <input type=button value=Change onclick="{changeColor()}"><br>
     
      <!--                                              
       document.getElementById('myB1').style.color = 'red'
@@ -56,7 +56,6 @@
     }
     function changeColorVar(){
       if (x = 0){
-        x++
         document.getElementById('myB1').style.color = "red";
         document.getElementById('myB1').style.backgroundColor = 'yellow';
       }else{

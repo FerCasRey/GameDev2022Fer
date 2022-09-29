@@ -4,7 +4,7 @@
   </head>
   <!--- Esto está mal-> <body style="background-color:#000000;"> --->
   <body>
-   <h5>Version 0.1.5</h5>
+   <h5>Version 0.1.6</h5>
     
     <h1 align=center>T1A01 Web Basics by Fer.html </h1><br>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -21,8 +21,8 @@
     <h5 style=color:grey>It's important you never give up! Go for it!</h5>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/KxGRhd_iWuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <hr>
-    <input type=text id="text1" placeholder="What should you never do?" size=30>
-    <input type=button id="upload" value="Send" onclick="{write()}">
+    <input type=text id="text1" placeholder="What should you never do?" size=30><br>
+    <input type=button value="Send" onclick="{write()}">
     <div id="divPos">...</div>
     <h5 style=color:red>Sadly this is not working yet...</h5>                                                   
     
@@ -134,7 +134,7 @@
         document.getElementById('divPos').innerHTML = "Try again mate!";
     }    
     function write(){
-      document.getElementById('divPos').innerHTML = 'works'
+      document.getElementById('divPos').innerHTML = "works";
     }  
   </script>  
 </html>

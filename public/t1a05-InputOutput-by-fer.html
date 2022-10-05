@@ -3,12 +3,25 @@
     <title>Input & Output</title>  
   </head>
   <body>
-    <h5>Version 0.0.2</h5>
+    <h5>Version 0.0.3</h5>
     <h1 style=center>T1A05-Input and Output code</h1>
-    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
-    
+    <a href="https://fercasrey.github.io/GameDev2022Fer/public/"><span style=color:white>To my main page</span></a><br>
+    <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp"><span style=color:white>Good reference to input and output</a>
+      
     <hr>
     
+    <pre>
+      let myIn01 = document.getElementById('myNum01').value
+      document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + miIn01*myIn01
+    </pre>  
+    <h4>Example input & output code</h4>  
+    <input  id="myNum01" type=number value"4"><br>
+    <input type=button value="myEvent squares" onclick="{
+      let myIn01 = parseFloat(document.getElementById('myNum01').value)
+      let myAnswer = myIn01 * myIn01                                                          
+      document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
+    }"><br>
+    <div id="myDiv01">...</div>  
     <style>
       body {
         background-color: black;

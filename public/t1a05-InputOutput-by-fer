@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Input & Output</title>
+    body{
+      color:white
+      background-color:black
+    }
+  </head>
+  <body>
+    <h5>Version 0.0.1</h5>
+    <h1>T1A05-Input and Output code</h1>
+    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+    
+    <hr>
+    
+    
+  </body>
+</html>

@@ -17,12 +17,12 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.6-6</h5>
+    <h5>Version 0.0.7-7</h5>
     <h1 style=center>T1A05-Input and Output code</h1>
-    <a href="https://fercasrey.github.io/GameDev2022Fer/public/" style=document.getElementById('hrefColor').value>To my main page</a><br>
+    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to input and output</a><br>
     <input type=button value="Light Mode" onclick="lightMode()">
-    <input type=button value="Dark Mode" onclick="darkMode()">
+    <input type=button value="toggle mode" onclick="darkMode()">
     
       
     <hr>
@@ -44,12 +44,13 @@
   <script>
     function darkMode() {
         var element = document.body;
-        element.className = "dark-mode";
-        var hrefColor = color:white;
+        element.classList.toggle = "light-mode";
     }
+    <!--
     function lightMode() {
         var element = document.body;
         element.className = "light-mode";
     }
+    -->
   </script>  
 </html>

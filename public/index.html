@@ -11,12 +11,14 @@
         background-color:white;
       }
       a:visited {
-        color:#2452AD;
+        color:#41BBDB;
       }
+      .a-light-mode {
+        color:#2452AD
     </style>  
   </head>
   <body>
-    <p><h5>Version 0.0.33-33</h5></p>
+    <p><h5>Version 0.0.34-34</h5></p>
     <h1 align=center>Welcome to my main page</h1><br>
     <input type=button value="Toggle Mode" onclick="lightMode()">
     <h3>Link to my Github</h3>
@@ -48,7 +50,9 @@
   <script>
     function lightMode() {
       var element = document.body;
+      var elementA = document.a:visited;
       element.classList.toggle("light-mode");
+      elementA.classList.toggle("a-light-mode");
     }
   </script>    
 </html>

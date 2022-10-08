@@ -44,7 +44,7 @@
     <div id="divPos">...</div>
     <h5 style=color:red>Sadly this is not working yet...</h5>                                                   
     --->
-    <p style=color:darkBlue>What should you <span style=color:red>do</span>?</p>
+    <p style=color:grey>What should you <span style=color:red>do</span>?</p>
     <input type=button value="Give up" onclick="{
       document.getElementById('div001').innerHTML = 'Of course not! Try again.'                                                  
     }">
@@ -148,19 +148,10 @@
     <div id="myDiv01">...</div>
   </body>
   <script>
-    function positive(){
-      if (document.getElementById('text1').value == 'Give up!' || document.getElementById('text1') == 'Give up' || document.getElementById('text1') == 'give up!' || document.getElementById('text1') == 'give up'){
-        document.getElementById('divPos').innerHTML = "In deed!";
-      }else{
-        document.getElementById('divPos').innerHTML = "Try again mate!";
-    }    
-    function write(){
-      document.getElementById('divPos').innerHTML = "works";
-    }
     function lightMode() {
       var element = document.body;
       element.classList.toggle("light-mode");
-    }  
+    }    
   </script>  
 </html>
     

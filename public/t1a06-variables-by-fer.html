@@ -17,10 +17,10 @@
   </head>  
   <body>
     
-    <h5>Version 0.0.3-3</h5>
+    <h5>Version 0.0.4-4</h5>
 
     <h1 align=center>T1A06 Varaibles by Fer.html</h1>
-    <input type=button value="Toggle Mode" onclick="lightMode()">
+    <input type=button value="Toggle Mode" onclick="lightMode()"><br>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to Variables in Javascript and other languages</a><br>
     
@@ -44,13 +44,11 @@
 
     <input type=button value="Show Variable" onclick="{
       let myIn01 = document.getElementById('myText01').value
-      document.getElementById('myDiv01').innerHTML = myIn01
-
+      document.getElementById('myDiv01').innerHTML = myIn01 + ' but tyde code'
     }"><br>
 
     <input type=button value="Using no variable" onclick="{
-      document.getElementById('myDiv01').innerHTML = 
-      document.getElementById('myText01').value
+      document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value + ' but messy code'
     }"><br>
 
     <div id="myDiv01">...</div>

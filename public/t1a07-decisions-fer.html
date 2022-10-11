@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.6-6</h5>
+    <h5>Version 0.0.7-7</h5>
     <h1 align=center>t1a07-decision-by-Fred.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to decisions</a><br>
@@ -60,7 +60,7 @@
     
     <hr>
     
-    <b>Time for some personal examples</b><br>
+    <b>Time for some personal examples</b><br><br>
     <input id="myNum02" type=number placeholder="Insert number"><br>
     <input type=button value="Even or Odd?" onclick="ex01()">
     <div id="myDiv02">...</div>
@@ -72,8 +72,10 @@
       let myMod01 = myIn02 % 2;
       if (myMod01 == 0) {
         document.getElementById('myDiv02').innerHTML = 'This number is even';
-      }else{
+      }else if (myMod01 != 0){
         document.getElementById('myDiv02').innerHTML = 'This number is odd';
+      }else{
+        document.getElementById('myDiv02').innerHTML = 'Please, insert a valid number';
       }
     }
   </script>    

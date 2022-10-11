@@ -63,7 +63,11 @@
     <b>Time for some personal examples</b><br><br>
     <input id="myNum02" type=number placeholder="Insert number"><br>
     <input type=button value="Even or Odd?" onclick="ex01()">
-    <div id="myDiv02">...</div>
+    <div id="myDiv02">...</div><br><br>
+    
+    <input id="myName01" type=text placeholder="Insert yout first name"><br>
+    <input type=button value="Common Name?" onclick="ex02()">
+    <div id="myDiv03">...</div>                    
       
   </body>
   <script>
@@ -72,11 +76,17 @@
       let myMod01 = myIn02 % 2;
       if (myMod01 == 0) {
         document.getElementById('myDiv02').innerHTML = 'This number is even';
-      }else if (myMod01 != 0){
-        document.getElementById('myDiv02').innerHTML = 'This number is odd';
+      }else if (myMod01 != 0 && myIn02 == 69){
+        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
       }else{
-        document.getElementById('myDiv02').innerHTML = 'Please, insert a valid number';
+        document.getElementById('myDiv02').innerHTML = 'This number is odd';
       }
+    }
+    function ex02() {
+      if (myName01 = 'John') {
+        document.getElementById('myDiv03').innerHTML = 'Pretty common name';
+      }else{
+        document.getElementById('myDiv03').innerHTML = 'error';
     }
   </script>    
 </html>

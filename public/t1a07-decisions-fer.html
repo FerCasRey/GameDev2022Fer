@@ -69,10 +69,12 @@
   <script>
     function ex01() {
       let myIn02 = parseFloat(document.getElementById('myNum02').value);
-      var myMod01 = myIn02 % 2;
+      let myMod01 = myIn02 % 2;
       if (myMod01 == 0) {
         document.getElementById('myDiv02').innerHTML = 'This number is even';
       }else{
         document.getElementById('myDiv02').innerHTML = 'This number is odd';
+      }
+    }
   </script>    
 </html>

@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.2-2</h5>
+    <h5>Version 0.0.3-3</h5>
     <h2 align=center>t1a07-decision-by-Fred.html</h2>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to decisions</a><br>
@@ -38,9 +38,9 @@
     <input id="myNum01" type=number value="4" ><br> 
     <input type=button value="Simple if Statement for Decision Making" onclick="{
       let myIn01 = parseFloat(document.getElementById('myNum01').value)
-      if (myIn01 >= 3){
+      if (myIn01 > 3){
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
-      }
+      }                                                                                
     }">
     <input type=button value="if...else" onclick="{
       let myIn01 = parseFloat(document.getElementById('myNum01').value)
@@ -57,5 +57,21 @@
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
     }">
     <div id="myDiv01">...</div>
+    
+    <hr>
+    
+    <b>Time for some personal examples</b><br>
+    <input id="myNum02" type=number placeholder="Insert number" onclick="ex01">
+    <div id="myDiv02">...</div>
+      
   </body>
+  <script>
+    function ex01() {
+      let myIn02 = parseFloat(document.getElementById('myNum02').value);
+      var myMod01 = myIn02 % 2;
+      if (myMod01 == 0) {
+        document.getElementById('myDiv02').innerHTML = 'This number is even';
+      }else{
+        document.getElementById('myDiv02').innerHTML = 'This number is odd';
+  </script>    
 </html>

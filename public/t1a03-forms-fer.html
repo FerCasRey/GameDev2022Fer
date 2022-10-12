@@ -1,11 +1,26 @@
 <html>
   <head>
     <title>Forms</title>
+    <style>
+      body {
+        background-color: #363636;
+        color: white;
+      }      
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+      a:visited {
+        color: lightGreen;
+      }
+    </style>
   </head>
   <body>
-    <h5>Version 0.1.0</h5>
+    <h5>Version 0.1.1-17</h5>
     <h1 align=center>T1A03-Forms-By-Fer.html</h1>
+    <input type=button value="Toggle Mode" onclick="lightMode()">
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+    
     <hr>
     
     <font color=blue>Join our concert band</font><br>
@@ -47,4 +62,12 @@
         }">
       </form>
   </body>
+  <script>
+    function lightMode() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+        var element2 = document.a;
+        element2.classList.toggle("light-mode2");
+    }
+  </script>
 </html>

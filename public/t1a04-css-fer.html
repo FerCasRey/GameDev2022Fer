@@ -13,9 +13,14 @@
       a:visited {
         color: lightGreen;
       }
-      .light-mode2 {
-        color: white;
-      }  
+      b {
+        color:white;
+        background-color:blue;
+      }
+      .yellow {
+        color:red;
+        background-color:yellow;
+      }                
     </style>
   </head>  
   <body>
@@ -38,7 +43,7 @@
     I do CSS inside the tag. It overpowers all other methods<br>
     
     <b>This is bold</b><br>
-    <b id="myB1" style="color:white; background-Color:blue; ">This is bold</b>
+    <b id="myB1" style="color:white; background-color:blue; ">This is bold</b>
     <input type=button value=Change onclick="{changeColor()}"><br>
     
      <!--                                              
@@ -58,30 +63,11 @@
                                              document.getElementById('ta01').style.left = parseInt(document.getElementById(textarea).style.left) - 10 + 'px';
                                              }"
   </body>
-  <script>
-    x = 0
-    function changeColor(){
-      if (document.getElementById('myB1').style.color = "white"){
-        document.getElementById('myB1').style.color = "red";
-        document.getElementById('myB1').style.backgroundColor = 'yellow';
-      }else if (document.getElementById('myB1').style.color = "red"){
-        document.getElementById('myB1').style.color = "white";
-        document.getElementById('myB1').style.backgroundColor = 'blue';
-      }  
+  <script>    
+    function changeColor() {
+      var color = document.b;
+      color.classList.toggle("yellow");
     }
-    function changeColorVar(){
-      if (x = 0){
-        document.getElementById('myB1').style.color = "red";
-        document.getElementById('myB1').style.backgroundColor = 'yellow';
-      }else{
-        x = x-1
-        document.getElementById('myB1').style.color = "white";
-        document.getElementById('myB1').style.backgroundColor = 'blue';
-      }
-    }  
-    function change(){
-      document.getElementById('myB1').style.color = 'red'
-    }  
     function lightMode() {
         var element = document.body;
         element.classList.toggle("light-mode");

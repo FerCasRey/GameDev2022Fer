@@ -1,16 +1,31 @@
 <html>
   <head>
     <title>CSS</title>
+    <style>
+      body {
+        background-color: #363636;
+        color: white;
+      }      
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+      a:visited {
+        color: lightGreen;
+      }
+      .light-mode2 {
+        color: white;
+      }  
+    </style>
   </head>  
   <body>
-    <h5>Version 0.0.18</h5>
+    <h5>Version 0.0.19-19</h5>
     <h1 align=center>T1A04 CSS By Fer</h1>
-    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
-    Reference Link: 
-    <a href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br>
+    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br> 
+    <a href="https://www.w3schools.com/cssref/default.asp">Good referece link</a><br>
     Properly done with a .css file listing all css commands for your webside<br>
     Another way to do CSS (Cascading Style Sheets: determine colors locations extra effects on the tags on your web page)<br>
-    
+    <input type=button value="Toggle Mode" onclick="lightMode()">
     <hr>
     
     Here is typical in document style
@@ -67,5 +82,11 @@
     function change(){
       document.getElementById('myB1').style.color = 'red'
     }  
+    function lightMode() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+        var element2 = document.a;
+        element2.classList.toggle("light-mode2");
+    }
   </script>  
 </html>  

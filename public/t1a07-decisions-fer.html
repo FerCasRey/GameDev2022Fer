@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.9-9</h5>
+    <h5>Version 0.0.10-10</h5>
     <h1 align=center>t1a07-decision-by-Fred.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to decisions</a><br>
@@ -76,7 +76,7 @@
       let myMod01 = myIn02 % 2;
       if (myMod01 == 0) {
         document.getElementById('myDiv02').innerHTML = 'This number is even';
-      }else if (myMod01 != 0 && myIn02 == 69){
+      }else if (myIn02 == 69){
         document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
       }else{
         document.getElementById('myDiv02').innerHTML = 'This number is odd';
@@ -88,7 +88,7 @@
       var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
       if (boyName.includes(name) || girlName.includes(name)) {
         document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
-      } else if (name == Ellis || name == Jeremy) {
+      } else if (name == 'Ellis' || name == 'Jeremy') {
         document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
       } else if (name == 'Fernando' || name == 'Fer') {
         document.getElementById('myDiv03').innerHTML = 'Hello, dad.';

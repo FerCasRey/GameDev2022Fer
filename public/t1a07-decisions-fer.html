@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.8-8</h5>
+    <h5>Version 0.0.9-9</h5>
     <h1 align=center>t1a07-decision-by-Fred.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to decisions</a><br>
@@ -65,7 +65,7 @@
     <input type=button value="Even or Odd?" onclick="ex01()">
     <div id="myDiv02">...</div><br><br>
     
-    <input id="myName01" type=text placeholder="Insert yout first name"><br>
+    <input id="myName01" type=text placeholder="Insert yout first name" value=""><br>
     <input type=button value="Common Name?" onclick="ex02()">
     <div id="myDiv03">...</div>                    
       
@@ -83,10 +83,17 @@
       }
     }
     function ex02() {
-      if (myName01 = 'John') {
-        document.getElementById('myDiv03').innerHTML = 'Pretty common name';
-      }else{
-        document.getElementById('myDiv03').innerHTML = 'error';
+      var name = document.getElementById('myName01').value;       
+      var boyName = ['Michael', 'John', 'Chris', 'David', 'Mike', 'Ryan', 'Matt', 'Jason', 'Brian', 'Andrew'];
+      var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
+      if (boyName.includes(name) || girlName.includes(name)) {
+        document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
+      } else if (name == Ellis || name == Jeremy) {
+        document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
+      } else if (name == 'Fernando' || name == 'Fer') {
+        document.getElementById('myDiv03').innerHTML = 'Hello, dad.';
+      } else {
+        document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
       }
     }
   </script>    

@@ -1,11 +1,28 @@
 <html>
   <head>
     <title>Lists and Tables</title>
+    <style>
+      body {
+        background-color: #363636;
+        color: white;
+      }      
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+      a:visited {
+        color: lightGreen;
+      }
+      .light-mode2 {
+        color: white;
+      }  
+    </style>
   </head>
   <body>
-    <h5>Version 0.3.2</h5>
-    <h1 align=center>T1A02-Lists-and-tables-by-Fer</h1>
+    <h5>Version 0.3.1-31</h5>
+    <h1 align=center>T1A02-Lists-and-tables-by-Fer</h1>    
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+    <input type=button value="Toggle Mode" onclick="lightMode()">
     <hr>
     <h2>Lists</h2>
     <ol> Ordered list of fav foods (at least 5)
@@ -63,5 +80,13 @@
     <div id="myDiv01">...</div>  
     
   </body>
+    <script>
+    function lightMode() {
+        var element = document.body;
+        element.classList.toggle("light-mode");
+        var element2 = document.a;
+        element2.classList.toggle("light-mode2");
+    }
+  </script> 
 </html>                                                                                                
                                                                                                  

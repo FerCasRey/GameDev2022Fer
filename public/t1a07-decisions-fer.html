@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.11-11</h5>
+    <h5>Version 0.0.12-12</h5>
     <h1 align=center>t1a07-decision-by-Fred.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to decisions</a><br>
@@ -72,15 +72,11 @@
     
     How are you feeling today?<br>
     <input type=radio name="myRad01" id='sad' value="Sad">Sad<br>
-    <inpur type=radio name"myRad01" id='happy' value="Happy">Happy<br>
+    <input type=radio name"myRad01" id='happy' value="Happy">Happy<br>
     <input type=radio name="myRad01" id='normal' value="Normal">Normal<br>
     <input type=radio name="myRad01" id='dunno' value="I don't know">I don\'t know<br>
-    <div id="myDiv04">...</div>
-    
-      
-  </body>
-  <script>
-    if (document.getElementById('sad').checked) {
+    <script>
+      if (document.getElementById('sad').checked) {
       document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but... We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
     } else if (document.getElementById('happy').checked) {
       document.getElementById('myDiv04').innerHTML = 'So good to hear that! Keep it like that and share with people you love!';
@@ -89,15 +85,21 @@
     } else if (document.getElementById('dunno').checked) {
       document.getElementById('myDiv04').innerHTML = 'Sorry... I wish I could help you, but you will need to talk with yourself. Sometimes it can be overwelming, but you can do it. We trust in you <3'
     }
+    </script> 
+    <div id="myDiv04">...</div>
+    
+      
+  </body>
+  <script>
     function ex01() {
       let myIn02 = parseFloat(document.getElementById('myNum02').value);
       let myMod01 = myIn02 % 2;
-      if (myMod01 == 0) {
-        document.getElementById('myDiv02').innerHTML = 'This number is even';
-      }else if (myIn02 == 69) {
-        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
-      } else if (myIn02 == 42) {
+      if (myIn02 == 42) {
         document.getElementById('myDiv02').innerHTML = 'Hey!! You found the meaning of life, the universe, and everything! You are awesome. By the way, this number is even';
+      } else if (myIn02 == 69) {
+        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
+      } else if (myMod01 == 0) {
+        document.getElementById('myDiv02').innerHTML = 'This number is even';
       }else{
         document.getElementById('myDiv02').innerHTML = 'This number is odd';
       }

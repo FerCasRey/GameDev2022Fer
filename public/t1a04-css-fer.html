@@ -17,14 +17,14 @@
         color:white;
         background-color:blue;
       }
-      .yellow {
+      .yellow-mode {
         color:red;
         background-color:yellow;
       }                
     </style>
   </head>  
   <body>
-    <h5>Version 0.0.20-20</h5>
+    <h5>Version 0.0.21-21</h5>
     <h1 align=center>T1A04 CSS By Fer</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br> 
     <a href="https://www.w3schools.com/cssref/default.asp">Good referece link</a><br>
@@ -44,7 +44,7 @@
     
     <b>This is bold</b><br>
     <b id="myB1" style="color:white; background-color:blue; ">This is bold</b>
-    <input type=button value=Change onclick="{changeColor()}"><br>
+    <input type=button value=Change onclick="changeColor()"><br>
     
      <!--                                              
       document.getElementById('myB1').style.color = 'red'
@@ -66,7 +66,7 @@
   <script>    
     function changeColor() {
       var color = document.b;
-      color.classList.toggle("yellow");
+      color.classList.toggle("yellow-mode");
     }
     function lightMode() {
         var element = document.body;

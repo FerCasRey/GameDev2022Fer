@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.13-13</h5>
+    <h5>Version 0.0.14-14</h5>
     <h1 align=center>t1a07-decision-by-Fred.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to decisions</a><br>
@@ -66,9 +66,13 @@
     <h6>Hint: do you celebrate the towel day?</h6>
     <div id="myDiv02">...</div><br><br>
     
+    <hr>
+    
     <input id="myName01" type=text placeholder="Insert yout first name" value=""><br>
     <input type=button value="Common Name?" onclick="ex02()">
     <div id="myDiv03">...</div>
+    
+    <hr>
     
     How are you feeling today?<br>
     <input type=radio name="myRad01" id='sad' value="Sad">Sad<br>
@@ -77,6 +81,15 @@
     <input type=radio name="myRad01" id='dunno' value="I don\'t know">I don't know<br>
     <input type=button value="Check" onclick="ex03()">    
     <div id="myDiv04">...</div>
+    
+    <hr>
+    
+    You say a number and I say its next, or its previous, whatever you want<br>
+    <input type=number id="myNumToChange" placegolher="5">
+    <input type=radio name="changeName" id="next" checked>Next<br>
+    <input type=radio name="changeName" id="previous" checked>Previous<br>
+    <input type=button value="Number, please" onclick="ex04()">
+    <div id="myDiv05">...</div>
     
       
   </body>
@@ -110,7 +123,7 @@
     }
     function ex03() {  
       if (document.getElementById('sad').checked) {
-        document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but... We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
+        document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but...'<br> +' We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
       } else if (document.getElementById('happy').checked) {
         document.getElementById('myDiv04').innerHTML = 'So good to hear that! Keep it like that and share with people you love!';
       } else if (document.getElementById('normal').checked) {
@@ -119,5 +132,13 @@
         document.getElementById('myDiv04').innerHTML = 'Sorry... I wish I could help you, but you will need to talk with yourself. Sometimes it can be overwelming, but you can do it. We trust in you <3'
       }
     }
+    function ex04() {
+      if (document.getElementById('next').checked) {
+        document.getElementById('myDiv05').innerHTML = myNumToChange += 1
+      } else {
+        document.getElementById('myDiv05').innerHTML = myNumToChange -= 1
+      }
+    }
+      
   </script>    
 </html>

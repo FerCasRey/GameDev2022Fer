@@ -134,12 +134,12 @@
       }
     }
     function ex04() {
-      var myNumToChange = parseFloat(document.getElementById('myNumToChange'))
+      var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
       if (document.getElementById('next').checked) {
-        myNumToChange += 1
+        myNumToChange = myNumToChange + 1
         document.getElementById('myDiv05').innerHTML = myNumToChange
       } else {
-        myNumToChange -= 1
+        myNumToChange = myNumToChange - 1
         document.getElementById('myDiv05').innerHTML = myNumToChange
       }
     }

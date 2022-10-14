@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.14-14</h5>
+    <h5>Version 0.0.15-15</h5>
     <h1 align=center>t1a07-decision-by-Fred.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to decisions</a><br>
@@ -123,7 +123,8 @@
     }
     function ex03() {  
       if (document.getElementById('sad').checked) {
-        document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but...'<br> +' We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
+        document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but...' 
+                                                       'We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
       } else if (document.getElementById('happy').checked) {
         document.getElementById('myDiv04').innerHTML = 'So good to hear that! Keep it like that and share with people you love!';
       } else if (document.getElementById('normal').checked) {
@@ -133,6 +134,7 @@
       }
     }
     function ex04() {
+      var myNumToChange = document.getElementById('myNumToChange')
       if (document.getElementById('next').checked) {
         document.getElementById('myDiv05').innerHTML = myNumToChange += 1
       } else {

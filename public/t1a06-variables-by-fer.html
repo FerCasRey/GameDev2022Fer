@@ -17,7 +17,7 @@
   </head>  
   <body>
     
-    <h5>Version 0.0.7-7</h5>
+    <h5>Version 0.0.8-8</h5>
 
     <h1 align=center>T1A06 Varaibles by Fer.html</h1>
     <input type=button value="Toggle Mode" onclick="lightMode()"><br>
@@ -52,6 +52,21 @@
     }"><br>
 
     <div id="myDiv01">...</div>
+    
+    <hr>
+    
+    <b>Time for some personal examples</b><br>
+    <i>This one uses objets</i><br>
+    Please, enter the age of a real friend:  
+    <input type=number id="myFriendAge" min=0 max=130 placeholder="18"><br>
+    Now, enter your friend's favourite color:  
+    <input type=color id="myFriendColor" placeholder=red><br>
+    Finally, enter your friend's name:   
+    <input type=text id="myFriendName"  placeholder="Steven">
+    <input type=button value="Show friend info" onclick="">
+    <div id="myFriendDiv">...</div>
+    
+    <hr>
   </body>
   <script>
     function lightMode() {
@@ -60,5 +75,11 @@
         var element2 = document.a;
         element2.classList.toggle("light-mode2");
     }
+    function friendInfo() {
+      var friend.name = document.getElementById('myFriendName').value;
+      var friend.age = document.getElementById('myFriendAge').value;
+      var friend.color = document.getElementById('myFriendColor').value;
+      document.getElementById('myFriendDiv').innerHTML = 'Your friend ' + friend.name + ' is ' + friend.age + ' old and loves color ' + friend.color;
+    }         
   </script>
 </html>

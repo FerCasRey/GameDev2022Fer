@@ -16,31 +16,27 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.1-1</h5>
+    <h5>Version 0.0.2-2</h5>
     <h2 align=center>t1a08-loops-by-Fred.html</h2>
+    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="">Good reference to Javascript Loops</a><br>
+    
+    <hr>
 
     <h4> Example input output code</h4>
     <pre>
 
     </pre>
-
     <h4> Example working code</h4>
-
     Max loops: <input id="myNum01" type=number value="4" ><br> 
-
     <input type=button value="Basic For loop with Decisions" onclick="{
       document.getElementById('myDiv01').innerHTML = ''
       let myTemp = ''
-
       let myMax = parseInt(document.getElementById('myNum01').value)
-
-      for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-
+      for (let myLoop = 0; myLoop < myMax; myLoop++){
         if (myLoop * 2 > myMax){
-          myTemp += ' cool '
+          myTemp += 'cool '
         }
-
         myTemp += 'Loop number: ' + myLoop + '<br>'
       }
       document.getElementById('myDiv01').innerHTML = myTemp 
@@ -48,7 +44,7 @@
     <input type=button value="Basic For loop only" onclick="{
       let myTemp = ''
       let myMax = parseInt(document.getElementById('myNum01').value)
-      for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+      for (let myLoop = 0; myLoop < myMax; myLoop++){
         myTemp += 'Loop number: ' + myLoop + '<br>'
       }
       document.getElementById('myDiv01').innerHTML = myTemp 
@@ -56,15 +52,11 @@
     <input type=button value="Even number identifier" onclick="{
       document.getElementById('myDiv01').innerHTML = ''
       let myTemp = ''
-
       let myMax = parseInt(document.getElementById('myNum01').value)
-
       for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-
         if (myLoop % 2 == 0){
           myTemp += 'Even Number, '
         }
-
         myTemp += 'Loop number: ' + myLoop + '<br>'
       }
       document.getElementById('myDiv01').innerHTML = myTemp 
@@ -72,20 +64,35 @@
     <input type=button value="Odd number identifier" onclick="{
       document.getElementById('myDiv01').innerHTML = ''
       let myTemp = ''
-
       let myMax = parseInt(document.getElementById('myNum01').value)
-
-      for (let myLoop = 0; myLoop < myMax; myLoop++ ){
-
+      for (let myLoop = 0; myLoop < myMax; myLoop++){
         if (myLoop % 2 == 1){
           myTemp += '<font style=\'color:red;\'> Odd </font>'
         }
-
         myTemp += 'Loop number: ' + myLoop + '<br>'
       }
       document.getElementById('myDiv01').innerHTML = myTemp 
     }">
-
     <div id="myDiv01"><font color=red>...</font></div>
+    
+    <hr>
+    
+    <b>Time for personal examples:</b><br>
+    Make the box move 
+    <input type=number min=1 max=15 value=3 id="myNumOfSteps" style="width:10"> 
+    steps<br>
+    <image id="myBox" style="position:relative; width:100px; top:0px; right:0px;" src="https://th.bing.com/th/id/OIP.ro3HsO38SnCNNZqjINqxEQHaFx?w=225&h=180&c=7&r=0&o=5&pid=1.7"/><br>
+    <input type=button value="Move the box" onclick="moveBox()"/><br>
+    
+    <hr>
+    
   </body>
+  <script>
+    function moveBox() {
+      var mySteps = parseInt(document.getElementById('myNumOfSteps').value);
+      for (x = 0; x < mySteps; x++) {
+        document.getElementById('myBox').style.right = parseInt(document.getElementById('myImage01').style.right) + 10 + 'px';
+      }
+    }
+  </script>
 </html>

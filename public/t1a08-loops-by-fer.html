@@ -95,18 +95,27 @@
       for (x = 0; x < mySteps; x++) {        
         if (steps <= 149) {
           steps++;
-          document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
+          setTimeout(moveForward, 500); 
+          //document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
         } else if (steps > 149) {
           if (steps < 298) {
             steps++;
-            document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) - 10 + 'px';
+            setTimeout(moveBackward, 500);
+            //document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) - 10 + 'px';
           }else if (steps =298) {
             steps = steps - 298;
             steps ++;
-            document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
+            setTimeout(moveForward, 500);
+            //document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
           }
         }
       }
+    }
+    function moveForward() {
+      document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
+    }
+    function moveBackward() {
+      document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) - 10 + 'px';
     }
   </script>
 </html>

@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.8-8</h5>
+    <h5>Version 0.0.9-9</h5>
     <h2 align=center>t1a08-loops-by-Fred.html</h2>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="">Good reference to Javascript Loops</a><br>
@@ -92,7 +92,19 @@
       var mySteps = parseInt(document.getElementById('myNumOfSteps').value);
       //Should wait some time between steps to make it visible, work on that
       for (x = 0; x < mySteps; x++) {        
-        document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px'
+        if (steps <= 149) {
+          steps++;
+          document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
+        } else if (steps > 149) {
+          if (steps < 298) {
+            steps++;
+            document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) - 10 + 'px';
+          }else if (steps =298) {
+            steps = steps - 298;
+            steps ++;
+            document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
+          }
+        }
       }
     }
   </script>

@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.12-12</h5>
+    <h5>Version 0.0.13-13</h5>
     <h2 align=center>t1a08-loops-by-Fred.html</h2>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="">Good reference to Javascript Loops</a><br>
@@ -95,17 +95,18 @@
       for (x = 0; x < mySteps; x++) {        
         if (steps <= 149) {
           steps++;
-          setTimeout(moveForward, 500); 
+          // Thanks, 
+          setTimeout(moveForward, 500 * steps); 
           //document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
         } else if (steps > 149) {
           if (steps < 298) {
             steps++;
-            setTimeout(moveBackward, 500);
+            setTimeout(moveBackward, 500 * steps);
             //document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) - 10 + 'px';
-          }else if (steps =298) {
+          }else if (steps == 298) {
             steps = steps - 298;
             steps ++;
-            setTimeout(moveForward, 500);
+            setTimeout(moveForward, 500 * steps);
             //document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px';
           }
         }

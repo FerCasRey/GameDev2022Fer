@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.7-7</h5>
+    <h5>Version 0.0.8-8</h5>
     <h2 align=center>t1a08-loops-by-Fred.html</h2>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="">Good reference to Javascript Loops</a><br>
@@ -79,9 +79,9 @@
     
     <b>Time for personal examples:</b><br>
     Make the box move 
-    <input type=number min=1 max=15 value=3 id="myNumOfSteps" style="width:50"> 
+    <input type=number max=150 value=3 id="myNumOfSteps" style="width:50"> 
     steps<br>
-    <image id="myBox" style="position: relative; width: 100px; top: 0px; left: 100px;" src="https://th.bing.com/th/id/OIP.ro3HsO38SnCNNZqjINqxEQHaFx?w=225&h=180&c=7&r=0&o=5&pid=1.7"/><br>
+    <image id="myBox" style="position: relative; width: 100px; top: 0px; left: 0px;" src="https://th.bing.com/th/id/OIP.ro3HsO38SnCNNZqjINqxEQHaFx?w=225&h=180&c=7&r=0&o=5&pid=1.7"/><br>
     <input type=button value="Move the box" onclick="moveBox()"/><br>
     
     <hr>
@@ -92,7 +92,7 @@
       var mySteps = parseInt(document.getElementById('myNumOfSteps').value);
       //Should wait some time between steps to make it visible, work on that
       for (x = 0; x < mySteps; x++) {        
-        document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) - 10 + 'px'
+        document.getElementById('myBox').style.left = parseInt(document.getElementById('myBox').style.left) + 10 + 'px'
       }
     }
   </script>

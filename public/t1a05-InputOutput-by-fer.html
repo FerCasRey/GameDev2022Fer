@@ -42,7 +42,7 @@
     
     <hr>
     
-    <b>Time for personal examples</b>
+    <b>Time for personal examples</b><br>
     <input  id="myNum02" type=number value"4"><br>
     <input type=button value="myEvent cubes" onclick="{
       let myIn02 = parseFloat(document.getElementById('myNum02').value)
@@ -50,6 +50,17 @@
       document.getElementById('myDiv02').innerHTML = myIn02 + ' cubed = ' + myAnswer02                                              
     }"><br>
     <div id="myDiv02">...</div>
+    
+    <hr>
+    //keep working on this
+    <input  id="myNum02" type=number value"4"><br>
+    <input type=button value="myEvent cubes" onclick="{
+      let myIn02 = parseFloat(document.getElementById('myNum02').value)
+      let myAnswer02 = myIn02 * myIn02 * myIn02                                                           
+      document.getElementById('myDiv02').innerHTML = myIn02 + ' cubed = ' + myAnswer02                                              
+    }"><br>
+    <div id="myDiv02">...</div>
+    
     
     <b style="color:red">More examples coming soon (when I have more ideas)</b>
   </body>

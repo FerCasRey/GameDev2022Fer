@@ -19,7 +19,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.13-13</h5>
+    <h5>Version 0.0.14-14</h5>
     <h1 align=center>T1A05-Input and Output code</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to input and output</a><br>
@@ -39,7 +39,19 @@
       document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
     }"><br>
     <div id="myDiv01">...</div>  
-    <b>Now repeat the button 9 more times changing what it does</b>
+    
+    <hr>
+    
+    <b>Time for personal examples</b>
+    <input  id="myNum02" type=number value"4"><br>
+    <input type=button value="myEvent cubes" onclick="{
+      let myIn02 = parseFloat(document.getElementById('myNum02').value)
+      let myAnswer02 = myIn02 * myIn02 * myIn02                                                           
+      document.getElementById('myDiv02').innerHTML = myIn02 + ' cubed = ' + myAnswer02                                              
+    }"><br>
+    <div id="myDiv02">...</div>
+    
+    <b style="color:red">More examples coming soon (when I have more ideas)</b>
   </body>
   <script>
     function lightMode() {

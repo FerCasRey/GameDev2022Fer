@@ -12,19 +12,11 @@
       }
       a:visited {
         color: lightGreen;
-      }
-      b {
-        color:white;
-        background-color:blue;
-      }
-      .yellow-mode {
-        color:red;
-        background-color:yellow;
-      }                
+      }                     
     </style>
   </head>  
   <body>
-    <h5>Version 0.0.21-21</h5>
+    <h5>Version 0.0.22-22</h5>
     <h1 align=center>T1A04 CSS By Fer</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br> 
     <a href="https://www.w3schools.com/cssref/default.asp">Good referece link</a><br>
@@ -65,8 +57,13 @@
   </body>
   <script>    
     function changeColor() {
-      var color = document.b;
-      color.classList.toggle("yellow-mode");
+      if (document.getElementById('myB1').style.color == "white") {
+        document.getElementById('myB1').style.color = "red"
+        document.getElementById('myB1').style.background-color = "yellow"
+      } else {
+        document.getElementById('myB1').style.color = "white"
+        document.getElementById('myB1').style.background-color = "blue"
+      }
     }
     function lightMode() {
         var element = document.body;

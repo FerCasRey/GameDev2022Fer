@@ -16,7 +16,7 @@
     </style>
   </head>  
   <body>
-    <h5>Version 0.0.22-22</h5>
+    <h5>Version 0.0.23-23</h5>
     <h1 align=center>T1A04 CSS By Fer</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br> 
     <a href="https://www.w3schools.com/cssref/default.asp">Good referece link</a><br>
@@ -50,26 +50,39 @@
     }"><br>
 -->
     
-    <textarea id="ta01" style="position:relative; left:0; top:0; width:200; height:50; ">Advanced: see if you move this textarea</textarea><br>
-    <input type=button value="MOVE" onclick="{
-                                             document.getElementById('ta01').style.left = parseInt(document.getElementById(textarea).style.left) - 10 + 'px';
-                                             }">
+    <textarea id="myTA01" style="position:relative; left:0; top:0; width:200; height:50; ">Advanced: see if you move this textarea</textarea><br>
+    <input type=button value="MOVE" onclick="moveTA()"/>
+                                             
+    
+    <hr>
+    
+    Time for personal examples:<br>
+    <b>Font Properties</b><br>
+    <span style="font-family:'New Century School'">Font familily</span>
+    <span style="font-style:oblique">Font style</span>
+    <span style="font-variant: small-caps">Font variant</span>
+    <span style="font-size: large">Font size</span>
+    
+    <hr>
+    
+    <b>Color and Background Properties:</b><br>
+    <span style="color:red">Color</span>
+    <span style="background-color: lightGrey">Background Color</span>
+    <p style="background-image: url(https://i.imgur.com/24nDRz9.png)">Background Image</p>
   </body>
   <script>    
     function changeColor() {
-      if (document.getElementById('myB1').style.color == "white") {
-        document.getElementById('myB1').style.color = "red"
-        document.getElementById('myB1').style.background-color = "yellow"
-      } else {
-        document.getElementById('myB1').style.color = "white"
-        document.getElementById('myB1').style.background-color = "blue"
-      }
+      document.getElementById('myB1').style.color = "red"
+      document.getElementById('myB1').style.backgroundColor = "yellow"
     }
     function lightMode() {
         var element = document.body;
         element.classList.toggle("light-mode");
         var element2 = document.a;
         element2.classList.toggle("light-mode2");
+    }
+    function moveTA() {
+      document.getElementById('myTA01').style.left = parseInt(document.getElementById('myTA01').style.left) - 10 + 'px';
     }
   </script>  
 </html>  

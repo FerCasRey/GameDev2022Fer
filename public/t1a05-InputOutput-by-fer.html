@@ -19,7 +19,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.16-16</h5>
+    <h5>Version 0.0.17-17</h5>
     <h1 align=center>T1A05-Input and Output code</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to input and output</a><br>
@@ -53,7 +53,7 @@
     
     <hr>
     
-    Look at this one, so helpful:
+    Look at this one, so helpful:<br>
     <input id="myNum03" type=number value="4"><br>
     <input type=button value="myEvent devides by itself" onclick="{
       let myIn03 = parseFloat(document.getElementById('myNum03').value)
@@ -63,19 +63,26 @@
     <div id="myDiv03">...</div>
     
     <hr>
-    
-    This one gives you the module:
+        
     <input id="myNum04" type=number value="4"><br>
     Number by which you want the module: <input id="myModNum" type=number value="4"><br>
     <input type=button value="myEvent give module" onclick="{
       let myIn04 = parseFloat(document.getElementById('myNum04').value)
       let myModNum01 = parseFloat(document.getElementById('myModNum').value)                                                      
-      let myAnswer04 = myIn03 % myModNum                                                      
-      document.getElementById('myDiv03').innerHTML = 'The module of ' + myIn04 + ' divided by ' + myModNum01 + ' is ' + myAnswer04                                              
+      let myAnswer04 = myIn04 % myModNum                                                      
+      document.getElementById('myDiv04').innerHTML = 'The module of ' + myIn04 + ' divided by ' + myModNum01 + ' is ' + myAnswer04                                              
     }"><br>
     <div id="myDiv04">...</div>
     
     <hr> 
+    
+    <input id="myNum05" type=number value="4"><br> 
+    <input type=button value="myEvent substract 2" onclick="{
+      let myIn05 = parseFloat(document.getElementById('myNum05').value)                                 
+      let myAnswer05 = myIn05 - 2                                                    
+      document.getElementById('myDiv05').innerHTML = myIn05 + ' minus 2 + ' + myanswer05                                              
+    }"><br>
+    <div id="myDiv05">...</div>
     
     <hr>
     <b style="color:red">More examples coming soon (when I have more ideas)</b>

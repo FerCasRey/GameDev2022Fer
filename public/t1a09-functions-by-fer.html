@@ -67,7 +67,7 @@
     }
   </script>
   <body>
-    <h5>Version 0.0.10-10</h5>
+    <h5>Version 0.0.11-11</h5>
     <h2 align=center>t1a09-Functions-by-Fer.html</h2>
     <input type=button value="Toggle Mode" onclick="lightMode()"><br>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -157,6 +157,22 @@
         myNumToChange = myNumToChange - 1
         document.getElementById('myDiv05').innerHTML = myNumToChange
       }
+    }
+    </pre>
+    <h4>Third, in the "CSS" assignment, the are a few functions</h4>
+    <b id="myB1" style="color:white; background-color:blue; ">This is bold</b>
+    <input type=button value=Change onclick="changeColor()"><br>
+    <pre>
+      function changeColor() {
+      document.getElementById('myB1').style.color = "red"
+      document.getElementById('myB1').style.backgroundColor = "yellow"
+    } 
+    </pre>
+    <textarea id="myTA01" style="position:relative; left:0; top:0; width:200; height:50; ">Advanced: see if you move this textarea</textarea><br>
+    <input type=button value="MOVE" onclick="moveTA()"/>
+    <pre>
+      function moveTA() {
+      document.getElementById('myTA01').style.left = parseInt(document.getElementById('myTA01').style.left) + 10 + 'px';
     }
     </pre>
   </body>

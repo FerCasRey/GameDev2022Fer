@@ -55,16 +55,14 @@
         document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
       }
     }
-    function ex03() {  
-      if (document.getElementById('sad').checked) {
-        document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but...' +
-                                                       'We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
-      } else if (document.getElementById('happy').checked) {
-        document.getElementById('myDiv04').innerHTML = 'So good to hear that! Keep it like that and share with people you love!';
-      } else if (document.getElementById('normal').checked) {
-        document.getElementById('myDiv04').innerHTML = 'That is usually good, but why if we try to change it for a \"good\"? That would be awesome!';
-      } else if (document.getElementById('dunno').checked) {
-        document.getElementById('myDiv04').innerHTML = "Sorry... I wish I could help you, but you will need to talk with yourself. Sometimes it can be overwelming, but you can do it. We trust in you <3
+    function ex04() {
+      var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
+      if (document.getElementById('next').checked) {
+        myNumToChange = myNumToChange + 1
+        document.getElementById('myDiv05').innerHTML = myNumToChange
+      } else {
+        myNumToChange = myNumToChange - 1
+        document.getElementById('myDiv05').innerHTML = myNumToChange
       }
     }
   </script>
@@ -144,28 +142,24 @@
     }
     </pre>
     
-    <input type=radio name="myRad01" id='sad' value="Sad">Sad<br>
-    <input type=radio name="myRad01" id='happy' value="Happy">Happy<br>
-    <input type=radio name="myRad01" id='normal' value="Normal">Normal<br>
-    <input type=radio name="myRad01" id='dunno' value="I don\'t know">I don't know<br>
-    <input type=button value="Check" onclick="ex03()">    
-    <div id="myDiv04">...</div>
+    <input type=number id="myNumToChange" placegolher="5"><br>
+    <input type=radio name="changeName" id="next" checked>Next<br>
+    <input type=radio name="changeName" id="previous">Previous<br>
+    <input type=button value="Number, please" onclick="ex04()">
+    <div id="myDiv05">...</div>
     <pre>
-    function ex03() {  
-      if (document.getElementById('sad').checked) {
-        document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but...' +
-                                                       'We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
-      } else if (document.getElementById('happy').checked) {
-        document.getElementById('myDiv04').innerHTML = 'So good to hear that! Keep it like that and share with people you love!';
-      } else if (document.getElementById('normal').checked) {
-        document.getElementById('myDiv04').innerHTML = 'That is usually good, but why if we try to change it for a \"good\"? That would be awesome!';
-      } else if (document.getElementById('dunno').checked) {
-        document.getElementById('myDiv04').innerHTML = 'Sorry... I wish I could help you, but you will need to talk with yourself. Sometimes it can be overwelming, but you can do it. We trust in you <3''
+      function ex04() {
+      var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
+      if (document.getElementById('next').checked) {
+        myNumToChange = myNumToChange + 1
+        document.getElementById('myDiv05').innerHTML = myNumToChange
+      } else {
+        myNumToChange = myNumToChange - 1
+        document.getElementById('myDiv05').innerHTML = myNumToChange
       }
     }
-    </pre>   
+    </pre>
   </body>
-  
 </html>
 
     

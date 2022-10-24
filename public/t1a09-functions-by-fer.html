@@ -22,9 +22,22 @@
         var element2 = document.a;
         element2.classList.toggle("light-mode2");
     }
+    function ex01() {
+      let myIn02 = parseFloat(document.getElementById('myNum02').value);
+      let myMod01 = myIn02 % 2;
+      if (myIn02 == 42) {
+        document.getElementById('myDiv02').innerHTML = 'Hey!! You found the meaning of life, the universe, and everything! You are awesome. By the way, this number is even';
+      } else if (myIn02 == 69) {
+        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
+      } else if (myMod01 == 0) {
+        document.getElementById('myDiv02').innerHTML = 'This number is even';
+      }else{
+        document.getElementById('myDiv02').innerHTML = 'This number is odd';
+      }
+    }
   </script>
   <body>
-    <h5>Version 0.0.6-6</h5>
+    <h5>Version 0.0.7-7</h5>
     <h2 align=center>t1a09-Functions-by-Fer.html</h2>
     <input type=button value="Toggle Mode" onclick="lightMode()"><br>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -47,7 +60,7 @@
     <div id="myDiv01">...</div>
     
     <hr>
-    <!--
+    
     <h3>Time for some personal examples:</h3>
     <h4>First, the code for the button that changes the light mode of this page is a function</h4>
     <pre>
@@ -56,8 +69,8 @@
         element.classList.toggle("light-mode");        
       }
     </pre>
--->
-    <!--
+
+    
     <h4>Second, every button in the "decisions" assignment triggers a function</h4>
     <input id="myNum02" type=number placeholder="Insert number"><br>
     <input type=button value="Even or Odd?" onclick="ex01()">
@@ -78,6 +91,7 @@
       }
     }
     </pre>
+    <!--
     <input id="myName01" type=text placeholder="Insert yout first name" value=""><br>
     <input type=button value="Common Name?" onclick="ex02()">
     <div id="myDiv03">...</div>

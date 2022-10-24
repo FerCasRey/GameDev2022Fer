@@ -22,6 +22,12 @@
         var element2 = document.a;
         element2.classList.toggle("light-mode2");
     }
+    function myExampleFunction() {
+      let myIn01 = parseInt(document.getElementById('myText01').value)
+      let mySum = myIn01 + myIn01
+      let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum
+      return myReply
+    }
     function ex01() {
       let myIn02 = parseFloat(document.getElementById('myNum02').value);
       let myMod01 = myIn02 % 2;
@@ -35,9 +41,23 @@
         document.getElementById('myDiv02').innerHTML = 'This number is odd';
       }
     }
+    function ex02() {
+      var name = document.getElementById('myName01').value;       
+      var boyName = ['Michael', 'John', 'Chris', 'David', 'Mike', 'Ryan', 'Matt', 'Jason', 'Brian', 'Andrew'];
+      var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
+      if (boyName.includes(name) || girlName.includes(name)) {
+        document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
+      } else if (name == 'Ellis' || name == 'Jeremy') {
+        document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
+      } else if (name == 'Fernando' || name == 'Fer') {
+        document.getElementById('myDiv03').innerHTML = 'Hello, dad.';
+      } else {
+        document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
+      }
+    }
   </script>
   <body>
-    <h5>Version 0.0.7-7</h5>
+    <h5>Version 0.0.8-8</h5>
     <h2 align=center>t1a09-Functions-by-Fer.html</h2>
     <input type=button value="Toggle Mode" onclick="lightMode()"><br>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -91,7 +111,7 @@
       }
     }
     </pre>
-    <!--
+    
     <input id="myName01" type=text placeholder="Insert yout first name" value=""><br>
     <input type=button value="Common Name?" onclick="ex02()">
     <div id="myDiv03">...</div>
@@ -111,6 +131,7 @@
       }
     }
     </pre>
+    <!--
     <input type=radio name="myRad01" id='sad' value="Sad">Sad<br>
     <input type=radio name="myRad01" id='happy' value="Happy">Happy<br>
     <input type=radio name="myRad01" id='normal' value="Normal">Normal<br>

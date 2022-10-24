@@ -16,60 +16,15 @@
     </style>
   </head>
   <script>
-    <!--
-    function ex01() {
-      let myIn02 = parseFloat(document.getElementById('myNum02').value);
-      let myMod01 = myIn02 % 2;
-      if (myIn02 == 42) {
-        document.getElementById('myDiv02').innerHTML = 'Hey!! You found the meaning of life, the universe, and everything! You are awesome. By the way, this number is even';
-      } else if (myIn02 == 69) {
-        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
-      } else if (myMod01 == 0) {
-        document.getElementById('myDiv02').innerHTML = 'This number is even';
-      }else{
-        document.getElementById('myDiv02').innerHTML = 'This number is odd';
-      }
-    }
-    function ex02() {
-      var name = document.getElementById('myName01').value;       
-      var boyName = ['Michael', 'John', 'Chris', 'David', 'Mike', 'Ryan', 'Matt', 'Jason', 'Brian', 'Andrew'];
-      var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
-      if (boyName.includes(name) || girlName.includes(name)) {
-        document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
-      } else if (name == 'Ellis' || name == 'Jeremy') {
-        document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
-      } else if (name == 'Fernando' || name == 'Fer') {
-        document.getElementById('myDiv03').innerHTML = 'Hello, dad.';
-      } else {
-        document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
-      }
-    }
-    function ex03() {  
-      if (document.getElementById('sad').checked) {
-        document.getElementById('myDiv04').innerHTML = 'I\'m so sorry to hear that... I know that is difficult hear what a screen says to you, but...' +
-                                                       'We really think that you should smile. It is a beautiful life this one we live, and we are sure you have some reasons to be happy. Work on them!';
-      } else if (document.getElementById('happy').checked) {
-        document.getElementById('myDiv04').innerHTML = 'So good to hear that! Keep it like that and share with people you love!';
-      } else if (document.getElementById('normal').checked) {
-        document.getElementById('myDiv04').innerHTML = 'That is usually good, but why if we try to change it for a \"good\"? That would be awesome!';
-      } else if (document.getElementById('dunno').checked) {
-        document.getElementById('myDiv04').innerHTML = "Sorry... I wish I could help you, but you will need to talk with yourself. Sometimes it can be overwelming, but you can do it. We trust in you <3
-      }
-    }
-    -->
-    function myExampleFunction() {
-      let myIn01 = parseInt(document.getElementById('myText01').value)
-      let mySum = myIn01 + myIn01
-      let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum
-      return myReply
-    }
     function lightMode() {
         var element = document.body;
-        element.classList.toggle("light-mode");        
+        element.classList.toggle("light-mode");
+        var element2 = document.a;
+        element2.classList.toggle("light-mode2");
     }
   </script>
   <body>
-    <h5>Version 0.0.5-5</h5>
+    <h5>Version 0.0.6-6</h5>
     <h2 align=center>t1a09-Functions-by-Fer.html</h2>
     <input type=button value="Toggle Mode" onclick="lightMode()"><br>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>

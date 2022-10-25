@@ -59,15 +59,19 @@
     <hr>
     <hr>
     
-    <p class="hed01">OnClick</p><br>
+    <p class="hed01">OnClick</p>
+    Click the button below to do something<br>
     <input type=button value="here" onclick="{
       document.getElementById('myDiv001').innerHTML = 'PUM. NEW CONTENT'
     }"><br>
-    <div id="myDiv001">...</div>
+    <div id="myDiv001"></div>
     
     <hr>
     
     <p class="hed01">onDBClick</p><br>
+    Doble click the button below to do something<br>
+    <p ondblclick="click2()">2 clicks!</p>
+    <div id="myDiv002"></div>
     
 
 
@@ -76,9 +80,9 @@
     function lightMode() {
       var element = document.body;
       element.classList.toggle("light-mode");        
-    }
-    function onclick() {
-      document.getElementById('myDiv001').innerHTML = 'PUM, new text';            
+    }    
+    function myFunction() {
+      document.getElementById("myDiv002").innerHTML = "PUM, NEW CONTENT";
     }
   </script>
 </html>

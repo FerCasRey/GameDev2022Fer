@@ -1,4 +1,4 @@
-         <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Arrays</title>
@@ -23,9 +23,8 @@
     <body>
         <h5>Version 0.0.1-1</h5>
         <h2 align=center>t2a01-arrays-by-Fer.html</h2>
-        <a href="">Good reference to Javasccript Arrays</a><br>
+        <a href="">Good reference to Javascript Arrays</a><br>
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
-        <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to input and output</a><br>
         <input type=button value="Toggle Mode" onclick="lightMode()">
 
         Arrays are stored numbered variables
@@ -72,19 +71,19 @@
             element.classList.toggle("light-mode");
         }
         function showFlower() {
-            let mySum02 = ''
-            document.getElementById('myDiv02').innerHTML = ''
-            flowerArray = new Array()
-            flowerArray[0] = "Rose"
-            flowerArray[1] = "Poppy"
-            flowerArray[2] = "Hydrangeas"
-            flowerArray[3] = "Peony"
-            flowerArray[4] = "Camellia"
-            for (tempFlower=0; tempFlower<6; tempFlower++) {
-                mySum02 += 'Loop #: ' + tempFlower + ' || Array entry: ' + myArray[tempFlower] +'<br>'               
-
+            let myTemp02 = 6;
+            let mySum02 = '';
+            document.getElementById('myDiv02').innerHTML = '';
+            flowerArray = [];
+            flowerArray[0] = "Rose";
+            flowerArray[1] = "Poppy";
+            flowerArray[2] = "Hydrangeas";
+            flowerArray[3] = "Peony";
+            flowerArray[4] = "Camellia";
+            for (flowerLoop=0; flowerLoop<myTemp02; flowerLoop++) {
+                mySum02 += 'Loop #: ' + flowerLoop + ' || Array entry: ' + flowerArray[flowerLoop] +'<br>';               
             }
-            document.getElementById('myDiv02').innerHTML = mySum02
+            document.getElementById('myDiv02').innerHTML = mySum02;
         }
     </script> 
 </html>

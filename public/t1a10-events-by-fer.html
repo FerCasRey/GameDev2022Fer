@@ -20,7 +20,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.9-9</h5><br>
+    <h5>Version 0.0.10-10</h5><br>
     <h1 align=center>T1A10-Events-by-Fer.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://way2tutorial.com/html/html5_events_handler_list.php">Good reference to HTML Events</a><br>
@@ -59,23 +59,11 @@
     <hr>
     <hr>
     
-    <p class="hed01">OnClick</p>
-    Click the button below to do something<br>
-    <input type=button value="here" onclick="{
-      document.getElementById('myDiv001').innerHTML = 'PUM. NEW CONTENT'
-    }"><br>
-    <div id="myDiv001"></div>
-    
-    <hr>
-    
-    <p class="hed01">onDBClick</p><br>
-    Doble click the button below to do something<br>
-    <input type=button value="doble click" ondblclick="click2()">
-    <div id="myDiv002"></div>
-    
-    <hr>
-    
-    <p class="hed01">onChange</p><br>
+    <input type="text" id="myText01" value="Hi there"><br>     
+    <input type="button" value="Example onClick" onclick="{ 
+       document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+    }">     
+    <div id="myDiv01">...</div>
     
 
 
@@ -85,8 +73,23 @@
       var element = document.body;
       element.classList.toggle("light-mode");        
     }    
-    function myFunction() {
-      document.getElementById("myDiv002").innerHTML = "PUM, NEW CONTENT";
+    function onClickFunc() {
+      document.getElementById("myDiv02").innerHTML = document.getElementById("myText02").value
+    }
+    function onDBClickFunc() {
+      document.getElementById("myDiv03").innerHTML = document.getElementById("myText03").value
+    }
+    function onChangeFunc() {
+      var x = document.getElementById("mySelect").value;
+      document.getElementById("myP01").innerHTML = "You selected: " + x;
+    }
+    function onBlurFunc() {
+      var y = document.getElementById("myText04");
+      y.value = y.value.toUpperCase();
+    }
+    function onFocusFunc() {
+      var z = document.getElementById("myText04");
+      z.value = z.value.toLowerCase();
     }
   </script>
 </html>

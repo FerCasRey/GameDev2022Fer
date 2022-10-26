@@ -20,7 +20,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.11-11</h5><br>
+    <h5>Version 0.0.12-12</h5><br>
     <h1 align=center>T1A10-Events-by-Fer.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://way2tutorial.com/html/html5_events_handler_list.php">Good reference to HTML Events</a><br>
@@ -60,10 +60,23 @@
     <hr>
     
     <input type="text" id="myText001" value="Hi there"><br>     
-    <input type="button" value="Example onClick" onclick="{ 
+    <input type="button" value="onClick" onclick="{ 
        document.getElementById('myDiv001').innerHTML = document.getElementById('myText001').value
     }">     
     <div id="myDiv001">...</div>
+    
+    <hr>
+    
+    onDBLClick: <br> <input type="text" value="2" id="myText03"> <br> <input type="button" value="onDBLClick" ondblclick="onDBClickFunc()"> <br> <div id="myDiv03">...</div>
+   
+    <hr>
+    
+    onChange: <br> <select id="mySelect" onchange="onChangeFunc()">
+      <option value="One">One</option>
+      <option value="Two">Two</option>
+      <option value="Three">Three</option>
+      <option value="Four">Four</option>
+    </select> <br> <p id="myP01"></p>
     
 
 

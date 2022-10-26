@@ -20,7 +20,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.10-10</h5><br>
+    <h5>Version 0.0.11-11</h5><br>
     <h1 align=center>T1A10-Events-by-Fer.html</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://way2tutorial.com/html/html5_events_handler_list.php">Good reference to HTML Events</a><br>
@@ -59,11 +59,11 @@
     <hr>
     <hr>
     
-    <input type="text" id="myText01" value="Hi there"><br>     
+    <input type="text" id="myText001" value="Hi there"><br>     
     <input type="button" value="Example onClick" onclick="{ 
-       document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+       document.getElementById('myDiv001').innerHTML = document.getElementById('myText001').value
     }">     
-    <div id="myDiv01">...</div>
+    <div id="myDiv001">...</div>
     
 
 
@@ -74,21 +74,21 @@
       element.classList.toggle("light-mode");        
     }    
     function onClickFunc() {
-      document.getElementById("myDiv02").innerHTML = document.getElementById("myText02").value
+      document.getElementById("myDiv002").innerHTML = document.getElementById("myText002").value
     }
     function onDBClickFunc() {
-      document.getElementById("myDiv03").innerHTML = document.getElementById("myText03").value
+      document.getElementById("myDiv003").innerHTML = document.getElementById("myText003").value
     }
     function onChangeFunc() {
       var x = document.getElementById("mySelect").value;
-      document.getElementById("myP01").innerHTML = "You selected: " + x;
+      document.getElementById("myP001").innerHTML = "You selected: " + x;
     }
     function onBlurFunc() {
-      var y = document.getElementById("myText04");
+      var y = document.getElementById("myText004");
       y.value = y.value.toUpperCase();
     }
     function onFocusFunc() {
-      var z = document.getElementById("myText04");
+      var z = document.getElementById("myText004");
       z.value = z.value.toLowerCase();
     }
   </script>

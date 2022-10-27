@@ -86,9 +86,9 @@
     
     <hr>
     
-    <b>This will solve any first grade equation:</b><br>
-    We need an a (<input id="myNum06a" type=number value="3">) and a b (<input id="myNum06b" type=number value="6">)<br>    
-    <input type=button value="myEvent solve first grade equation" onclick="{
+    <b>This will solve any simple equation:</b><br>
+    We need an <i>a</i> (<input id="myNum06a" type=number value="3">) and a <i>b</i> (<input id="myNum06b" type=number value="6">)<br>    
+    <input type=button value="myEvent solve simple equation" onclick="{
       let myA06 = parseFloat(document.getElementById('myNum06a').value)
       let myB06 = parseFloat(document.getElementById('myNum06b').value)                                                               
       let myAnswer06 = -myA06 / myB06
@@ -101,23 +101,9 @@
       myB07 * myB07 - (4*myA07*myC07)
       'x = ' + my1Answer07 + ' || or x = ' + my2Answer07
     -->
-    <b>This will solve any second grade equation:</b><br>
+    <b>This will solve any quadratic equation:</b><br>
     We need an <i>a</i> (<input id="myNum07a" type=number value="3">), a <i>b</i> (<input id="myNum07b" type=number value="6">) and a <i>c</i> (<input id="myNum07c" type=number value="9">)<br>
-    <input type=button value="myEvent solve second grade equation" onclick="{
-      let myA07 = parseFloat(document.getElementById('myNum07a').value)
-      let myB07 = parseFloat(document.getElementById('myNum07b').value)
-      let myC07 = parseFloat(document.getElementById('myNum07c').value)
-      let myNumToSquare07 = 9                                                                            
-      if (myNumToSquare07 >= 0) {
-        let mySquareRoot07 = math.sqrt(myNumToSquare07)
-        let my1Answer07 = (-myB07 + mySquareRoot07) / (2*myA07)  
-        let my2Answer07 = (-myB07 - mySquareRoot07) / (2*myA07)                                                                            
-        document.getElementById('myDiv07').innerHTML = "hey"                                                                           
-      } else {
-        document.getElementById('myDiv07').innerHTML = 'This is equation has not solution. I\'m sorry'                                                                      
-      }                                                                            
-         
-    }"><br>
+    <input type=button value="myEvent solve quadratic equation" onclick="solveQuadratic()"><br>
     <div id="myDiv07">...</div>
     
     <hr>
@@ -129,6 +115,22 @@
         element.classList.toggle("light-mode");
         var element2 = document.a;
         element2.classList.toggle("light-mode2");
+    }
+    function solveQuadratic() {
+      let myA07 = parseFloat(document.getElementById('myNum07a').value)
+      let myB07 = parseFloat(document.getElementById('myNum07b').value)
+      let myC07 = parseFloat(document.getElementById('myNum07c').value)
+      let myNumToSquare07 = (myB07 * myB07) - (4*myA07*myC07)                                                                            
+      if (myNumToSquare07 > 0) {
+        let mySquareRoot07 = math.sqrt(myNumToSquare07)
+        let my1Answer07 = (-myB07 + mySquareRoot07) / (2*myA07)  
+        let my2Answer07 = (-myB07 - mySquareRoot07) / (2*myA07)                                                                            
+        document.getElementById('myDiv07').innerHTML = "hey"                                                                           
+      } else if (myNumToSquare07 == 0) {
+        //work on this
+        let my3Answer07 = 
+        document.getElementById('myDiv07').innerHTML = 'This is equation has not solution. I\'m sorry'                                                                      
+      }       
     }
   </script>  
 </html>

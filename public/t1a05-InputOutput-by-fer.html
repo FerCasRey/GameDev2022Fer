@@ -97,7 +97,10 @@
     <div id="myDiv06">...</div>
     
     <hr>
-    <!--myB07 * myB07 - (4*myA07*myC07)-->
+    <!--
+      myB07 * myB07 - (4*myA07*myC07)
+      'x = ' + my1Answer07 + ' || or x = ' + my2Answer07
+    -->
     <b>This will solve any second grade equation:</b><br>
     We need an <i>a</i> (<input id="myNum07a" type=number value="3">), a <i>b</i> (<input id="myNum07b" type=number value="6">) and a <i>c</i> (<input id="myNum07c" type=number value="9">)<br>
     <input type=button value="myEvent solve second grade equation" onclick="{
@@ -109,7 +112,7 @@
         let mySquareRoot07 = math.sqrt(myNumToSquare07)
         let my1Answer07 = (-myB07 + mySquareRoot07) / (2*myA07)  
         let my2Answer07 = (-myB07 - mySquareRoot07) / (2*myA07)                                                                            
-        document.getElementById('myDiv07').innerHTML = 'x = ' + my1Answer07 + ' || or x = ' + my2Answer07
+        document.getElementById('myDiv07').innerHTML = "hey"                                                                           
       } else {
         document.getElementById('myDiv07').innerHTML = 'This is equation has not solution. I\'m sorry'                                                                      
       }                                                                            

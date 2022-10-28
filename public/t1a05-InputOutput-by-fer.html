@@ -19,7 +19,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.24-24</h5>
+    <h5>Version 0.0.25-25</h5>
     <h1 align=center>T1A05-Input and Output code</h1>
     <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
     <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to input and output</a><br>
@@ -117,20 +117,37 @@
         element2.classList.toggle("light-mode2");
     }
     function solveQuadratic() {
-      let myA07 = parseFloat(document.getElementById('myNum07a').value)
-      let myB07 = parseFloat(document.getElementById('myNum07b').value)
-      let myC07 = parseFloat(document.getElementById('myNum07c').value)
-      let myNumToSquare07 = (myB07 * myB07) - (4*myA07*myC07)                                                                            
-      if (myNumToSquare07 > 0) {
-        let mySquareRoot07 = math.sqrt(myNumToSquare07)
-        let my1Answer07 = (-myB07 + mySquareRoot07) / (2*myA07)  
-        let my2Answer07 = (-myB07 - mySquareRoot07) / (2*myA07)                                                                            
-        document.getElementById('myDiv07').innerHTML = "hey"                                                                           
-      } else if (myNumToSquare07 == 0) {
+      let myA07 = parseFloat(document.getElementById('myNum07a').value);
+      let myB07 = parseFloat(document.getElementById('myNum07b').value);
+      let myC07 = parseFloat(document.getElementById('myNum07c').value);
+      let myNumberToBeSquaredRoot = (myB07 * myB07) - (4 * myA07 * myC07);
+      if (myNumberToBeSquaredRoot == 0) {
+        let myAnswer07 = -myB07 / (2 * myA07);
+        document.getElementById('myDiv07').innerHTML = "x = " + myAnswer07;
+      } else if (myNumberToBeSquaredRoot > 0) { 
+        let mySquareRoot07 = math.sqrt(myNumberToBeSquaredRoot);
+        let my1Answer07 = (-myB07 + mySquareRoot07) / (2 * myA07);
+        let my2Answer07 = (-myB07 - mySquareRoot07) / (2 * myA07);
+        document.getElementById('myDiv07').innerHTML = "x = " + my1Answer07 + " || x = " + my2Answer07;
+      } else if (myNumberToBeSquaredRoot < 0) {
+        document.getElementById('myDiv07').innerHTML = "Sorry, this equation has not <i>real</i> solution";
+      } else {
+        document.getElementById('myDiv07').innerHTML = "Error";
+      }
+    }
+        
+        
+      //if (myNumToSquare07 > 0) {
+        //let mySquareRoot07 = math.sqrt(myNumToSquare07)
+        //let my1Answer07 = (-myB07 + mySquareRoot07) / (2*myA07)  
+        //let my2Answer07 = (-myB07 - mySquareRoot07) / (2*myA07)                                                                            
+        //document.getElementById('myDiv07').innerHTML = "hey"  
+        
+      //} else if (myNumToSquare07 == 0) {
         //work on this
-        let my3Answer07 = 
-        document.getElementById('myDiv07').innerHTML = 'This is equation has not solution. I\'m sorry'                                                                      
-      }       
+        //let my3Answer07 = 
+        //document.getElementById('myDiv07').innerHTML = 'This is equation has not solution. I\'m sorry'                                                                      
+      //}       
     }
   </script>  
 </html>

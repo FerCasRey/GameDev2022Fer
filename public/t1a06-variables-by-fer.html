@@ -17,7 +17,7 @@
             </style>
         </head>  
         <body>    
-            <h5>Version 0.0.9-9</h5>
+            <h5>Version 0.0.9.9</h5>
             <h1 align=center>T1A06 Varaibles by Fer.html</h1>
             <input type=button value="Toggle Mode" onclick="lightMode()"><br>
             <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -53,12 +53,12 @@
             <b>Time for some personal examples</b><br>
             <!--<i>This one uses objets</i><br>-->
             Please, enter the age of a real friend:  
-            <input type=number id="myFriendAge" min=0 max=130 placeholder="18"><br>
+            <input type=number id="myFriendAge" min=0 max=130 value="18"><br>
             Now, enter your friend's favourite color:  
-            <input type=color id="myFriendColor" placeholder=red><br>
+            <input type=color id="myFriendColor"><br>
             Finally, enter your friend's name:   
-            <input type=text id="myFriendName"  placeholder="Steven">
-            <input type=button value="Show friend info" onclick="">
+            <input type=text id="myFriendName"  value="Steven"><br>
+            <input type=button value="Show friend info" onclick="friendInfo()"><br>
             <div id="myFriendDiv">...</div>
     
             <hr>
@@ -74,7 +74,7 @@
                 var myFriendName = document.getElementById('myFriendName').value;
                 var myFriendAge = document.getElementById('myFriendAge').value;
                 var myFriendColor = document.getElementById('myFriendColor').value;
-                document.getElementById('myFriendDiv').innerHTML = 'Your friend ' + myFriendName + ' is ' + myFriendAge + ' old and loves color ' + myFriendColor;
+                document.getElementById('myFriendDiv').innerHTML = 'Your friend ' + myFriendName + ' is ' + myFriendAge + ' old and loves hex color ' + myFriendColor;
             }         
         </script>
     </html>

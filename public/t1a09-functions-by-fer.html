@@ -1,189 +1,189 @@
-<html>
-  <head>
-    <title>Functions</title>
-    <style>
-      body {
-        background-color: #363636;
-        color: white;
-      }      
-      .light-mode {
-        background-color: white;
-        color: black;
-      }
-      a:visited {
-        color: lightGreen;
-      } 
-    </style>
-  </head>
-  <script>
-    function lightMode() {
-        var element = document.body;
-        element.classList.toggle("light-mode");
-        var element2 = document.a;
-        element2.classList.toggle("light-mode2");
-    }
-    function myExampleFunction() {
-      let myIn01 = parseInt(document.getElementById('myText01').value)
-      let mySum = myIn01 + myIn01
-      let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum
-      return myReply
-    }
-    function ex01() {
-      let myIn02 = parseFloat(document.getElementById('myNum02').value);
-      let myMod01 = myIn02 % 2;
-      if (myIn02 == 42) {
-        document.getElementById('myDiv02').innerHTML = 'Hey!! You found the meaning of life, the universe, and everything! You are awesome. By the way, this number is even';
-      } else if (myIn02 == 69) {
-        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
-      } else if (myMod01 == 0) {
-        document.getElementById('myDiv02').innerHTML = 'This number is even';
-      }else{
-        document.getElementById('myDiv02').innerHTML = 'This number is odd';
-      }
-    }
-    function ex02() {
-      var name = document.getElementById('myName01').value;       
-      var boyName = ['Michael', 'John', 'Chris', 'David', 'Mike', 'Ryan', 'Matt', 'Jason', 'Brian', 'Andrew'];
-      var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
-      if (boyName.includes(name) || girlName.includes(name)) {
-        document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
-      } else if (name == 'Ellis' || name == 'Jeremy') {
-        document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
-      } else if (name == 'Fernando' || name == 'Fer') {
-        document.getElementById('myDiv03').innerHTML = 'Hello, dad.';
-      } else {
-        document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
-      }
-    }
-    function ex04() {
-      var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
-      if (document.getElementById('next').checked) {
-        myNumToChange = myNumToChange + 1
-        document.getElementById('myDiv05').innerHTML = myNumToChange
-      } else {
-        myNumToChange = myNumToChange - 1
-        document.getElementById('myDiv05').innerHTML = myNumToChange
-      }
-    }
-    function moveTA() {
-      document.getElementById('myTA01').style.left = parseInt(document.getElementById('myTA01').style.left) + 10 + 'px';
-    }
-    function changeColor() {
-      document.getElementById('myB1').style.color = "red"
-      document.getElementById('myB1').style.backgroundColor = "yellow"
-    }
-  </script>
-  <body>
-    <h5>Version 0.0.13-13</h5>
-    <h2 align=center>t1a09-Functions-by-Fer.html</h2>
-    <input type=button value="Toggle Mode" onclick="lightMode()"><br>
-    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
-    <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Functions</title>
+            <style>
+                body {
+                    background-color: #363636;
+                    color: white;
+                }      
+                .light-mode {
+                    background-color: white;
+                    color: black;
+                }
+                a:visited {
+                    color: lightGreen;
+                } 
+            </style>
+        </head>
+        <script>
+            function lightMode() {
+                var element = document.body;
+                element.classList.toggle("light-mode");
+                var element2 = document.a;
+                element2.classList.toggle("light-mode2");
+            }
+            function myExampleFunction() {
+                let myIn01 = parseInt(document.getElementById('myText01').value)
+                let mySum = myIn01 + myIn01
+                let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum
+                return myReply
+            }
+            function ex01() {
+                let myIn02 = parseFloat(document.getElementById('myNum02').value);
+                let myMod01 = myIn02 % 2;
+                if (myIn02 == 42) {
+                    document.getElementById('myDiv02').innerHTML = 'Hey!! You found the meaning of life, the universe, and everything! You are awesome. By the way, this number is even';
+                } else if (myIn02 == 69) {
+                    document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
+                } else if (myMod01 == 0) {
+                    document.getElementById('myDiv02').innerHTML = 'This number is even';
+                }else{
+                    document.getElementById('myDiv02').innerHTML = 'This number is odd';
+                }
+            }
+            function ex02() {
+                var name = document.getElementById('myName01').value;       
+                var boyName = ['Michael', 'John', 'Chris', 'David', 'Mike', 'Ryan', 'Matt', 'Jason', 'Brian', 'Andrew'];
+                var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
+                if (boyName.includes(name) || girlName.includes(name)) {
+                    document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
+                } else if (name == 'Ellis' || name == 'Jeremy') {
+                    document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
+                } else if (name == 'Fernando' || name == 'Fer') {
+                    document.getElementById('myDiv03').innerHTML = 'Hello, dad.';
+                } else {
+                    document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
+                }
+            }
+            function ex04() {
+                var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
+                if (document.getElementById('next').checked) {
+                    myNumToChange = myNumToChange + 1
+                    document.getElementById('myDiv05').innerHTML = myNumToChange
+                } else {
+                    myNumToChange = myNumToChange - 1
+                    document.getElementById('myDiv05').innerHTML = myNumToChange
+                }
+            }
+            function moveTA() {
+                document.getElementById('myTA01').style.left = parseInt(document.getElementById('myTA01').style.left) + 10 + 'px';
+            }
+            function changeColor() {
+                document.getElementById('myB1').style.color = "red"
+                document.getElementById('myB1').style.backgroundColor = "yellow"
+            }
+        </script>
+        <body>
+            <h5>Version 0.0.14-14</h5>
+            <h2 align=center>t1a09-Functions-by-Fer.html</h2>
+            <input type=button value="Toggle Mode" onclick="lightMode()"><br>
+            <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+            <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
+            
+            <hr>
     
-    <hr>
+            Functions are used to sensibly organzie code. Then they are "Called" elsewhere. Information can also be passed to functions (that's more advanced).
+            <h4> Example Functions code</h4>
+            <pre>
+                function myGrabNumber(){
+                    return parseInt(document.getElementById('myText01').value)
+                }
+            </pre>
+            <h4> Example working code</h4>
+            <input type=text id="myText01" value="3"><br>
+            <input type=button value="Function Example" onclick="{
+                document.getElementById('myDiv01').innerHTML =  myExampleFunction()
+            }">
+            <div id="myDiv01">...</div>
+            
+            <hr>
+            <hr>
     
-    Functions are used to sensibly organzie code. Then they are "Called" elsewhere. Information can also be passed to functions (that's more advanced).
-    <h4> Example Functions code</h4>
-    <pre>
-      function myGrabNumber(){
-        return parseInt(document.getElementById('myText01').value)
-      }
-    </pre>
-    <h4> Example working code</h4>
-    <input type=text id="myText01" value="3"><br>
-    <input type=button value="Function Example" onclick="{
-      document.getElementById('myDiv01').innerHTML =  myExampleFunction()
-    }">
-    <div id="myDiv01">...</div>
-    
-    <hr>
-    
-    <h3>Time for some personal examples:</h3>
-    <h4>First, the code for the button that changes the light mode of this page is a function</h4>
-    <pre>
-      function lightMode() {
-        var element = document.body;
-        element.classList.toggle("light-mode");        
-      }
-    </pre>
+            <h3>Time for some personal examples:</h3>
+            <h4>First, the code for the button that changes the light mode of this page is a function</h4>
+            <pre>
+                function lightMode() {
+                    var element = document.body;
+                    element.classList.toggle("light-mode");        
+                }
+            </pre>
 
     
-    <h4>Second, every button in the "decisions" assignment triggers a function</h4>
-    <input id="myNum02" type=number placeholder="Insert number"><br>
-    <input type=button value="Even or Odd?" onclick="ex01()">
-    <h6>Hint: do you celebrate the towel day?</h6>
-    <div id="myDiv02">...</div><br><br>
-    <pre>
-      function ex01() {
-      let myIn02 = parseFloat(document.getElementById('myNum02').value);
-      let myMod01 = myIn02 % 2;
-      if (myIn02 == 42) {
-        document.getElementById('myDiv02').innerHTML = 'Hey!! You found the meaning of life, the universe, and everything! You are awesome. By the way, this number is even';
-      } else if (myIn02 == 69) {
-        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
-      } else if (myMod01 == 0) {
-        document.getElementById('myDiv02').innerHTML = 'This number is even';
-      }else{
-        document.getElementById('myDiv02').innerHTML = 'This number is odd';
-      }
-    }
-    </pre>
+            <h4>Second, every button in the "decisions" assignment triggers a function</h4>
+            <input id="myNum02" type=number placeholder="Insert number"><br>
+            <input type=button value="Even or Odd?" onclick="ex01()">
+            <h6>Hint: do you celebrate the towel day?</h6>
+            <div id="myDiv02">...</div><br><br>
+            <pre>
+                function ex01() {
+                    let myIn02 = parseFloat(document.getElementById('myNum02').value);
+                    let myMod01 = myIn02 % 2;
+                    if (myIn02 == 42) {
+                        document.getElementById('myDiv02').innerHTML = 'Hey!! You found the meaning of life, the universe, and everything! You are awesome. By the way, this number is even';
+                    } else if (myIn02 == 69) {
+                        document.getElementById('myDiv02').innerHTML = 'This number is odd, BTW, nice';
+                    } else if (myMod01 == 0) {
+                        document.getElementById('myDiv02').innerHTML = 'This number is even';
+                    }else{
+                        document.getElementById('myDiv02').innerHTML = 'This number is odd';
+                    }
+                }
+            </pre>
+        
+            <input id="myName01" type=text placeholder="Insert yout first name" value=""><br>
+            <input type=button value="Common Name?" onclick="ex02()">
+            <div id="myDiv03">...</div>
+            <pre>
+                function ex02() {
+                    var name = document.getElementById('myName01').value;       
+                    var boyName = ['Michael', 'John', 'Chris', 'David', 'Mike', 'Ryan', 'Matt', 'Jason', 'Brian', 'Andrew'];
+                    var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
+                    if (boyName.includes(name) || girlName.includes(name)) {
+                        document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
+                    } else if (name == 'Ellis' || name == 'Jeremy') {
+                        document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
+                    } else if (name == 'Fernando' || name == 'Fer') {
+                        document.getElementById('myDiv03').innerHTML = 'Hello, dad.';
+                    } else {
+                        document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
+                    }
+                }
+            </pre>
     
-    <input id="myName01" type=text placeholder="Insert yout first name" value=""><br>
-    <input type=button value="Common Name?" onclick="ex02()">
-    <div id="myDiv03">...</div>
-    <pre>
-      function ex02() {
-      var name = document.getElementById('myName01').value;       
-      var boyName = ['Michael', 'John', 'Chris', 'David', 'Mike', 'Ryan', 'Matt', 'Jason', 'Brian', 'Andrew'];
-      var girlName = ['Olivia', 'Emma', 'Amelia', 'Ava', 'Sophia', 'Charlote', 'Isabella', 'Mia', 'Luna', 'Harper', 'Mary'];
-      if (boyName.includes(name) || girlName.includes(name)) {
-        document.getElementById('myDiv03').innerHTML = 'Pretty common name, we like it!';
-      } else if (name == 'Ellis' || name == 'Jeremy') {
-        document.getElementById('myDiv03').innerHTML = 'Well come, Mr.Ellis. We hope you find the marking a pleasant experience.'; 
-      } else if (name == 'Fernando' || name == 'Fer') {
-        document.getElementById('myDiv03').innerHTML = 'Hello, dad.';
-      } else {
-        document.getElementById('myDiv03').innerHTML = 'Unusual! We like it!';
-      }
-    }
-    </pre>
-    
-    <input type=number id="myNumToChange" placegolher="5"><br>
-    <input type=radio name="changeName" id="next" checked>Next<br>
-    <input type=radio name="changeName" id="previous">Previous<br>
-    <input type=button value="Number, please" onclick="ex04()">
-    <div id="myDiv05">...</div>
-    <pre>
-      function ex04() {
-      var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
-      if (document.getElementById('next').checked) {
-        myNumToChange = myNumToChange + 1
-        document.getElementById('myDiv05').innerHTML = myNumToChange
-      } else {
-        myNumToChange = myNumToChange - 1
-        document.getElementById('myDiv05').innerHTML = myNumToChange
-      }
-    }
-    </pre>
-    <h4>Third, in the "CSS" assignment, the are a few functions</h4>
-    <b id="myB1" style="color:white; background-color:blue; ">This is bold</b>
-    <input type=button value=Change onclick="changeColor()"><br>
-    <pre>
-      function changeColor() {
-      document.getElementById('myB1').style.color = "red"
-      document.getElementById('myB1').style.backgroundColor = "yellow"
-    } 
-    </pre>
-    <textarea id="myTA01" style="position:relative; left:0; top:0; width:200; height:50; ">Advanced: see if you move this textarea</textarea><br>
-    <input type=button value="MOVE" onclick="moveTA()"/>
-    <pre>
-      function moveTA() {
-      document.getElementById('myTA01').style.left = parseInt(document.getElementById('myTA01').style.left) + 10 + 'px';
-    }
-    </pre>
-    <b style="color:red">More examples coming soon (when I have more ideas)</b>
-  </body>
-</html>
-
-    
+            <input type=number id="myNumToChange" placegolher="5"><br>
+            <input type=radio name="changeName" id="next" checked>Next<br>
+            <input type=radio name="changeName" id="previous">Previous<br>
+            <input type=button value="Number, please" onclick="ex04()">
+            <div id="myDiv05">...</div>
+            <pre>
+                function ex04() {
+                    var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
+                    if (document.getElementById('next').checked) {
+                        myNumToChange = myNumToChange + 1
+                        document.getElementById('myDiv05').innerHTML = myNumToChange
+                    } else {
+                        myNumToChange = myNumToChange - 1
+                        document.getElementById('myDiv05').innerHTML = myNumToChange
+                    }
+                }
+            </pre>
+            <h4>Third, in the "CSS" assignment, the are a few functions</h4>
+            <b id="myB1" style="color:white; background-color:blue; ">This is bold</b>
+            <input type=button value=Change onclick="changeColor()"><br>
+            <pre>
+                function changeColor() {
+                    document.getElementById('myB1').style.color = "red"
+                    document.getElementById('myB1').style.backgroundColor = "yellow"
+                } 
+            </pre>
+            <textarea id="myTA01" style="position:relative; left:0; top:0; width:200; height:50; ">Advanced: see if you move this textarea</textarea><br>
+            <input type=button value="MOVE" onclick="moveTA()"/>
+            <pre>
+                function moveTA() {
+                    document.getElementById('myTA01').style.left = parseInt(document.getElementById('myTA01').style.left) + 10 + 'px';
+                }
+            </pre>
+            <b style="color:red">More examples coming soon (when I have more ideas)</b>
+        </body>
+    </html>

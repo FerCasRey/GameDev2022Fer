@@ -60,10 +60,10 @@
                 var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)
                 if (document.getElementById('next').checked) {
                     myNumToChange = myNumToChange + 1
-                    document.getElementById('myDiv05').innerHTML = myNumToChange
+                    document.getElementById('myDiv05-1').innerHTML = myNumToChange
                 } else {
                     myNumToChange = myNumToChange - 1
-                    document.getElementById('myDiv05').innerHTML = myNumToChange
+                    document.getElementById('myDiv05-1').innerHTML = myNumToChange
                 }
             }
             function moveTA() {
@@ -227,7 +227,7 @@
             <input type=radio name="changeName" id="next" checked>Next<br>
             <input type=radio name="changeName" id="previous">Previous<br>
             <input type=button value="Number, please" onclick="ex04()">
-            <div id="myDiv05">...</div>
+            <div id="myDiv05-1">...</div>
             <pre>
                 function ex04() {
                     var myNumToChange = parseFloat(document.getElementById('myNumToChange').value)

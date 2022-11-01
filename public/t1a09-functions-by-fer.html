@@ -73,9 +73,74 @@
                 document.getElementById('myB1').style.color = "red"
                 document.getElementById('myB1').style.backgroundColor = "yellow"
             }
+            
+            //I dont know the number of the example, but in the original assignment was 4
+            document.myPoints04 = 0;
+            document.myBallonsExploted04 = 0;
+            function plus5Points() {
+                document.myBallonsExploted04 += 1;
+                document.myPoints04 += 5;
+                document.getElementById('myDiv04').innerHTML = 'You have exploted ' + document.myBallonsExploted04 + ' ballons, and you have a punctuation of ' + document.myPoints04;
+            } 
+            function plus10Points() {
+                document.myBallonsExploted04 += 1;
+                document.myPoints04 += 10;
+                document.getElementById('myDiv04').innerHTML = 'You have exploted ' + document.myBallonsExploted04 + ' ballons, and you have a punctuation of ' + document.myPoints04;
+            }     
+            function clearVariables04() {
+            	document.myBallonsExploted04 = 0;
+                document.myPoints04 = 0;
+                document.getElementById('myDiv04').innerHTML = 'Hit a ballon to start';
+            }
+            
+            //I dont know the number of the example, but in the original assignment was 5
+            document.myMultiplier05 = 1;
+            document.myBadGuyPoints05 = 0;
+            function addStandartP05() {
+                document.myMultiplier05 = 1;
+                document.getElementById('myMultiplierDiv05').innerHTML = 'You have Standart multiplier';
+            }
+            function addX2P05() {
+                document.myMultiplier05 = 2;
+                document.getElementById('myMultiplierDiv05').innerHTML = 'You have x2 multiplier';
+            }
+            function add50PerP05() {
+                myTemp05 = Math.random();
+                if (myTemp05 < 0.5) {
+                    document.myMultiplier05 = 4;
+                } else {
+                    document.myMultiplier05 = -2;
+                }
+                document.getElementById('myMultiplierDiv05').innerHTML = 'You have a secret multiplier. Would you dare?';
+            }
+            function hitBadGuy05() {
+                document.myBadGuyPoints05 += 2 * document.myMultiplier05;
+                if (document.myMultiplier05 == -2) {
+                    document.getElementById('myDiv05').innerHTML = 'Oh no! that was a good guy. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else if (document.myMultiplier05 == 4) {
+                    document.getElementById('myDiv05').innerHTML = 'Hey! Now your are helping them become a better person!. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else {
+                    document.getElementById('myDiv05').innerHTML = 'Your punctuation is: ' + document.myBadGuyPoints05;
+                }
+            }
+            function hitVeryBadGuy05() {
+                document.myBadGuyPoints05 += 5 * document.myMultiplier05;
+                if (document.myMultiplier05 == -2) {
+                    document.getElementById('myDiv05').innerHTML = 'Oh no! that was a very good guy. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else if (document.myMultiplier05 == 4) {
+                    document.getElementById('myDiv05').innerHTML = 'Hey! Now your are helping them become a better person!. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else {
+                    document.getElementById('myDiv05').innerHTML = 'Your punctuation is: ' + document.myBadGuyPoints05;
+                }
+            }
+            function clearVariables05() {
+                document.myBadGuyPoints05 = 0;
+                document.getElementById('myDiv05').innerHTML = 'Hit a bad guy to start...';
+            } 
+
         </script>
         <body>
-            <h5>Version 0.0.14-14</h5>
+            <h5>Version 0.0.15-15</h5>
             <h2 align=center>t1a09-Functions-by-Fer.html</h2>
             <input type=button value="Toggle Mode" onclick="lightMode()"><br>
             <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -99,6 +164,7 @@
             
             <hr>
             <hr>
+            <hr>
     
             <h3>Time for some personal examples:</h3>
             <h4>First, the code for the button that changes the light mode of this page is a function</h4>
@@ -109,7 +175,9 @@
                 }
             </pre>
 
-    
+            <hr>
+            <hr>
+               
             <h4>Second, every button in the "decisions" assignment triggers a function</h4>
             <input id="myNum02" type=number placeholder="Insert number"><br>
             <input type=button value="Even or Odd?" onclick="ex01()">
@@ -130,6 +198,8 @@
                     }
                 }
             </pre>
+            
+            <hr>
         
             <input id="myName01" type=text placeholder="Insert yout first name" value=""><br>
             <input type=button value="Common Name?" onclick="ex02()">
@@ -150,6 +220,8 @@
                     }
                 }
             </pre>
+            
+            <hr>
     
             <input type=number id="myNumToChange" placegolher="5"><br>
             <input type=radio name="changeName" id="next" checked>Next<br>
@@ -168,6 +240,10 @@
                     }
                 }
             </pre>
+            
+            <hr>
+            <hr>
+            
             <h4>Third, in the "CSS" assignment, the are a few functions</h4>
             <b id="myB1" style="color:white; background-color:blue; ">This is bold</b>
             <input type=button value=Change onclick="changeColor()"><br>
@@ -177,6 +253,9 @@
                     document.getElementById('myB1').style.backgroundColor = "yellow"
                 } 
             </pre>
+            
+            <hr>
+            
             <textarea id="myTA01" style="position:relative; left:0; top:0; width:200; height:50; ">Advanced: see if you move this textarea</textarea><br>
             <input type=button value="MOVE" onclick="moveTA()"/>
             <pre>
@@ -184,6 +263,96 @@
                     document.getElementById('myTA01').style.left = parseInt(document.getElementById('myTA01').style.left) + 10 + 'px';
                 }
             </pre>
+            
+            <hr>
+            <hr>
+            <h4>Forth, in the "Variables" assignment, there are lots of functions</h4><br>
+            <b>Now we have a variable that stores your points and other that stores your clicks</b><br>
+            <button onclick="plus5Points()">Red ballon</button>
+            <button onclick="plus10Points()">Blue ballon</button><br>
+            <div id="myDiv04">Hit a ballon to start</div>
+            <button onclick="clearVariables04()">Restart</button>
+            <pre>
+                //Example 04
+            document.myPoints04 = 0;
+            document.myBallonsExploted04 = 0;
+            function plus5Points() {
+                document.myBallonsExploted04 += 1;
+                document.myPoints04 += 5;
+                document.getElementById('myDiv04').innerHTML = 'You have exploted ' + document.myBallonsExploted04 + ' ballons, and you have a punctuation of ' + document.myPoints04;
+            } 
+            function plus10Points() {
+                document.myBallonsExploted04 += 1;
+                document.myPoints04 += 10;
+                document.getElementById('myDiv04').innerHTML = 'You have exploted ' + document.myBallonsExploted04 + ' ballons, and you have a punctuation of ' + document.myPoints04;
+            }     
+            function clearVariables04() {
+            	document.myBallonsExploted04 = 0;
+                document.myPoints04 = 0;
+                document.getElementById('myDiv04').innerHTML = 'Hit a ballon to start';
+            }
+            </pre>  
+            
+            <hr>
+          
+            <b>Now we have different forms of adding points and some randomness</b><br>
+            <button onclick="addStandartP05()">Standart</button>
+            <button onclick="addX2P05()">x2 PowerUp</button>
+            <button onclick="add50PerP05()">50% Change</button>
+            <div id="myMultiplierDiv05">You have Standart multiplier</div><br>
+            <button onclick="hitBadGuy05()">Bad Guy</button>
+            <button onclick="hitVeryBadGuy05()">Very Bad Guy</button><br>
+            <div id="myDiv05">Hit a bad guy to start...</div><br>
+            <button onclick="clearVariables05()">Restart</button>
+            <pre>
+                //Example 05
+            document.myMultiplier05 = 1;
+            document.myBadGuyPoints05 = 0;
+            function addStandartP05() {
+                document.myMultiplier05 = 1;
+                document.getElementById('myMultiplierDiv05').innerHTML = 'You have Standart multiplier';
+            }
+            function addX2P05() {
+                document.myMultiplier05 = 2;
+                document.getElementById('myMultiplierDiv05').innerHTML = 'You have x2 multiplier';
+            }
+            function add50PerP05() {
+                myTemp05 = Math.random();
+                if (myTemp05 < 0.5) {
+                    document.myMultiplier05 = 4;
+                } else {
+                    document.myMultiplier05 = -2;
+                }
+                document.getElementById('myMultiplierDiv05').innerHTML = 'You have a secret multiplier. Would you dare?';
+            }
+            function hitBadGuy05() {
+                document.myBadGuyPoints05 += 2 * document.myMultiplier05;
+                if (document.myMultiplier05 == -2) {
+                    document.getElementById('myDiv05').innerHTML = 'Oh no! that was a good guy. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else if (document.myMultiplier05 == 4) {
+                    document.getElementById('myDiv05').innerHTML = 'Hey! Now your are helping them become a better person!. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else {
+                    document.getElementById('myDiv05').innerHTML = 'Your punctuation is: ' + document.myBadGuyPoints05;
+                }
+            }
+            function hitVeryBadGuy05() {
+                document.myBadGuyPoints05 += 5 * document.myMultiplier05;
+                if (document.myMultiplier05 == -2) {
+                    document.getElementById('myDiv05').innerHTML = 'Oh no! that was a very good guy. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else if (document.myMultiplier05 == 4) {
+                    document.getElementById('myDiv05').innerHTML = 'Hey! Now your are helping them become a better person!. Your punctuation is: ' + document.myBadGuyPoints05;
+                } else {
+                    document.getElementById('myDiv05').innerHTML = 'Your punctuation is: ' + document.myBadGuyPoints05;
+                }
+            }
+            function clearVariables05() {
+                document.myBadGuyPoints05 = 0;
+                document.getElementById('myDiv05').innerHTML = 'Hit a bad guy to start...';
+            } 
+            </pre>
+            <hr>
+            <hr>
+            
             <b style="color:red">More examples coming soon (when I have more ideas)</b>
         </body>
     </html>

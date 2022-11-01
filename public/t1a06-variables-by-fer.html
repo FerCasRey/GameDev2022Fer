@@ -17,7 +17,7 @@
             </style>
         </head>  
         <body>    
-            <h5>Version 0.1.1-12</h5>
+            <h5>Version 0.2.0-13</h5>
             <h1 align=center>T1A06 Varaibles by Fer.html</h1>
             <input type=button value="Toggle Mode" onclick="lightMode()"><br>
             <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -70,8 +70,18 @@
             <input type="text" id="myAnimal2" value="Deer"><br>
             <input type="button" value="Show my list of favourite animals" onclick="showMyAnimalList()">
             <div id="myAnimalDiv">...</div>
+
+            <hr>
+
+            <b>Now we have a variable that stores your points and other that stores your clicks</b><br>
+            <button onclick="plus5Points()">Red ballon</button>
+            <button onclick="plus10Points()">Blue ballon</button><br>
+            <div id="myDiv04">Hit a ballon to start</div>
+            <button onclick="clearVariables04()">Restart</button>
         </body>
         <script>
+            document.myPoints04 = 0
+            document.myBallonsExploted04 = 0
             function lightMode() {
                 var element = document.body;
                 element.classList.toggle("light-mode");
@@ -97,6 +107,21 @@
                     }
 
                 }
-            }        
+            } 
+            function plus5Points() {
+                document.myBallonsExploted04 += 1;
+                document.myPoints04 += 5;
+                document.getElementById('myDiv04').innerHTML = 'You have exploted ' + document.myBallonsExploted04 + ' ballons, and you have a punctuation of ' + document.myPoints04;
+            } 
+            function plus10Points() {
+                document.myBallonsExploted04 += 1;
+                document.myPoints04 += 10;
+                document.getElementById('myDiv04').innerHTML = 'You have exploted ' + document.myBallonsExploted04 + ' ballons, and you have a punctuation of ' + document.myPoints04;
+            }     
+            function clearVariables04() {
+            		document.myBallonsExploted04 = 0;
+                document.myPoints04 = 0;
+                document.getElementById('myDiv04').innerHTML = 'Hit a ballon to start';
+            }
         </script>
     </html>

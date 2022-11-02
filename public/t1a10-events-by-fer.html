@@ -1,108 +1,189 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      body {
-        background-color: #363636;
-        color: white;
-      }      
-      .light-mode {
-        background-color: white;
-        color: black;
-      }
-      a:visited {
-        color: lightGreen;
-      } 
-      .hed01 {
-        color: #ff4848;
-        font-size: 25pt;
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <h5>Version 0.0.12-12</h5><br>
-    <h1 align=center>T1A10-Events-by-Fer.html</h1>
-    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
-    <a href="https://way2tutorial.com/html/html5_events_handler_list.php">Good reference to HTML Events</a><br>
-    <input type=button value="Toggle Mode" onclick="lightMode()">
-    
-    <hr>
-    
-    Events are HTML code that activates Javascript code 
+    <head>
+        <style>
+            body {
+                background-color: #363636;
+                color: white;
+            }      
+            .light-mode {
+                background-color: white;
+                color: black;
+            }
+            a:visited {
+                color: lightGreen;
+            } 
+            .hed01 {
+                color: #ff4848;
+                font-size: 25pt;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h5>Version 1.0.0-13</h5><br>
+        <h1 align=center>T1A10-Events-by-Fer.html</h1>
+        <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+        <a href="https://way2tutorial.com/html/html5_events_handler_list.php">Good reference to HTML Events</a><br>
+        <input type=button value="Toggle Mode" onclick="lightMode()">
+      
+        <hr>
+      
+        Events are HTML code that activates Javascript code 
+  
+        <h4> Example Events code</h4> 
+        <pre> 
+            <b id="myB01" onMouseOut="{ 
+            document.getElementById('myB01').innerHTML = 'This is bold.'
+            }"> Bold stuff here </b>
+        </pre> 
+  
+        <h4> Example working event</h4> 
+  
+        <input type=text id="myText01" value="3"><br> 
+  
+        <input type=button value="Example onClick" onClick="{ 
+            document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+        }"> 
+  
+        <div id="myDiv01">...</div> 
+  
+        <b id="myB02" onMouseOut="{ 
+            document.getElementById('myB02').innerHTML = 'This is nice.'
+        }"   onMouseOver = "{
+            document.getElementById('myB02').innerHTML = 'This is cool.'
+        }"> This is bold</b> <br><br>
+  
+        You do at least 8 other events:<br> 
+        onClick, onDBClick, onChange, onBlur, onFocus, orMouseMove, onTouch, onKeyDown, onKeyPress, onDragStart, onTouchStart, onTouchEnd, onTouchMove 
+      
+        <hr>
+        <hr>
+      
+        onClick:<br>
+        <input type="text" id="myText001" value="Hi there"><br>     
+        <input type="button" value="onClick" onclick="{ 
+            document.getElementById('myDiv001').innerHTML = document.getElementById('myText001').value
+        }">     
+        <div id="myDiv001">...</div>
+      
+        <hr>
+      
+        onDBLClick:<br> 
+        <input type="text" value="2" id="myText003"><br>
+        <input type="button" value="onDBLClick" ondblclick="onDBClickFunc()"><br>
+        <div id="myDiv003">...</div>
+     
+        <hr>
+      
+        onChange: <br> 
+        <select id="mySelect" onchange="onChangeFunc()">
+            <option value="One">One</option>
+            <option value="Two">Two</option>
+            <option value="Three">Three</option>
+            <option value="Four">Four</option>
+        </select><br> 
+        <p id="myP001">You have  not selected anything</p>
+      
+        <hr>
 
-    <h4> Example Events code</h4> 
-    <pre> 
-      <b id="myB01" onMouseOut="{ 
-        document.getElementById('myB01').innerHTML = 'This is bold.'
-      }"> Bold stuff here </b>
-    </pre> 
+        onBlur:<br>
+        <input type="text" id="myText004" value="..." onblur="onBlurFunc()">
 
-    <h4> Example working event</h4> 
+        <hr>
 
-    <input type=text id="myText01" value="3"><br> 
+        onFocus:<br>
+        <input type="text" id="myText005" value="..." onfocus="onFocusFunc()">
 
-    <input type=button value="Example onClick" onClick="{ 
-      document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
-    }"> 
+        <hr>
 
-    <div id="myDiv01">...</div> 
+        orMouseMove:<br>
+        <img width="300" id="myImg006" src="https://www.macmillandictionary.com/external/slideshow/full/emoji_thumbs-up_full.jpg" onmousemove="onMouseMoveFunc()">
 
-    <b id="myB02" onMouseOut="{ 
-      document.getElementById('myB02').innerHTML = 'This is nice.'
-    }"   onMouseOver = "{
-      document.getElementById('myB02').innerHTML = 'This is cool.'
-    }"> This is bold</b> <br><br>
+        <hr>
 
-    You do at least 8 other events:<br> 
-    onClick, onDBClick, onChange, onBlur, onFocus, orMouseMove, onTouch, onKeyDown, onKeyPress, onDragStart, onTouchStart, onTouchEnd, onTouchMove 
-    
-    <hr>
-    <hr>
-    
-    <input type="text" id="myText001" value="Hi there"><br>     
-    <input type="button" value="onClick" onclick="{ 
-       document.getElementById('myDiv001').innerHTML = document.getElementById('myText001').value
-    }">     
-    <div id="myDiv001">...</div>
-    
-    <hr>
-    
-    onDBLClick: <br> <input type="text" value="2" id="myText003"> <br> <input type="button" value="onDBLClick" ondblclick="onDBClickFunc()"> <br> <div id="myDiv003">...</div>
-   
-    <hr>
-    
-    onChange: <br> <select id="mySelect" onchange="onChangeFunc()">
-      <option value="One">One</option>
-      <option value="Two">Two</option>
-      <option value="Three">Three</option>
-      <option value="Four">Four</option>
-    </select> <br> <p id="myP001"></p>
-    
+        onTouch:<br>
+        <p id="myPar007" onclick="onTouch()">Don't touch me! (please do it)</p>
 
+        <hr>
 
-  </body>
-  <script>
-    function lightMode() {
-      var element = document.body;
-      element.classList.toggle("light-mode");        
-    }    
-    function onClickFunc() {
-      document.getElementById("myDiv002").innerHTML = document.getElementById("myText002").value
-    }
-    function onDBClickFunc() {
-      document.getElementById("myDiv003").innerHTML = document.getElementById("myText003").value
-    }
-    function onChangeFunc() {
-      var x = document.getElementById("mySelect").value;
-      document.getElementById("myP001").innerHTML = "You selected: " + x;
-    }
-    function onBlurFunc() {
-      var y = document.getElementById("myText004");
-      y.value = y.value.toUpperCase();
-    }
-    function onFocusFunc() {
-      var z = document.getElementById("myText004");
-      z.value = z.value.toLowerCase();
-    }
-  </script>
+        onKeyDown:<br>
+        <image id="myImage008" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe8fUDefvoldr3fa4o47UPYrAc_ooNtuVwDg&usqp=CAU" style="position: relative; width: 100px; height: 100px; top: 0px; left: 100px;"><br>
+        <input type="text" onkeydown="{
+            document.getElementById('myImage008').style.left = parseInt(document.getElementById('myImage008').style.left) - 10 + 'px';
+        }">
+
+        <hr>
+
+        onKeyPress:<br>
+        <image id="myImage009" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe8fUDefvoldr3fa4o47UPYrAc_ooNtuVwDg&usqp=CAU" style="position: relative; width: 100px; height: 100px; top: 0px; left: 100px;"><br>
+        <input type="text" onkeypress="{
+            document.getElementById('myImage009').style.left = parseInt(document.getElementById('myImage009').style.left) + 10 + 'px';
+        }">
+
+        <hr>
+
+        onDragStart:<br>
+        <p draggable="true" style="cursor: grab;" id="myText010" ondragstart="onDrag()">Try to move me!</p>
+
+        <hr>
+
+        onTouchStart: <b>(Only touch devices)</b><br>
+        <p ontouchstart="onTouchStart()">Touch to discover something</p>
+        <div id="myDiv011">...</div>
+
+        <hr>
+
+        onTouchEnd: <b>(Only touch devices)</b><br>
+        <p ontouchend="onTouchEnd()">Touch and stop to discover something</p>
+        <div id="myDiv012">...</div>
+
+        <hr>
+
+        onTouchMove: <b>(Only touch devices)</b><br>
+        <p ontouchmove="onTouchMove()">Touch and move to discover something</p>
+        <div id="myDiv013">...</div>
+
+  
+    </body>
+    <script>
+        function lightMode() {
+            var element = document.body;
+            element.classList.toggle("light-mode");        
+        }    
+        function onClickFunc() {
+            document.getElementById("myDiv002").innerHTML = document.getElementById("myText002").value;
+        }
+        function onDBClickFunc() {
+            document.getElementById("myDiv003").innerHTML = document.getElementById("myText003").value;
+        }
+        function onChangeFunc() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("myP001").innerHTML = "You selected: " + x;
+        }
+        function onBlurFunc() {
+            document.getElementById('myText004').value = 'Press to write';
+        }
+        function onFocusFunc() {
+            document.getElementById('myText005').value = 'Write whatever you want';
+        }
+        function onMouseMoveFunc() {
+            document.getElementById('myImg006').src = "https://www.macmillandictionary.com/external/slideshow/full/emoji_thumbs-down_full.jpg";
+        }
+        function onTouch() {
+            document.getElementById('myPar007').innerHTML = "You touched me! (thanks)";
+        }
+        function onDrag() {
+            document.getElementById('myText010').innerHTML = "Haha, you could not!"
+        }
+        function onTouchStart() {
+            document.getElementById('myDiv011').innerHTML = "You are awesome!"
+        }
+        function onTouchEnd() {
+            document.getElementById('myDiv012').innerHTML = "You are even more awesome!"
+        }
+        function onTouchMove() {
+            document.getElementById('myDiv013').innerHTML = "You are more awesome each time!"
+        }
+    </script>
 </html>

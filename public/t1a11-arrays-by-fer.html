@@ -21,9 +21,9 @@
     
     </head>
     <body>
-        <h5>Version 0.0.3-3</h5>
-        <h2 align=center>t2a01-arrays-by-Fer.html</h2>
-        <a href="">Good reference to Javascript Arrays</a><br>
+        <h5>Version 0.0.4-4</h5>
+        <h2 align=center>t1a011-arrays-by-Fer.html</h2>
+        <a href="https://www.w3schools.com/js/js_arrays.asp">Good reference to Javascript Arrays</a><br>
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
         <input type=button value="Toggle Mode" onclick="lightMode()">
         
@@ -61,11 +61,19 @@
         You do at least 7 other arrays:<br>
 
         <hr>
+        <hr>
 
         <b>Time for personal examples:</b><br>
         Array for flowers:<br>
         <input type="button" value="Show flowers" onclick="showFlower()"><br>
         <div id="myDiv02">...</div>
+
+        <hr>
+
+        This is a 2D array:<br>
+        <input type="number" id="myNum03" onchange="twoDArray()">
+        <div id="myDiv03">Select number of loops...</div>
+
     </body>
     <script>
         function lightMode() {
@@ -87,6 +95,23 @@
             }
             document.getElementById('myDiv02').innerHTML = mySum02;
         }
+
+        //Here comes a 2d array
+        function twoDArray() {
+            //First is to set the array and give some values
+            my2DArray = new Array()
+            my2DArray = [['John', 21], ['Mike', 34], ['Steven', 19]]
+            let myTemp03 = document.getElementById('myNum03').value
+            let myText03 = ''
+            for (let x = 0; x < myTemp03; x++) {
+                
+	            for (let y = 0; y < 2; y++ ) {
+              			myText03 += '|| Loop #' + x + ',' + y;
+                    myText03 += ' | value = ' + my2DArray[x][y] + ' ';
+              }
+              myText03 += '<br>'  
+            }
+            document.getElementById('myDiv03').innerHTML = myText03
+        }
     </script> 
 </html>
-  

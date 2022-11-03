@@ -21,7 +21,7 @@
     
     </head>
     <body>
-        <h5>Version 0.0.4-4</h5>
+        <h5>Version 0.1.0-5</h5>
         <h2 align=center>t1a011-arrays-by-Fer.html</h2>
         <a href="https://www.w3schools.com/js/js_arrays.asp">Good reference to Javascript Arrays</a><br>
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
@@ -98,20 +98,34 @@
 
         //Here comes a 2d array
         function twoDArray() {
-            //First is to set the array and give some values
-            my2DArray = new Array()
-            my2DArray = [['John', 21], ['Mike', 34], ['Steven', 19]]
-            let myTemp03 = document.getElementById('myNum03').value
-            let myText03 = ''
-            for (let x = 0; x < myTemp03; x++) {
-                
-	            for (let y = 0; y < 2; y++ ) {
-              			myText03 += '|| Loop #' + x + ',' + y;
-                    myText03 += ' | value = ' + my2DArray[x][y] + ' ';
-              }
-              myText03 += '<br>'  
+            //This is a temp solution to the lack of array values
+            let myTemp03 = document.getElementById('myNum03').value;
+            let myAuxTemp03 = 0;
+            my2DArray = new Array();
+            my2DArray = [['John', 21], ['Mike', 34], ['Steven', 19]];
+            let myText03 = '';
+            while (myAuxTemp03<3 && myAuxTemp03 < myTemp03) {
+            		let y = 0 
+                while (y<2){
+                		myText03 += '|| Loop #' + myAuxTemp03 + ',' + y;
+                    myText03 += ' | value = ' + my2DArray[myAuxTemp03][y] + ' ';
+                    y++
+                }
+            		myText03 += '<br>'
+                myAuxTemp03++
+            }
+            while (myAuxTemp03 >=3 && myAuxTemp03 < myTemp03) {
+            		let y =0
+                while (y<2) {
+                		myText03 += '|| Loop #' + myAuxTemp03 + ',' + y;
+                    myText03 += ' | value = ' + 'null' + ' ';
+                    y++
+                }
+                myTemp03 += '<br>'
+                myAuxTemp03++
             }
             document.getElementById('myDiv03').innerHTML = myText03
+        
         }
     </script> 
 </html>

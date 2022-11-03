@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+        <style>
+            body {
+                background-color: #363636;
+                color: white;
+            }      
+            .light-mode {
+                background-color: white;
+                color: black;
+            }
+            a:visited {
+                color: lightGreen;
+            }            
+        </style>
+
+    </head>
+
+    <body>    
+        Version 0.0.1-1
+        <h2 align=center>t1a12-objects-by-Fer.html</h2>    
+        <a href="https://www.w3schools.com/js/js_objects.asp">Good reference to Javascript Objects</a><br>
+        <input type=button value="Toggle Mode" onclick="lightMode()">
+
+        <hr>
+        
+        Objects are stored named variables
+
+        <h4> Example Objects code</h4>
+
+        <pre>
+            let myPerson = {   
+                "firstName": "John",
+                "lastName": "Doe",
+                "age": 50,
+                "eyeColor": "blue"
+            }
+
+        </pre>
+
+        <h4> Example working Objects code</h4>
+        Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+        <input type=button value="Example Object Set and Show" onClick="{
+            let myPerson = {   
+                'firstName' : 'John',
+                'lastName'  : 'Doe',
+                'age'       :  50,
+                'eyeColor'  : 'blue'
+            }
+            document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
+            document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
+            document.getElementById('myDiv01').innerHTML += 'You do the others  <br> ' 
+
+        }">
+        <div id="myDiv01">...</div>
+        <br>
+
+    </body>
+
+    <script>
+        function lightMode() {
+            var element = document.body;
+            element.classList.toggle("light-mode");                        
+        }
+
+    </script>
+
+    
+</html>

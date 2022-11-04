@@ -19,7 +19,7 @@
     </head>
 
     <body>    
-        <h5>Version 0.0.1-1</h5>
+        <h5>Version 0.1.0-2</h5>
         <h2 align=center>t1a12-objects-by-Fer.html</h2>    
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br> 
         <a href="https://www.w3schools.com/js/js_objects.asp">Good reference to Javascript Objects</a><br>
@@ -52,11 +52,18 @@
             }
             document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
             document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>' + myPerson.lastName + '<br>' + myPerson.age + '<br>' + myPerson.eyeColor + '<br>'
-            document.getElementById('myDiv01').innerHTML += 'You do the others, (others done!)w  <br> ' 
+            document.getElementById('myDiv01').innerHTML += 'You do the others, (others done!)  <br> ' 
 
         }">
         <div id="myDiv01">...</div>
         <br>
+
+        <hr>
+        <hr>
+        <b>Personal Examples</b><br>
+        In this case, the object stores days of the week<br>
+        <input type="button" value="Print" onclick="daysOfTheWeek()">
+        <div id="myDiv02">...</div>
 
     </body>
 
@@ -64,6 +71,21 @@
         function lightMode() {
             var element = document.body;
             element.classList.toggle("light-mode");                        
+        }
+
+        //define onject with japanese days of week and print it
+        function daysOfTheWeek() {
+            let myWeek = {
+                'sunday' : 'nichiyoobi',
+                'monday' : 'getsuyoobi',
+                'tuesday' : 'kayoobi',
+                'wednesday': 'suiyoobi',
+                'thursday': 'mokuyoobi',
+                'friday' : 'kinyoobi', 
+                'saturday' : 'doyoobi'
+            }
+            document.getElementById('myDiv02').innerHTML = 'The days of the week are ' + myWeek.sunday + ', ' + myWeek.monday + ', ' + myWeek.tuesday + ', ' + myWeek.wednesday + ', ' + myWeek.thursday + ', ' + myWeek.friday + ', ' + myWeek.saturday + '.'
+            
         }
 
     </script>

@@ -53,7 +53,6 @@
             document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
             document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>' + myPerson.lastName + '<br>' + myPerson.age + '<br>' + myPerson.eyeColor + '<br>'
             document.getElementById('myDiv01').innerHTML += 'You do the others, (others done!)  <br> ' 
-
         }">
         <div id="myDiv01">...</div>
         <br>
@@ -64,6 +63,25 @@
         In this case, the object stores days of the week<br>
         <input type="button" value="Print" onclick="daysOfTheWeek()">
         <div id="myDiv02">...</div>
+
+        <hr>
+
+        In this case, you can create your wn object (kind of)<br>
+        <i>Your friend</i><br>
+        <select id="mySel03" size="5">
+            <option value="name">Name</option>
+            <option value="lastName">Last Name</option>
+            <option value="age">Age</option>
+            <option value="favThing">Favourite Thing</option>
+            <option value="leastFavThing">Least favourite thing</option>
+        </select><br>
+        <i>is</i><br>
+        <input type="text" id="myText03"><input type="button" value="Save Info" onclick="saveInfo()">
+        <button onclick="printFriend()">Show me the info stored</button> 
+        <div id="myDiv03">...</div>
+
+        <hr>
+
 
     </body>
 
@@ -86,6 +104,33 @@
             }
             document.getElementById('myDiv02').innerHTML = 'The days of the week are (in japanese) ' + myWeek.sunday + ', ' + myWeek.monday + ', ' + myWeek.tuesday + ', ' + myWeek.wednesday + ', ' + myWeek.thursday + ', ' + myWeek.friday + ' and ' + myWeek.saturday + '.'
             
+        }
+
+        //3rd example. 1st save info 2nd print it
+        let myFriend03 = {
+                'name' : 'null',
+                'lastName' : 'null',
+                'age' : 'null',
+                'favouriteThing' : 'null',
+                'leastFavouriteThing' : 'null'
+            }
+        function saveInfo() {
+            let mySelec03 = document.getElementById('mySel03').value;
+            if (mySelec03 == 'name') {
+                myFriend03.name = document.getElementById('myText03').value;
+            } else if (mySelec03 == 'lastName') {
+                myFriend03.lastName = document.getElementById('myText03').value;
+            } else if (mySelec03 == 'age') {
+                myFriend03.age = document.getElementById('myText03').value;
+            } else if (mySelec03 == 'favThing') {
+                myFriend03.favouriteThing = document.getElementById('myText03').value;
+            } else if (mySelec03 == 'leastFavThing') {
+                myFriend03.leastFavouriteThing = document.getElementById('myText03').value;
+            }
+            
+        }
+        function printFriend() {
+            document.getElementById('myDiv03').innerHTML = 'Your friend info is the following: <br>' + myFriend03.name + '<br>' + myFriend03.lastName + '<br>' +  myFriend03.age + '<br>' +  myFriend03.favouriteThing + '<br>' +  myFriend03.leastFavouriteThing 
         }
 
     </script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Classes</title>
+        <style>
+            body {
+                background-color: #363636;
+                color: white;
+            }      
+            .light-mode {
+                background-color: white;
+                color: black;
+            }
+            a:visited {
+                color: lightGreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h5>Version 0.0.1-1</h5>
+        <h2 align=center>t2a03-Classes-by-Fer</h2>
+        <a href="https://www.w3schools.com/js/js_classes.asp">Good reference to Javascript Arrays</a><br>
+        <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+        <input type=button value="Toggle Mode" onclick="lightMode()">
+        Classes are both Objects that store variables (Called Properties) and Functions
+        that work on the variables (called Methods)
+
+        <h4> Example Classses code</h4>
+        <pre>
+            class myAnimal {
+                constructor(passName, passAge) {
+                this.myName = passName;
+                this.myAge = passAge;
+            }
+            myShow(){    
+                document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+            }
+            myDog = new myAnimal('Snickers', 5)
+            myDog.myShow()  
+
+        </pre>
+
+        <h4> Example working Classes code</h4>
+        Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+        <input type=button value="Example Class Set and Show Class Animal" onClick="{
+        class myAnimal {
+            constructor(passName, passAge) {
+                this.myName = passName;
+                this.myAge = passAge;
+            }
+            myShow(){    
+                document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+            }
+        }  // end class myAnimal
+        myDog = new myAnimal('Snickers', 5)
+        myDog.myShow()  
+        }">
+
+        <div id="myDiv01">...</div>
+
+    </body>
+    <script>
+        function lightMode() {
+            var element = document.body;
+            element.classList.toggle("light-mode");
+        }
+    </script>
+</html>

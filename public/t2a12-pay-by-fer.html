@@ -46,24 +46,24 @@
             //useful variables
             let mySalary = document.getElementById('mySalary').value;
             let myHours = document.getElementById('myHours').value;
-            let myTaxes = document.getElementById('myTaxes').value / 100;
+            let myTaxes = document.getElementById('myTaxes').value;
             let myDays = document.getElementById('myDays').value;
             //daily calculations
             let myDaySal = mySalary * myHours;
-            let myDayTakeOut = (mySalary * myHours * (100-myTaxes)).toFixed(2);
+            let myDayTakeOut = (mySalary * myHours * ((100-myTaxes)/100)).toFixed(2);
             //monthly calculations
             let myMonSal = mySalary * myHours * myDays;
-            let myStateHelp = (mySalary * myHours * myDays * myTaxes).toFixed(2);
+            let myStateHelp = (mySalary * myHours * myDays * (myTaxes/100)).toFixed(2);
             let myActSal = (mySalary * myHours * myDays - myStateHelp).toFixed(2);
             //yearly calculations
             let myYearSal = myActSal * 14;
             //output
-            document.getElementById('myDaySal').innerHTML = `Your daily salary is ${myDaySal}`;
-            document.getElementById('myDayTakeOut').innerHTML = `Your daily take home salary is ${myDayTakeOut}`;
-            document.getElementById('myMonSal').innerHTML = `Your monthly salary is ${myMonSal}`;
-            document.getElementById('myStateHelp').innerHTML = `Your montly help to the state is ${myStateHelp}`;
-            document.getElementById('myActSal').innerHTML = `Your monthly takehome salary is ${myActSal}`;
-            document.getElementById('myYearSal').innerHTML = `Your anual takehome salary is ${myYearSal}`;
+            document.getElementById('myDaySal').innerHTML = `Your daily salary is ${myDaySal}$`;
+            document.getElementById('myDayTakeOut').innerHTML = `Your daily take home salary is ${myDayTakeOut}$`;
+            document.getElementById('myMonSal').innerHTML = `Your monthly salary is ${myMonSal}$`;
+            document.getElementById('myStateHelp').innerHTML = `Your montly help to the state is ${myStateHelp}$`;
+            document.getElementById('myActSal').innerHTML = `Your monthly takehome salary is ${myActSal}$`;
+            document.getElementById('myYearSal').innerHTML = `Your anual takehome salary is ${myYearSal}$`;
             
         }
     </script>

@@ -17,7 +17,7 @@
         </style>
     </head>
     <body>
-        <h5>Version 0.0.1-1</h5>
+        <h5>Version 0.0.3-3</h5>
         <h1 align="center">Calculate the money you make!</h1>
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
         <input type=button value="Toggle Mode" onclick="lightMode()">
@@ -27,7 +27,7 @@
         <h3>Please, follow the instruction below to calculate your salary:</h3>
         <table border="1">
             <tr><td>Introduce your salary per hour</td><td>Introduce the amount of hours you work in a day</td><td>Introduce your percentage of taxes</td><td>Introduce the days you work in a month</td></tr>
-            <tr><td><input type="number"  style="width: 3em" id="mySalary" value="15" min="0">$</td><td><input type="number" style="width: 3em" max="24" min="1" id="myHours" value="8" ></td><td><input type="number" style="width: 3em" max="100" min="0" value="30" id="myTaxes">%</td><td><input type="number" style="width: 3em" max="31" min="1" id="myDays" value="22" ></td></tr>
+            <tr><td><input type="number" onchange="calculateSalary()" style="width: 3em" id="mySalary" value="15" min="0">$</td><td><input type="number" style="width: 3em" max="24" min="1" onchange="calculateSalary()" id="myHours" value="8" ></td><td><input type="number" style="width: 3em" max="100" min="0" value="30" onchange="calculateSalary()" id="myTaxes">%</td><td><input type="number" style="width: 3em" max="31" min="1" id="myDays" onchange="calculateSalary()" value="22" ></td></tr>
         </table>
         <h4>Daily calculations:</h4>
         <div id="myDaySal"></div><br>

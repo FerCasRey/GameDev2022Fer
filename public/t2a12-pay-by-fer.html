@@ -17,7 +17,7 @@
         </style>
     </head>
     <body>
-        <h5>Version 0.0.3-3</h5>
+        <h5>Version 1.0.0-4</h5>
         <h1 align="center">Calculate the money you make!</h1>
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
         <input type=button value="Toggle Mode" onclick="lightMode()">
@@ -56,7 +56,7 @@
             let myStateHelp = (mySalary * myHours * myDays * (myTaxes/100)).toFixed(2);
             let myActSal = (mySalary * myHours * myDays - myStateHelp).toFixed(2);
             //yearly calculations
-            let myYearSal = myActSal * 14;
+            let myYearSal = (myActSal * 14).toFixed(2);
             //output
             document.getElementById('myDaySal').innerHTML = `Your daily salary is ${myDaySal}$`;
             document.getElementById('myDayTakeOut').innerHTML = `Your daily take home salary is ${myDayTakeOut}$`;

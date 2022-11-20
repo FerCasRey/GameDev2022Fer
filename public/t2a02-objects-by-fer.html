@@ -19,7 +19,7 @@
     </head>
 
     <body>    
-        <h5>Version 0.1.2-4</h5>
+        <h5>Version 0.2.0-11</h5>
         <h2 align=center>t2a02-objects-by-Fer.html</h2>    
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br> 
         <a href="https://www.w3schools.com/js/js_objects.asp">Good reference to Javascript Objects</a><br>
@@ -60,14 +60,15 @@
         <hr>
         <hr>
         <b>Personal Examples</b><br>
-        In this case, the object stores days of the week<br>
-        <input type="button" value="Print" onclick="daysOfTheWeek()">
+        In this case, the object stores days of the week (in Japanese)<br>
+        <input type="text" id="myAnswer02" placeholder="Write a day of the week">
+        <button onclick="daysOfTheWeek()">Check</button>
         <div id="myDiv02">...</div>
 
         <hr>
 
         In this case, you can create your wn object (kind of)<br>
-        <i>Your friend</i><br>
+        <i>Your friend's</i><br>
         <select id="mySel03" size="5">
             <option value="name">Name</option>
             <option value="lastName">Last Name</option>
@@ -83,6 +84,7 @@
         <hr>
 
 
+
     </body>
 
     <script>
@@ -91,8 +93,9 @@
             element.classList.toggle("light-mode");                        
         }
 
-        //define onject with japanese days of week and print it
+        //define object with japanese days of the week, check if the answer is correct and print it
         function daysOfTheWeek() {
+            document.getElementById('myDiv02').innerHTML = ''
             let myWeek = {
                 'sunday' : 'nichiyoobi',
                 'monday' : 'getsuyoobi',
@@ -102,7 +105,13 @@
                 'friday' : 'kinyoobi', 
                 'saturday' : 'doyoobi'
             }
-            document.getElementById('myDiv02').innerHTML = 'The days of the week are (in japanese) ' + myWeek.sunday + ', ' + myWeek.monday + ', ' + myWeek.tuesday + ', ' + myWeek.wednesday + ', ' + myWeek.thursday + ', ' + myWeek.friday + ' and ' + myWeek.saturday + '.'
+            let answer02 = document.getElementById('myAnswer02').value.toLowerCase()
+            if (answer02 == myWeek.sunday || answer02 == myWeek.monday || answer02 == myWeek.tuesday || answer02 == myWeek.wednesday || answer02 == myWeek.thursday || answer02 == myWeek.friday || answer02 == myWeek.saturday) {
+                document.getElementById('myDiv02').innerHTML = 'That is correct! other days of the week are: <br>'
+            } else if (answer02 != (myWeek.sunday || myWeek.monday || myWeek.tuesday || myWeek.wednesday || myWeek.thursday || myWeek.friday || myWeek.saturday)) {
+                document.getElementById('myDiv02').innerHTML = 'Sorry, that is not correct. The days of the week are: <br> '
+            }
+            document.getElementById('myDiv02').innerHTML += 'The days of the week (in japanese) are : ' + myWeek.sunday + ', ' + myWeek.monday + ', ' + myWeek.tuesday + ', ' + myWeek.wednesday + ', ' + myWeek.thursday + ', ' + myWeek.friday + ' and ' + myWeek.saturday + '.'
             
         }
 
@@ -130,7 +139,7 @@
             
         }
         function printFriend() {
-            document.getElementById('myDiv03').innerHTML = 'Your friend info is the following: <br>' + myFriend03.name + '<br>' + myFriend03.lastName + '<br>' +  myFriend03.age + '<br>' +  myFriend03.favouriteThing + '<br>' +  myFriend03.leastFavouriteThing 
+            document.getElementById('myDiv03').innerHTML = 'Your friend info is the following: <br>' + myFriend03.name + '<br>' + myFriend03.lastName + '<br>' +  myFriend03.age + '<br>' +  'Favourite thing: ' + myFriend03.favouriteThing + '<br>' +  'Least favourite thing: ' + myFriend03.leastFavouriteThing 
         }
 
     </script>

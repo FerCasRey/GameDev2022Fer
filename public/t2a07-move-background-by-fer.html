@@ -21,7 +21,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.0.1-1</h5>
+    <h5>Version 0.1.0-2</h5>
     
     <h1 align=center>Moving Background.html</h1><br>
     <input type=button value="Toggle Mode" onclick="lightMode()"><br>
@@ -29,16 +29,16 @@
 
     <hr>
 
-    <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://wallpapercave.com/wp/wp2708351.jpg">
+    <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://wallpapercave.com/wp/qCP2zTJ.jpg">
 
       <script>
-         let myGlobalX = 0
-         let myClock
+        let myGlobalX = 0
+        let myClock
       </script>
       
       <input id="myButton01" type=button value="background move left" onclick="{
-        myTemp = '100px 0px'
-        myGlobalX -= 5
+        myTemp = '0px 0px'
+        myGlobalX -= 1
         myTemp =  myGlobalX + 'px 0px'
         document.getElementById('myBody').style.backgroundPosition = myTemp
       
@@ -48,8 +48,12 @@
         clearInterval(myClock)
         myClock = setInterval(function(){
            document.getElementById('myButton01').click() 
-        }, 100)
+        }, 1)
           
+      }">
+
+      <input type="button" value="Stop Auto Background Left" onclick="{
+        clearInterval(myClock)
       }">
       
       <input type=button value="Image Right" onclick="{
@@ -57,7 +61,79 @@
       }"><br><br>
       
       <img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="https://gamepedia.cursecdn.com/antibirth_gamepedia_en/thumb/4/43/Bethany_App.png/70px-Bethany_App.png?version=525f7e86deaa9524a154b03d5af04fe5">
+
+      <hr>
+
+      <button onclick="backgroundMove()">Move background</button>
+      <button onclick="autoBackgroundMove()">Auto Move</button>
+      <button onclick="fastSpeed()">Faster!</button>
+      <button onclick="slowSpeed()">Slower</button><br>
+      <button onclick="">Move Image to the Right</button>
+      <button onclick="">Move Image to the Left</button><br>
+
+      <img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:-50px;" src="">
+
+
+    </body>
+     
       
+
   </body>
-  <script></script>
+  <script>
+    //Setting global variables
+    let myBackMove = 0
+    let myInterval 
+    let mySpeed = 1
+
+    // Move  a single pixel
+    function backgroundMove() {
+      myTemp01 = '0px 0px'
+      myBackMove -= 1
+      myTemp01 =  myBackMove + 'px 0px'
+      document.getElementById('myBody').style.backgroundPosition = myTemp01
+    }
+
+    //Auto move (different speeds). 5 speeds system
+    function autoBackgroundMove() {
+      if (mySpeed == 5) {
+        clearInterval(myInterval)
+        myInterval = setInterval(backgroundMove, 1)
+      } else if (mySpeed == 4) {
+        clearInterval(myInterval)
+        myInterval = setInterval(backgroundMove, 5)
+      } else if (mySpeed == 3) {
+        clearInterval(myInterval)
+        myInterval = setInterval(backgroundMove, 10)
+      } else if (mySpeed == 2) {
+        clearInterval(myInterval)
+        myInterval = setInterval(backgroundMove, 15)
+      } else if (mySpeed == 1) {
+        clearInterval(myInterval)
+        myInterval = setInterval(backgroundMove, 20)
+      } else if (mySpeed == 0) {
+        clearInterval(myInterval)
+      } else {
+        alert(ERROR)
+      }
+    }
+
+    //Change speed
+    function slowSpeed() {
+      if (mySpeed > 0) {
+        mySpeed--
+        
+      }
+      autoBackgroundMove()
+    }
+    function fastSpeed() {
+      if (mySpeed < 5) {
+        mySpeed++
+        
+      }
+      autoBackgroundMove()
+    }
+
+    //Move image
+
+  </script>
 </html>

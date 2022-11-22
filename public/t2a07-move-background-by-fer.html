@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,7 +20,7 @@
     </style>
   </head>
   <body>
-    <h5>Version 0.2.0-15</h5>
+    <h5>Version 0.3.0-25</h5>
     
     <h1 align=center>Moving Background.html</h1><br>
     <input type=button value="Toggle Mode" onclick="lightMode()"><br>
@@ -67,12 +66,14 @@
       <button onclick="backgroundMove()">Move background</button>
       <button onclick="autoBackgroundMove()">Auto Move</button>
       <button onclick="fastSpeed()">Faster!</button>
-      <button onclick="slowSpeed()">Slower</button><br>
-      <button onclick="">Move Image to the Right</button>
-      <button onclick="">Move Image to the Left</button><br>
+      <button onclick="slowSpeed()">Slower</button>
+      Your velocity is: <span id="myVelocitySpam">...</span><br>
+      <button onclick="moveMyCarRight()">Move Image to the Right</button>
+      <button onclick="moveMyCarLeft()">Move Image to the Left</button><br>
 
-      <img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:-50px;" src="">
+      <img id="myCar01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="https://cdn-icons-png.flaticon.com/512/3097/3097180.png">
 
+      <div id="myAlert01"></div>
 
     </body>
      
@@ -115,25 +116,48 @@
       } else {
         alert(ERROR)
       }
+      document.getElementById('myVelocitySpam').innerHTML = mySpeed
     }
 
     //Change speed
     function slowSpeed() {
       if (mySpeed > 0) {
         mySpeed--
-        
+        document.getElementById('myVelocitySpam').innerHTML = mySpeed
       }
       autoBackgroundMove()
     }
     function fastSpeed() {
       if (mySpeed < 5) {
         mySpeed++
-        
+        document.getElementById('myVelocitySpam').innerHTML = mySpeed
       }
       autoBackgroundMove()
     }
 
     //Move image
-
+    function moveMyCarRight() {
+      //deletes the div alert
+      document.getElementById('myAlert01').innerHTML = ''
+      //check if the car is not too far away
+      if (parseInt(document.getElementById('myCar01').style.left) < 100) {
+        document.getElementById('myCar01').style.left = parseInt(document.getElementById('myCar01').style.left) + 10 + 'px'
+      }else {
+        //creates an alert saying the limit
+        document.getElementById('myAlert01').innerHTML = 'Hey! Too far away'
+      }
+      
+    }
+    function moveMyCarLeft() {
+      //deletes the div alert
+      document.getElementById('myAlert01').innerHTML = ''
+      //check if the car is not leaving the screen
+      if (parseInt(document.getElementById('myCar01').style.left) > 0){
+        document.getElementById('myCar01').style.left = parseInt(document.getElementById('myCar01').style.left) - 10 + 'px'
+      } else {
+        //creates an alert saying the limit
+        document.getElementById('myAlert01').innerHTML = 'Hey! We do not want it leaving'
+      }
+    }
   </script>
 </html>

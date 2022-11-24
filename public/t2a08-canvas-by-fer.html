@@ -23,7 +23,7 @@
       </style>
    </head>
    <body>
-      <h5>Version 0.1.7-7</h5>
+      <h5>Version 0.1.10-10</h5>
       <h1 align=center>Canvas.html</h1><br>
       <h5 align=center style="color:lightGrey">Please, go to the bottom</h5>
       <input type=button value="Toggle Mode" onclick="lightMode()"><br>
@@ -101,10 +101,10 @@
       <b>Own canvas project:</b>
       <table>
          <tr>
-            <td><button onclick="">Circle</button></td><td><button onclick="mySquare()">Square</button></td><td><button onclick="">Triangle</button></td><td><input type="number" id="myX" style="width: 100px;"  placeholder="Select your X"></td>
+            <td><button onclick="">Circle</button></td><td><button onclick="mySquare()">Square</button></td><td><button onclick="">Triangle</button></td><td><input type="number" id="myX" style="width: 100px;" onchange="saveVar()" placeholder="Select your X"></td>
          </tr>
          <tr>
-            <td><button onclick="">Thin line</button></td><td><button onclick="">Mid line</button></td><td><button onclick="">Thick line</button></td><td><input type="number" style="width: 100px;" id="myY" placeholder="Select your Y"></td>
+            <td><button onclick="">Thin line</button></td><td><button onclick="">Mid line</button></td><td><button onclick="">Thick line</button></td><td><input type="number" id="myY" style="width: 100px;"  onchange="saveVar()" placeholder="Select your Y"></td>
          </tr>
       </table>
       <canvas id="myTag" width="500" height="200" style="border:2px solid #000000;"></canvas>
@@ -118,10 +118,13 @@
       }
 
       //Global variables for personal canvas
-         let myCanvas02=document.getElementById('myTag');
-         let myContext02=myCanvas02.getContext('2d');
+      function saveVar() {
          let myX = document.getElementById('myX').value;
          let myY = document.getElementById('myY').value;
+      }
+         let myCanvas02=document.getElementById('myTag');
+         let myContext02=myCanvas02.getContext('2d');
+         
       //Different drawings for the canvas
       function mySquare() {
          myContext02.beginPath();
@@ -129,9 +132,9 @@
          myContext02.strokeStyle = '#747474';
          //Check this cause is not working
          myContext02.moveTo(myX,myY);
-         myContext02.lineTo(myX + 100,myY);
-         myContext02.lineTo(myX + 100,myY + 100);
-         myContext02.lineTo(myX - 100,myY + 100);
+         myContext02.lineTo((myX+100),(myY));
+         myContext02.lineTo((myX + 100),(myY + 100));
+         myContext02.lineTo(myX,(myY + 100));
          myContext02.lineTo(myX,myY);
          myContext02.stroke();
       }

@@ -1,21 +1,46 @@
-<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<!DOCTYPE html>
+<html>
+  <head>  
+    <title>Translate</title>
+    <style>
+      body {
+        background-color: #363636;
+        color: white;
+      }      
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+      a:visited {
+        color: lightGreen;
+      }      
+    </style>
+  </head>
+  <body>
+    <h5>Version 0.0.1-1</h5><br>
+    <h1 align=center>T1A10-Translate-by-Fer.html</h1>
+    <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+    <input type=button value="Toggle Mode" onclick="lightMode()">
 
-<script>
+    <hr>
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <div id="google_translate_element">I really like javascript</div>
+    <input  type="button" value="initilize speak" onclick="{  
+      let myVoice = 'Russian Female'
+        responsiveVoice.speak(document.getElementById('google_translate_element').innerText, myVoice, {pitch: 1, rate: 1, volume : 1})                                              
+    }"><br><br>
+
+  </body>
+  <script>
     function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,de,ru', layout:google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,de,ru', layout:google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
     }
-</script>
+    function lightMode() {
+      var element = document.body;
+      element.classList.toggle("light-mode");                        
+    }
+  </script>
+</html>
 
-
-
-<h1 align=center>t2a10-translate-name</h1>
-
-<div id="google_translate_element">I really like javascript</div>
-
-
-<input  type="button" value="initilize speak" onclick="{  
-   let myVoice = 'Russian Female'
-   responsiveVoice.speak(document.getElementById('google_translate_element').innerText, myVoice, {pitch: 1, rate: 1, volume : 1})                                              
-}"><br><br>

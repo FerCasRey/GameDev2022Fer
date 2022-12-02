@@ -1,1 +1,83 @@
-maybe while?
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sorting</title>
+        <style>
+            body {
+                background-color: #363636;
+                color: white;
+            }      
+            .light-mode {
+                background-color: white;
+                color: black;
+            }
+            a:visited {
+                color: lightGreen;
+            }      
+        </style>
+    </head>
+    <body>
+        <h5>Version 0.1.0-15</h5><br>
+        <h1 align=center>T1A12-Sort-by-Fer.html</h1>
+        <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
+        <input type=button value="Toggle Mode" onclick="lightMode()">
+
+        <hr>
+
+        Select the lenght of the array to sort (not prepared for more than 100): 
+        <input type="number" id="myLength" min="1" value="10" style="width:40px;" onchange="{z = document.getElementById('myLength').value}"><br>
+        <button onclick="createArray()">Create array</button>
+        <div id="myDiv01">Numbers to sort...</div>
+        <button onclick="sort(); sort()">Sort</button>
+        <div id="myDiv02">Sorted numbers...</div>
+
+    </body>
+    <script>
+        var z = document.getElementById('myLength').value
+        function lightMode() {
+            var element = document.body;
+            element.classList.toggle("light-mode");                        
+        }
+        function createArray() {
+            document.getElementById('myDiv01').innerHTML = ''
+            myArray = new Array()
+            for (i=0;i<z;i++){
+                myTemp02 = parseInt(Math.random() * 100 );
+                if (myTemp02 > 85 && myArray.includes(myTemp02)) {
+                    myTemp02 = 0
+                }
+                while (myArray.includes(myTemp02)) {
+                    myTemp02++                        
+                } 
+                
+                
+                myArray[i] = myTemp02    
+                
+                
+
+            } 
+            for (i=0;i<z;i++) {
+                document.getElementById('myDiv01').innerHTML += myArray[i] + '  '    
+            }
+           
+        }
+        function sort() {
+            document.getElementById('myDiv02').innerHTML = ''
+            //let rep = 0
+           // for (rep=0;rep<5;rep++) {
+                for (i=0;i<z;i++) {
+                    if (myArray[i] > myArray[i+1]) {
+                        myTemp = myArray[i];
+                        myArray[i] = myArray[i+1];
+                        myArray[i+1] = myTemp;
+                        i = 0 
+                    }
+              //  }
+            }
+            for (i=0;i<z;i++) {
+                document.getElementById('myDiv02').innerHTML += myArray[i] + '  '    
+            } 
+        }
+
+    </script>
+</html>

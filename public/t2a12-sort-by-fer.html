@@ -43,21 +43,16 @@
             myArray = new Array()
             for (i=0;i<z;i++){
                 myTemp02 = parseInt(Math.random() * 100 );
-                if (myTemp02 > 85 && myArray.includes(myTemp02)) {
-                    myTemp02 = 0
-                }
+
                 while (myArray.includes(myTemp02)) {
-                    myTemp02++                        
+                    myTemp02 = parseInt(Math.random() * 100 );
                 } 
                 
-                
-                myArray[i] = myTemp02    
-                
-                
+                myArray[i] = myTemp02;
 
             } 
             for (i=0;i<z;i++) {
-                document.getElementById('myDiv01').innerHTML += myArray[i] + '  '    
+                document.getElementById('myDiv01').innerHTML += myArray[i] + '  ';
             }
            
         }

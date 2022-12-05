@@ -18,7 +18,7 @@
             color:lightGreen;
          }  
          button {
-            width: 100px;
+            width: 110px;
          }
       </style>
    </head>
@@ -99,9 +99,9 @@
             <td rowspan="2"><button style="height: 48px; ;" onclick="mySupClear()">Clear</button></td>
          </tr>
          <tr>
+            <td><button onclick="myBetterCircle()">Better Circle</button></td>
             <td><button onclick="myBetterSquare()">Better Square</button></td>
-            <td><button onclick="">Mid line</button></td>
-            <td><button onclick="">Thick line</button></td>
+            <td><button onclick="myBetterTriagle()">Better Triangle</button></td>
             <!--<td><input type="number" id="myY" style="width: 100px;"  onchange="saveVar()" placeholder="Select your Y"></td>-->
          </tr>
       </table>
@@ -136,12 +136,26 @@
       }
 
       //Drawings
+      
+
+      //Triangles
+      function myTriagle() {
+         myContext.beginPath();
+         myContext.lineWidth = 5;
+         myContext.fillStyle = '#747474';
+         myContext.moveTo(110, 10);
+         myContext.lineTo(110, 110);
+         myContext.lineTo(210, 110);
+         myContext.fill();
+
+      }
+
+      //Squares
       function mySquare() {
          myContext.beginPath();
          //myContext.lineWidth = 5;   
          myContext.strokeStyle = '#747474';
          myContext.fillStyle = '#747474';
-
          myContext.fillRect(10,10,100,100)
          //Check this cause is not working
          /*
@@ -152,17 +166,6 @@
          myContext.lineTo(10,7);
          myContext.stroke(); 
          */
-      }
-
-      function myTriagle() {
-         myContext.beginPath();
-         myContext.lineWidth = 5;
-         myContext.fillStyle = '#747474';
-         myContext.moveTo(110, 10);
-         myContext.lineTo(110, 110);
-         myContext.lineTo(210, 110);
-         myContext.fill();
-
       }
       function myBetterSquare() {
          myContext.fillStyle = '#747474';
@@ -176,11 +179,6 @@
                const width = 100 - 40 * j;
                const x2 = x + 20 * j 
                const y2 = y + 20 * j
-               
-               
-               
-               
-               
                if (i == 1) {
                   myContext.fillRect(x,y,100,100);
                   myContext.clearRect(x2,y2, height, width);
@@ -190,18 +188,29 @@
                   myContext.strokeRect(x2,y2, height, width);
                   myContext.strokeRect(x2,y2, height, width);
                }
-               
             }
          }
       }
+
+      //Circles
       function myCircle() {
+         myContext.lineWidth = 5;
+         myContext.fillStyle = '#747474';
+         myContext.strokeStyle = '#747474';
+         myContext.beginPath();
+         myContext.arc(50, 50, 40, 0, 2*Math.PI,);
+         myContext.fill();
+         myContext.arc(150, 50, 40, 0, 2*Math.PI,);
+         myContext.stroke();
+      }
+
+      function myBetterCircle() {
          myContext.lineWidth = 5;
          myContext.fillStyle = '#747474';
          myContext.strokeStyle = '#747474';
          const myCanvas = document.getElementById('myCoolTag');
          if (myCanvas.getContext) {
             const myContext = myCanvas.getContext('2d');
-   
             for (let i = 0; i < 4; i++) {
                for (let j = 0; j < 3; j++) {
                   myContext.beginPath();
@@ -211,9 +220,7 @@
                   const startAngle = 0; // Starting point on circle
                   const endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
                   const counterclockwise = i % 2 !== 0; // clockwise or counterclockwise
-   
                   myContext.arc(x, y, radius, startAngle, endAngle, counterclockwise);
-
                   if (i > 1) {
                      myContext.fill();
                   } else {
@@ -223,10 +230,10 @@
             }
          }
       }
+
       //Clear
       function mySupClear() {
          myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
-
       }
    </script>
 </html>

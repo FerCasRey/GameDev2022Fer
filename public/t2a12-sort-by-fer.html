@@ -17,15 +17,15 @@
         </style>
     </head>
     <body>
-        <h5>Version 1.0.2-60</h5><br>
+        <h5>Version 1.1.0-62</h5><br>
         <h1 align=center>T1A12-Sort-by-Fer.html</h1>
         <a href="https://fercasrey.github.io/GameDev2022Fer/public/">To my main page</a><br>
         <input type=button value="Toggle Mode" onclick="lightMode()">
 
         <hr>
 
-        Select the lenght of the array to sort (not prepared for more than 100): 
-        <input type="number" id="myLength" min="1" max="100" value="10" style="width:40px;" onchange="{z = document.getElementById('myLength').value}"><br>
+        Select the lenght of the array to sort (not prepared for more than 1000): 
+        <input type="number" id="myLength" min="1" max="1000" value="10" style="width:40px;" onchange="{z = document.getElementById('myLength').value}"><br>
         <button onclick="createArray()">Create array</button>
         <div id="myDiv01">Numbers to sort...</div>
         <button onclick="sort(); sort()">Sort</button>
@@ -39,17 +39,17 @@
             element.classList.toggle("light-mode");                        
         }
         function createArray() {
-            if (z>100) {
-                z = 100
-                document.getElementById('myLength').value = 100
+            if (z>1000) {
+                z = 1000
+                document.getElementById('myLength').value = 1000
             }
             document.getElementById('myDiv01').innerHTML = ''
             myArray = new Array()
             for (i=0;i<z;i++){
-                myTemp02 = parseInt(Math.random() * 100 );
+                myTemp02 = parseInt(Math.random() * 1000 );
 
                 while (myArray.includes(myTemp02)) {
-                    myTemp02 = parseInt(Math.random() * 100 );
+                    myTemp02 = parseInt(Math.random() * 1000 );
                 } 
                 
                 myArray[i] = myTemp02;

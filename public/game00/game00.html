@@ -4,7 +4,7 @@
         <title>Level 2</title>
         <style>
             body {
-                background-color: #363636;
+                background-color: #969494;
                 color: white;
             }      
             .light-mode {
@@ -24,10 +24,33 @@
 
         <hr>
 
-        <image src="dogToRight.png"></image>
-        <image src=""
+        <img id="myDog" style="width: 150px;" src="https://fercasrey.github.io/GameDev2022Fer/public/dogToRight.png"></img>
+        <img id="myCat" style="width: 100px; position: relative; left: 0px; " src="cat01.png"></img><br>
+        <button onclick="moveCat()">RUN</button>
     </body>
     <script>
-
+        catPos = 0
+        function moveCat() {
+            document.getElementById('myCat').style.left = parseInt(document.getElementById('myCat').style.left) + 10 + 'px';
+            if (catPos == 0) {
+                document.getElementById("myCat").src = "cat02.png";
+                catPos++
+            } else if (catPos == 1) {
+                document.getElementById("myCat").src = "cat03.png";
+                catPos++
+            } else if (catPos == 2) {
+                document.getElementById("myCat").src = "cat04.png";
+                catPos++
+            } else if (catPos == 3) {
+                document.getElementById("myCat").src = "cat05.png";
+                catPos++
+            } else if (catPos == 1) {
+                document.getElementById("myCat").src = "cat06.png";
+                catPos++
+            } else {
+                document.getElementById("myCat").src = "cat01.png";
+                catPos = 0
+            }
+        }
     </script>
 </html>

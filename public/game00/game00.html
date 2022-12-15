@@ -26,10 +26,35 @@
 
         <img id="myDog" style="width: 150px;" src="https://fercasrey.github.io/GameDev2022Fer/public/dogToRight.png"></img>
         <img id="myCat" style="width: 100px; position: relative; left: 0px; " src="cat01.png"></img><br>
-        <button onclick="moveCat()">RUN</button>
+        <button onclick="run()">RUN</button>
     </body>
     <script>
         catPos = 0
+        switchSound = 0
+        mySteps = 0
+        let myClock
+        function run() {
+            moveCat()
+            mySteps++
+            console.log(mySteps)
+            if (mySteps == 5) {
+                moveDog()
+                console.log('ye')
+            }
+            if (switchSound = 0) {
+                mySound1.play()
+                switchSound++
+            }
+        }
+        //work on this
+        function moveDog() {
+            console.log('ye2')
+            clearInterval(myClock)
+            myClock = setInterval(function(){
+                document.getElementById('myDog').style.left = parseInt(document.getElementById('myDog').style.left) + 5 + 'px'
+            }, 10)
+            console.log('ye3')
+        }
         function moveCat() {
             document.getElementById('myCat').style.left = parseInt(document.getElementById('myCat').style.left) + 10 + 'px';
             if (catPos == 0) {
@@ -52,5 +77,6 @@
                 catPos = 0
             }
         }
+        let mySound1 = new Audio('https://fercasrey.github.io/GameDev2022Fer/public/bark.mp3')
     </script>
 </html>

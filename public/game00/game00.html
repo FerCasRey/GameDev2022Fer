@@ -24,7 +24,7 @@
 
         <hr>
 
-        <img id="myDog" style="width: 150px;" src="https://fercasrey.github.io/GameDev2022Fer/public/dogToRight.png"></img>
+        <img id="myDog" style="width: 150px; position: relative; left: 0px; " src="https://fercasrey.github.io/GameDev2022Fer/public/dogToRight.png"></img>
         <img id="myCat" style="width: 100px; position: relative; left: 0px; " src="cat01.png"></img><br>
         <button onclick="run()">RUN</button>
     </body>
@@ -33,27 +33,46 @@
         switchSound = 0
         mySteps = 0
         let myClock
+        let myClock2
+
+        //Funciones
         function run() {
             moveCat()
             mySteps++
             console.log(mySteps)
-            if (mySteps == 5) {
-                moveDog()
+            barkTime()
+            if (mySteps%5 == 0) {
+                moveDogTime()
                 console.log('ye')
             }
-            if (switchSound = 0) {
-                mySound1.play()
-                switchSound++
-            }
+            //if (switchSound == 0) {
+                //mySound1.play()
+                //switchSound++
+                //console.log('HAY')
+            //}
+            myCheckHit()
         }
-        //work on this
-        function moveDog() {
+
+        function barkTime() {
+            console.log('Start')
+            clearInterval(myClock2);
+            myClock2 = setInterval(bark(), 1000);
+            console.log('Abi');
+        }
+
+        function bark() {
+            mySound1.play()
+            console.log('Abi2')
+        }
+        
+        function moveDogTime() {
             console.log('ye2')
             clearInterval(myClock)
-            myClock = setInterval(function(){
-                document.getElementById('myDog').style.left = parseInt(document.getElementById('myDog').style.left) + 5 + 'px'
-            }, 10)
+            myClock = setInterval(moveDog(), 100)
             console.log('ye3')
+        }
+        function moveDog() {
+            document.getElementById('myDog').style.left = parseInt(document.getElementById('myDog').style.left) + 57 + 'px';
         }
         function moveCat() {
             document.getElementById('myCat').style.left = parseInt(document.getElementById('myCat').style.left) + 10 + 'px';
@@ -78,5 +97,31 @@
             }
         }
         let mySound1 = new Audio('https://fercasrey.github.io/GameDev2022Fer/public/bark.mp3')
+
+        //hitbox code by Ellis
+        function myHitOther(my1,my2){
+            left1   = parseInt(document.getElementById(my1).style.left)
+            right1  = left1 + parseInt(document.getElementById(my1).style.width)
+            top1    = parseInt(document.getElementById(my1).style.top)   
+            bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+            left2   = parseInt(document.getElementById(my2).style.left)
+            right2  = left2 + parseInt(document.getElementById(my2).style.width)
+            top2    = parseInt(document.getElementById(my2).style.top)   
+            bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+            if ((right1  >=  left2  ) &&      	   
+            (bottom1 >=  top2   ) &&
+            (left1   <=  right2 ) &&
+            (top1    <=  bottom2) ){
+                return true
+            }
+        }
+        function myCheckHit(){
+      if ( myHitOther('myCat','myDog') ){
+        alert('you lose')  
+        //document.getElementById('myCat').style.left = '20px'
+        location = 'game00/game00.html'  // go to your next level
+      }
+      // more if statements here like the above
+    }  // end of myCheckHit()
     </script>
 </html>

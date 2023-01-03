@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Study Social Studies</title>
+        <style>
+            body {
+                background-color: #474747;
+                color: #c5c5c5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align=center>Social Studies Interviews</h1>
+        <table>
+            <tr>
+                <td>
+                    <button onclick="socJus()">Social Studies</button>
+                </td>
+                <td>
+                    <div id="myDiv01"></div>
+                    <button onclick="pol()"></button>
+                </td>              
+                <td>
+                    <button onclick="phyGeo()"></button>
+                </td>
+                <td>
+                    <button onclick="comCiv()"></button>
+                </td>
+                <td>
+                    <button onclick="gen()"></button>
+                </td>
+                <td>
+                    <button onclick="indStu"></button>
+                </td>
+                <td>
+                    <button onclick="worRel()"></button>
+                </td>
+                <td>
+                    <button onclick="tweCenHis()"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <div id="myDiv02"></div>
+                </td>
+                <td>
+                    <div id="myDiv03"></div>
+                </td>
+                <td>
+                    <div id="myDiv04"></div>
+                </td>
+                <td>
+                    <div id="myDiv05"></div>
+                </td>
+                <td>
+                    <div id="myDiv06"></div>
+                </td>
+                <td>
+                    <div id="myDiv07"></div>
+                </td>
+                <td>
+                    <div id="myDiv08"></div>
+                </td>
+            </tr>
+                
+
+    </body>
+    <script>
+        //All the questions
+        q01 = "Discuss a Canadian singer or song and the impact they hava had on Canadian society"
+        q02 = "Considering the stakeholders, explain what the City of Mission should do with their homeless issue"
+        q03 = "Considering the stakeholders, comment on whether or not the Public Schools in Mission should have had a holiday on September 19th, Queen Elizabeth's funeral"
+        q04 = "Discus how Covid impact you, your family, the town of Mission over the last two years"
+        q05 = "Select a type of government, define it, and comment on four of the characteristics that comprise it. Ex. Capitalism"
+        q06 = "Select a government position/title and comment on their responsibilities to the people and country of Canada"
+        q07 = "Explain how a Bill becomes a Law"
+        q08 = "Compare the platforms of two Federal political parties in Canada"
+        q09 = "Which right is the most important one in Canadas Charter of Rights and freedoms? And why?"
+        q10 = "List three (3) tasks a volunteer might do for a candidate as they prepare for an election"
+        q11 = "List three (3) reasons why some Canadians might wish to get rid of the Senate? What might the solutions be?"
+        q12 = "Explain what you know about the Political Spectrum. Where do you sit on it? And Why?"
+        q13 = "What areas of responsibilities/services does the (Federal, Provincial, Municipal) government oversee? Cover 4-5"
+        q14 = "Explain the five (5) factors that affect temperatures"
+        q15 = "What are contour lines/maps? How do they aid hikers in their quest to climb a mountain?"
+        q16 = "Explain the five (5) factors that affect farming. Use a type of crop or herd to describe and explain those factors"
+        q17 = "Explain how the design of houses and construction can protect the building from different types of precipitation"
+        q18 = "Select a type of rainfall (orographic, convectional, frontal) and describe how it occurs"
+        q19 = "Select a physical landform, describe how its created and where can you find a famous one?"
+        q20 = "Select a physical landform and discuss its benefits and detriments to the environment and the economy"
+        q21 = "Why is deforestation of interest to people from BC? What are some of the negative effects of deforestation?"
+        q22 = "What causes global warming and what effect does it have on Canada and the world?"
+        q23 = "What are the nine (9) factors of population distribution? Apply them to an area around the world like Australia or South America"
+        q24 = "What are the seven (7) elements of a civilization?"
+        q25 = "Discuss the purpose as to why cannibalism was practiced in early years of the development of Papua New Guinea"
+        q26 = "Select a country within Oceania region, comment on its history, government, or economy of that place"
+        q27 = "Select a country within Oceania region, comment on its Religion and Holidays, Arts and Entertainment, or Sport and Leisure of that place"
+        q28 = "Select a country within the Oceania region, comment on the flora, fauna and architecture of that place"
+        q29 = "What constitutes a genocide? Detail an example of one"
+        q30 = "Why and how did Hitler rise to power in Germany, in the 1930's?"
+        q31 = "During Prof. Rossi's presentation in the Holocaust Symposium, what were the 6 six stages of her lecture?"
+        q32 = "List 3 three of the Nuremberg Laws and what was their purpose?"
+        q33 = "Describe a Jewish ghetto"
+        q34 = "Identify and describe the systematic ways in which Hitler and the Nazis restricted and then later tried to do away with the Jews of Europe"
+        q35 = "From the movie Schindler's List, identify five 5 examples of how the Nazi's and German citizens mistreated the Jewish people"
+        q36 = "From the movie Schindler's List, detail five (5) lengths/ways in which the Jews attempted to survive the Holocaust"
+        q37 = "Comment on the achievements and-contributions of a positive, famous German person (non-Nazi)"
+        q38 = "Select two situations that Indigenous People have had to deal with in the last century and discuss the outcomes or solutions to them"
+        q39 = "What does Indigenous mean?"
+        q40 = "Identify an Indigenous group of people in Canada, describe where they were found and a little about their lifestyle"
+        q41 = "Identify an Indigenous group of people in Canada, describe their belief system and political structure"
+        q42 = "Identify an Indigenous group of people in Canada, describe their housing style and food sources you researched"
+        q43 = "What is the Reconciliation movement? How can we aid this movement in advancing forward?"
+        q44 = "During “Dances with Wolves”, what did you notice about the importance of the bison hunt for the Sioux group? (3 things)"
+        q45 = "During “Dances with Wolves”, name three rituals that took place before/during the bison hunt."
+        q46 = "List the 6 six major religions of the world"
+        q47 = "Select a major religion of the world and comment on three of its' celebrations: food and activities"
+        q48 = "Select a major religion of the world and comment on its' style of worship, grand place of worship, and general buildings where worship would occur"
+        q49 = "Select a major religion of the world and comment on its' customs around birth, marriage, and death/afterlife"
+        q50 = "Discuss a famous picture from the 20th Century. Make sure you cover the who, what, where, when, why, and the significance and impact it had on the century"
+
+        //functions for random choice below
+        function socJus() {
+            temp = Math.ceil(Math.random() * 4);
+            console.log(temp)
+            if (temp == 1) {
+                document.getElementById("myDiv01").innerHTML = q01
+            } else if (temp ==2) {
+                document.getElementById("myDiv01").innerHTML = q02
+            } else if (temp == 3) {
+                document.getElementById("myDiv01").innerHTML = q03
+            } else {
+                document.getElementById("myDiv01").innerHTML = q04
+            }
+        }
+        //...
+    </script>

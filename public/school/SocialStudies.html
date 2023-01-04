@@ -7,66 +7,84 @@
                 background-color: #474747;
                 color: #c5c5c5;
             }
+            button {
+                width: 12.5em;
+            }
+            div {
+                color: aliceblue;
+            }
         </style>
     </head>
     <body>
         <h1 align=center>Social Studies Interviews</h1>
-        <table>
+        <br><br>
+        <hr>
+        <table align="center">
             <tr>
                 <td>
                     <button onclick="socJus()">Social Studies</button>
                 </td>
                 <td>
                     <div id="myDiv01"></div>
-                    <button onclick="pol()"></button>
-                </td>              
-                <td>
-                    <button onclick="phyGeo()"></button>
-                </td>
-                <td>
-                    <button onclick="comCiv()"></button>
-                </td>
-                <td>
-                    <button onclick="gen()"></button>
-                </td>
-                <td>
-                    <button onclick="indStu"></button>
-                </td>
-                <td>
-                    <button onclick="worRel()"></button>
-                </td>
-                <td>
-                    <button onclick="tweCenHis()"></button>
-                </td>
+                </td> 
             </tr>
             <tr>
                 <td>
-                    
+                    <button onclick="pol()">Politics</button>
                 </td>
                 <td>
                     <div id="myDiv02"></div>
                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="phyGeo()">Physical Geography</button>
+                </td>
                 <td>
                     <div id="myDiv03"></div>
+                </td>
+            </tr>  
+            <tr>
+                <td>
+                    <button onclick="comCiv()">Comparative Civilizations</button>
                 </td>
                 <td>
                     <div id="myDiv04"></div>
                 </td>
+            </tr>    
+            <tr>
+                <td>
+                    <button onclick="gen()">Genocide</button>
+                </td>
                 <td>
                     <div id="myDiv05"></div>
+                </td>
+            </tr>       
+            <tr>
+                <td>
+                    <button onclick="indStu()">Indigenous Studies</button>
                 </td>
                 <td>
                     <div id="myDiv06"></div>
                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="worRel()">World Religions</button>
+                </td>
                 <td>
                     <div id="myDiv07"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="tweCenHis()">"20th Century History</button>
                 </td>
                 <td>
                     <div id="myDiv08"></div>
                 </td>
-            </tr>
-                
-
+            </tr>              
+        </table>
     </body>
     <script>
         //All the questions
@@ -113,8 +131,8 @@
         q41 = "Identify an Indigenous group of people in Canada, describe their belief system and political structure"
         q42 = "Identify an Indigenous group of people in Canada, describe their housing style and food sources you researched"
         q43 = "What is the Reconciliation movement? How can we aid this movement in advancing forward?"
-        q44 = "During “Dances with Wolves”, what did you notice about the importance of the bison hunt for the Sioux group? (3 things)"
-        q45 = "During “Dances with Wolves”, name three rituals that took place before/during the bison hunt."
+        q44 = "During 'Dances with Wolves', what did you notice about the importance of the bison hunt for the Sioux group? (3 things)"
+        q45 = "During 'Dances with Wolves', name three rituals that took place before/during the bison hunt."
         q46 = "List the 6 six major religions of the world"
         q47 = "Select a major religion of the world and comment on three of its' celebrations: food and activities"
         q48 = "Select a major religion of the world and comment on its' style of worship, grand place of worship, and general buildings where worship would occur"
@@ -123,8 +141,10 @@
 
         //functions for random choice below
         function socJus() {
+            //Rounds up a random number (0'0... to 0'9999...) multiplied by the number of options you need
             temp = Math.ceil(Math.random() * 4);
-            console.log(temp)
+            //Debugging
+            console.log(temp);
             if (temp == 1) {
                 document.getElementById("myDiv01").innerHTML = q01
             } else if (temp ==2) {
@@ -135,5 +155,130 @@
                 document.getElementById("myDiv01").innerHTML = q04
             }
         }
-        //...
+        function pol() {
+            temp = Math.ceil(Math.random() * 9);
+            console.log(temp)
+            if (temp == 1) {
+                document.getElementById("myDiv02").innerHTML = q05
+            } else if (temp==2) { 
+                document.getElementById("myDiv02").innerHTML = q06
+            } else if (temp==3) {
+                document.getElementById("myDiv02").innerHTML = q07
+            } else if (temp==4) {
+                document.getElementById("myDiv02").innerHTML = q08
+            } else if (temp==5) {
+                document.getElementById("myDiv02").innerHTML = q09
+            } else if (temp==6) {
+                document.getElementById("myDiv02").innerHTML = q10
+            } else if (temp==7) {
+                document.getElementById("myDiv02").innerHTML = q11
+            } else if (temp==8) {
+                document.getElementById("myDiv02").innerHTML = q12
+            } else {
+                document.getElementById("myDiv02").innerHTML = q13
+            }
+        }
+        function phyGeo() {
+            temp = Math.ceil(Math.random() * 10);
+            console.log(temp)
+            if (temp == 1) {
+                document.getElementById("myDiv03").innerHTML = q14
+            } else if (temp==2) { 
+                document.getElementById("myDiv03").innerHTML = q15
+            } else if (temp==3) {
+                document.getElementById("myDiv03").innerHTML = q16
+            } else if (temp==4) {
+                document.getElementById("myDiv03").innerHTML = q17
+            } else if (temp==5) {
+                document.getElementById("myDiv03").innerHTML = q18
+            } else if (temp==6) {
+                document.getElementById("myDiv03").innerHTML = q19
+            } else if (temp==7) {
+                document.getElementById("myDiv03").innerHTML = q20
+            } else if (temp==8) {
+                document.getElementById("myDiv03").innerHTML = q21
+            } else if (temp==9) {
+                document.getElementById("myDiv03").innerHTML = q22
+            } else {
+                document.getElementById("myDiv03").innerHTML = q23
+            }
+        }
+        function comCiv() {
+            temp = Math.ceil(Math.random() * 5);
+            console.log(temp)
+            if (temp == 1) {
+                document.getElementById("myDiv04").innerHTML = q24
+            } else if (temp==2) { 
+                document.getElementById("myDiv04").innerHTML = q25
+            } else if (temp==3) {
+                document.getElementById("myDiv04").innerHTML = q26
+            } else if (temp==4) {
+                document.getElementById("myDiv04").innerHTML = q27
+            } else {
+                document.getElementById("myDiv04").innerHTML = q28
+            }
+        }
+        function gen() {
+            temp = Math.ceil(Math.random() * 9);
+            console.log(temp)
+            if (temp == 1) {
+                document.getElementById("myDiv05").innerHTML = q29
+            } else if (temp==2) { 
+                document.getElementById("myDiv05").innerHTML = q30
+            } else if (temp==3) {
+                document.getElementById("myDiv05").innerHTML = q31
+            } else if (temp==4) {
+                document.getElementById("myDiv05").innerHTML = q32
+            } else if (temp==5) {
+                document.getElementById("myDiv05").innerHTML = q33
+            } else if (temp==6) {
+                document.getElementById("myDiv05").innerHTML = q34
+            } else if (temp==7) {
+                document.getElementById("myDiv05").innerHTML = q35
+            } else if (temp==8) {
+                document.getElementById("myDiv05").innerHTML = q36
+            } else {
+                document.getElementById("myDiv05").innerHTML = q37
+            }
+        
+        }
+        function indStu() {
+            temp = Math.ceil(Math.random() * 8);
+            console.log(temp)
+            if (temp == 1) {
+                document.getElementById("myDiv06").innerHTML = q38
+            } else if (temp==2) { 
+                document.getElementById("myDiv06").innerHTML = q39
+            } else if (temp==3) {
+                document.getElementById("myDiv06").innerHTML = q40
+            } else if (temp==4) {
+                document.getElementById("myDiv06").innerHTML = q41
+            } else if (temp==5) {
+                document.getElementById("myDiv06").innerHTML = q42
+            } else if (temp==6) {
+                document.getElementById("myDiv06").innerHTML = q43
+            } else if (temp==7) {
+                document.getElementById("myDiv06").innerHTML = q44
+            } else {
+                document.getElementById("myDiv06").innerHTML = q45
+            }
+        }
+        function worRel() {
+            temp = Math.ceil(Math.random() * 4);
+            console.log(temp)
+            if (temp == 1) {
+                document.getElementById("myDiv07").innerHTML = q46
+            } else if (temp ==2) {
+                document.getElementById("myDiv07").innerHTML = q47
+            } else if (temp == 3) {
+                document.getElementById("myDiv07").innerHTML = q48
+            } else {
+                document.getElementById("myDiv07").innerHTML = q49
+            }
+        }
+        function tweCenHis() {
+            document.getElementById("myDiv08").innerHTML = q50
+        }
+        
     </script>
+</html>

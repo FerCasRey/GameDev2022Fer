@@ -18,11 +18,14 @@
             div {
                 color: aliceblue;
             }
+            
             #myClickAll {
-                position: absolute;
-                left: 30px;
-                top: 375px;
-            }
+                position: relative;
+                left: 45%;
+                top: 0px; 
+                text-align: center;
+            } 
+            
             hr {
                 width: auto;
             }
@@ -31,9 +34,10 @@
     <body>
         <h5>Version 1.2.1</h5>
         <h1 align=center>Social Studies Interviews</h1>
-        <br><br>
+        <!--<br><br>-->
+        <button id="myClickAll" onclick="socJus(); pol(); phyGeo(); comCiv(); gen(); indStu(); worRel(); tweCenHis();">Random All</button>
         <hr>
-        <table style="position: relative; left: 200px;">
+        <table style="position: relative; left: 100px;">
             <tr>
                 <td>
                     <button onclick="socJus()" >Social Studies</button>
@@ -99,7 +103,7 @@
                 </td>
             </tr>              
         </table>
-        <button id="myClickAll" onclick="socJus(); pol(); phyGeo(); comCiv(); gen(); indStu(); worRel(); tweCenHis();">Random All</button>
+        
     </body>
     <script>
         //All the questions

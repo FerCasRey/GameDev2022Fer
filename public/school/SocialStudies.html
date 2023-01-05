@@ -15,20 +15,25 @@
             div {
                 color: aliceblue;
             }
+            #myClickAll {
+                position: absolute;
+                left: 30px;
+                top: 375px;
+            }
         </style>
     </head>
     <body>
-        <h5>Version 1.1.1</h5>
+        <h5>Version 1.2.0</h5>
         <h1 align=center>Social Studies Interviews</h1>
         <br><br>
         <hr>
-        <table align="center">
+        <table style="position: relative; left: 200px;">
             <tr>
                 <td>
                     <button onclick="socJus()" >Social Studies</button>
                 </td>
                 <td>
-                    <div id="myDiv01"></div>
+                    <div id="myDiv01"></div><br>
                 </td> 
             </tr>
             <tr>
@@ -36,7 +41,7 @@
                     <button onclick="pol()" >Politics</button>
                 </td>
                 <td>
-                    <div id="myDiv02"></div>
+                    <div id="myDiv02"></div><br>
                 </td>
             </tr>
             <tr>
@@ -44,7 +49,7 @@
                     <button onclick="phyGeo()">Physical Geography</button>
                 </td>
                 <td>
-                    <div id="myDiv03"></div>
+                    <div id="myDiv03"></div><br>
                 </td>
             </tr>  
             <tr>
@@ -52,7 +57,7 @@
                     <button onclick="comCiv()" >Comparative Civilizations</button>
                 </td>
                 <td>
-                    <div id="myDiv04"></div>
+                    <div id="myDiv04"></div><br>
                 </td>
             </tr>    
             <tr>
@@ -60,7 +65,7 @@
                     <button onclick="gen()" >Genocide</button>
                 </td>
                 <td>
-                    <div id="myDiv05"></div>
+                    <div id="myDiv05"></div><br>
                 </td>
             </tr>       
             <tr>
@@ -68,7 +73,7 @@
                     <button onclick="indStu()" >Indigenous Studies</button>
                 </td>
                 <td>
-                    <div id="myDiv06"></div>
+                    <div id="myDiv06"></div><br>
                 </td>
             </tr>
             <tr>
@@ -76,25 +81,26 @@
                     <button onclick="worRel()" >World Religions</button>
                 </td>
                 <td>
-                    <div id="myDiv07"></div>
+                    <div id="myDiv07"></div><br>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button onclick="tweCenHis()" >"20th Century History</button>
+                    <button onclick="tweCenHis()" >20th Century History</button>
                 </td>
                 <td>
-                    <div id="myDiv08"></div>
+                    <div id="myDiv08"></div><br>
                 </td>
             </tr>              
         </table>
+        <button id="myClickAll" onclick="socJus(); pol(); phyGeo(); comCiv(); gen(); indStu(); worRel(); tweCenHis();">Random All</button>
     </body>
     <script>
         //All the questions
         q01 = "Discuss a Canadian singer or song and the impact they hava had on Canadian society"
         q02 = "Considering the stakeholders, explain what the City of Mission should do with their homeless issue"
         q03 = "Considering the stakeholders, comment on whether or not the Public Schools in Mission should have had a holiday on September 19th, Queen Elizabeth's funeral"
-        q04 = "Discus how Covid impact you, your family, the town of Mission over the last two years"
+        q04 = "Discuss how Covid impact you, your family, the town of Mission over the last two years"
         q05 = "Select a type of government, define it, and comment on four of the characteristics that comprise it. Ex. Capitalism"
         q06 = "Select a government position/title and comment on their responsibilities to the people and country of Canada"
         q07 = "Explain how a Bill becomes a Law"

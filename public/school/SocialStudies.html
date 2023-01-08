@@ -10,6 +10,7 @@
                 overflow-x: hidden;
                 margin: auto;
             }
+
             button {
                 width: 12.5em;
                 height: 4em;
@@ -20,15 +21,34 @@
                 
                 
             }
+
             button:hover {
                 transition-duration: 0.4s;
                 background-color: #888888;
                 color: #eafcff;
             }
+
             button:active {
                 background-color: #3e8e41;
                 transform: translateY(3px);
             }
+
+            #view {
+                border: 1px solid #474747;
+                border-radius: 0%;
+                width: 30px;
+                height: 30px;
+            }
+
+            #eye {
+                width: 25px;
+                position: relative;
+                left: -4px;
+                top: 1px;
+                border-radius: 10%;
+                
+            }
+
             div {
                 color: aliceblue;
             }
@@ -39,14 +59,15 @@
                 top: 0px; 
                 /*text-align: center;*/
             } 
-            
+
             hr {
                 width: auto;
             }
+            
         </style>
     </head>
     <body>
-        <h5>Version 1.3.2</h5>
+        <h5>Version 1.4.0</h5>
         <h1 align=center>Social Studies Interviews</h1>
         <!--<br><br>-->
         <button id="myClickAll" onclick="socJus(); pol(); phyGeo(); comCiv(); gen(); indStu(); worRel(); tweCenHis();">Random All</button>
@@ -54,66 +75,91 @@
         <table style="position: relative; left: 100px;">
             <tr>
                 <td>
-                    <button onclick="socJus()" >Social Studies</button>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
                 </td>
                 <td>
+                    <button onclick="socJus()" >Social Studies</button>
+                </td>
+                <td style="width: 900px;">
                     <div id="myDiv01"></div>
                 </td> 
             </tr>
             <tr>
                 <td>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
+                </td>
+                <td>
                     <button onclick="pol()" >Politics</button>
                 </td>
                 <td>
-                    <div id="myDiv02"></div><br>
+                    <div id="myDiv02"></div>
                 </td>
             </tr>
             <tr>
+                <td>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
+                </td>
                 <td>
                     <button onclick="phyGeo()">Physical Geography</button>
                 </td>
                 <td>
-                    <div id="myDiv03"></div><br>
+                    <div id="myDiv03"></div>
                 </td>
             </tr>  
             <tr>
                 <td>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
+                </td>
+                <td>
                     <button onclick="comCiv()" >Comparative Civilizations</button>
                 </td>
                 <td>
-                    <div id="myDiv04"></div><br>
+                    <div id="myDiv04"></div>
                 </td>
             </tr>    
             <tr>
                 <td>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
+                </td>
+                <td>
                     <button onclick="gen()" >Genocide</button>
                 </td>
                 <td>
-                    <div id="myDiv05"></div><br>
+                    <div id="myDiv05"></div>
                 </td>
             </tr>       
             <tr>
                 <td>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
+                </td>
+                <td>
                     <button onclick="indStu()" >Indigenous Studies</button>
                 </td>
                 <td>
-                    <div id="myDiv06"></div><br>
+                    <div id="myDiv06"></div>
                 </td>
             </tr>
             <tr>
+
+                <td>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
+                </td>
                 <td>
                     <button onclick="worRel()" >World Religions</button>
                 </td>
                 <td>
-                    <div id="myDiv07"></div><br>
+                    <div id="myDiv07"></div>
                 </td>
             </tr>
             <tr>
                 <td>
+                    <button id="view" onclick="show()"><img id="eye" src="https://static.thenounproject.com/png/5410363-200.png"></button>
+                </td>
+                <td>
                     <button onclick="tweCenHis()" >20th Century History</button>
                 </td>
                 <td>
-                    <div id="myDiv08"></div><br>
+                    <div id="myDiv08"></div>
                 </td>
             </tr>              
         </table>
@@ -123,7 +169,7 @@
         //All the questions
         q01 = "Discuss a Canadian singer or song and the impact they hava had on Canadian society"
         q02 = "Considering the stakeholders, explain what the City of Mission should do with their homeless issue"
-        q03 = "Considering the stakeholders, comment on whether or not the Public Schools in Mission should have had a holiday <br>on September 19th, Queen Elizabeth's funeral"
+        q03 = "Considering the stakeholders, comment on whether or not the Public Schools in Mission should have had a holiday on September 19th, Queen Elizabeth's funeral"
         q04 = "Discuss how Covid impact you, your family, the town of Mission over the last two years"
         q05 = "Select a type of government, define it, and comment on four of the characteristics that comprise it. Ex. Capitalism"
         q06 = "Select a government position/title and comment on their responsibilities to the people and country of Canada"

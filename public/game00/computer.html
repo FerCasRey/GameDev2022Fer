@@ -4,7 +4,7 @@
         <title>Windows</title>
         <style>
             body {
-                background-color: black;
+                background-color: rgb(36, 36, 36);
                 color: aliceblue;
                 font-family: fantasy;
                 margin: 4%;
@@ -36,27 +36,35 @@
                 border-radius: 15px;
                 height: 700px;
                 width: 1200px;
-                
+                /*background-image: url(https://th.bing.com/th/id/OIP.X_65uIJkSF8bJl_zyU4twgHaEo?w=289&h=180&c=7&r=0&o=5&pid=1.7);*/
+                background-repeat: repeat;
+                background-size:auto ;
+            }
 
+            #lol {
+                width: 30px;
+                position: absolute;
+                top: 600px;
+                left: 400px;
             }
         </style>
     </head>
-    <body>
+    <body onload="{alert('This game is more enjoyable in full screen. \nPress F11')}; canvas()">
         <table>
             <tr>
                 <td>
                     <table>
                         <tr>
                             <td>
-                                <button id="actions" onclick="">Press</button>
+                                <button id="actions" onclick="press()">Press</button>
                             </td>
                             <td>
-                                <button id="actions" onclick="">Read</button>            
+                                <button id="actions" onclick="read()">Read</button>            
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button id="actions" onclick="">Look at</button>
+                                <button id="actions" onclick="lookAt()">Look at</button>
                             </td>
                             <td>
                                 <button id="actions" onclick="">...</button>
@@ -65,7 +73,11 @@
                     </table>
                 </td>
                 <td align="center">
-                    <canvas></canvas>
+                    <canvas id="myCanvas" onload="canvas()">
+                        
+                    </canvas>
+                    <!--lots of images with absolute positions-->
+                    <img id=lol onclick="lookAt()" src="https://html-shark.com/Graphics/HTML-Shark_Logo.jpg">
                 </td>
             </tr>
 
@@ -75,6 +87,27 @@
 
     </body>
     <script>
+        //set cursor
+        document.body.style.cursor = "crosshair"
+        function press() {
+            document.body.style.cursor = "crosshair";
+        }
+        function read() {
+            document.body.style.cursor = "zoom-in";
+        }
+        function lookAt() {
+            document.body.style.cursor = "help";
+        }
+        //sets the "computer screen" to the standard state
+        var img01 = new Image ();
+        img01.src = "https://html-shark.com/Graphics/HTML-Shark_Logo.jpg"
+        /*function canvas() {
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 200, 200, 200, 200);
 
+        }*/
+
+        //funciton that reads the type of cursor you have, and with that creates a temporal variable that is used to determined what text or actions should you have in response
     </script>
 </html>

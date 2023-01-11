@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Main Page</title>
@@ -16,10 +17,18 @@
       a:visited {
         color:#41BBDB;
       }  
+      #new {
+        position: absolute;
+        top: 200px;
+        left: 1000px;
+        color: red;
+        font-size: 20px;
+
+      }
     </style>  
   </head>
   <body>
-    <p><h5>Version 1.1.0-66</h5></p>
+    <p><h5>Version 1.2.0-67</h5></p>
     <h1 align=center>Welcome to my main page</h1><br>
     <input type=button value="Toggle Mode" onclick="lightMode()">
     <h3>Link to my Github</h3>
@@ -69,6 +78,7 @@
       <li><a href="browser/index.html">Machine Learning</a><span style=color:green> Marked</span>
     </ul>
     <b>Thanks for your visit!</b>
+    <div id="new" onclick="{location='t2a11-game-tamplate-by-fer.html'}">Game is ready! Click to visit!</div>
   </body>
   <script>
     function lightMode() {

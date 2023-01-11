@@ -13,12 +13,12 @@
             }
             button {
                 display: block;
-                width: 75px;
+                width: 90px;
                 height: 40px;
                 background: none;
                 color: aliceblue;
-                font-family: fantasy;
-                font-size: 14pt;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 12pt;
                 border: 1px solid rgb(48, 48, 87);
                 transition-duration: 0.3s;
             }
@@ -36,22 +36,43 @@
                 border-radius: 15px;
                 height: 700px;
                 width: 1200px;
-                /*background-image: url(https://th.bing.com/th/id/OIP.X_65uIJkSF8bJl_zyU4twgHaEo?w=289&h=180&c=7&r=0&o=5&pid=1.7);*/
+                background-image: url(https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/Wallpaper.png?raw=true);
                 background-repeat: repeat;
                 background-size:auto ;
             }
 
-            #lol {
-                width: 30px;
+            #menu {
+                width: 35px;
                 position: absolute;
-                top: 600px;
-                left: 400px;
+                top: 735px;
+                left: 75px;
+            }
+            #myComment {
+                font-family: 'Courier New', Courier, monospace;
+                position: absolute;
+                top: 470px;
+                left: 1279px;
+                width: 180px;
+                height: 200px;
+                border: 1px red;
+                background-color: rgb(102, 90, 90);
+                resize: none;
+                color: aliceblue;
+                
+                
             }
         </style>
     </head>
     <body onload="{alert('This game is more enjoyable in full screen. \nPress F11')}; canvas()">
         <table>
             <tr>
+                <td align="center">
+                    <canvas id="myCanvas" onload="canvas()">
+                        
+                    </canvas>
+                    <!--lots of images with absolute positions-->
+                    <img id=menu onclick="menu()" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/Squares.png?raw=true">
+                </td>
                 <td>
                     <table>
                         <tr>
@@ -70,24 +91,14 @@
                                 <button id="actions" onclick="">...</button>
                             </td>
                         </tr>
-                        <tr style="height: 600px;">
-                            <td>
-                                <div id="myComment"></div>
-                            </td>
-                        </tr>
+                        
                     </table>
                 </td>
-                <td align="center">
-                    <canvas id="myCanvas" onload="canvas()">
-                        
-                    </canvas>
-                    <!--lots of images with absolute positions-->
-                    <img id=lol onclick="lol()" src="https://thenounproject.com/api/private/icons/105012/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABjvxqc2pkGrCtVx2LvIr1uwoW50DqEii-bahutm5_U3xAvZ_XJxDqAHTSE3LB_CzaDqA9rdSKEw2T4n99lJ48g0UH5-Q%3D%3D">
-                </td>
+                
             </tr>
 
         </table>
-        
+        <textarea id="myComment" disabled></textarea>
         
 
     </body>
@@ -103,9 +114,10 @@
         function lookAt() {
             document.body.style.cursor = "help";
         }
+        ////Not working, not going to
         //sets the "computer screen" to the standard state
-        var img01 = new Image ();
-        img01.src = "https://html-shark.com/Graphics/HTML-Shark_Logo.jpg"
+        //var img01 = new Image ();
+        //img01.src = "https://html-shark.com/Graphics/HTML-Shark_Logo.jpg"
         /*function canvas() {
             var canvas = document.getElementById("myCanvas");
             var ctx = canvas.getContext("2d");
@@ -117,12 +129,19 @@
         //temporal variable that is used to determined what text or actions should you have in response
     
 
-        function lol() {
+        function menu() {
             if (document.body.style.cursor == "help") {
                 document.getElementById('myComment').innerHTML = "The main menu button."
-            } else if (document.body.style.cursor == "zoom-in") {
+            } 
+            if (document.body.style.cursor == "zoom-in") {
                 document.getElementById('myComment').innerHTML = "It's the logo of the famous software brand \"Squares\""
-            }
+            } 
+            if (document.body.style.cursor == "crosshair") {
+                //maybe create a image that moves onclick to create the main menu
+                document.getElementById('myComment').innerHTML = "Acces to main menu dissable due to time limit"
+            } 
         }
+
+        //For the lol icon, onclick with press just move it around, so dbclock is impossible
     </script>
 </html>

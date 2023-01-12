@@ -41,12 +41,22 @@
                 background-size:auto ;
             }
 
-            #menu {
+            #menuIco {
                 width: 35px;
                 position: absolute;
                 top: 730px;
-                left: 70px;
+                left: 75px;
+            }/*
+            .menu{
+                width: 150px;
+                height: 250px;
+                border: 0ch;
+                border-radius: 10px;
+                background-color: grey;
+
             }
+            */
+
             /*
             #lol {
                 width: 40px;
@@ -98,10 +108,13 @@
                         
                     </canvas>
                     <!--lots of images with absolute positions-->
-                    <img id="menu" draggable="false" onclick="menu()" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/Squares.png?raw=true">
+                    <img id="menuIco" draggable="false" onclick="menuIco()" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/Squares.png?raw=true">
+                    
                     <img id="lol" draggable="false" onclick="lol()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/256px-LoL_icon.svg.png" style="position: absolute; top: 100px; left: 100px; width: 40px;">
                     <div onclick="mot()" disabled id="mot" value="IF YOU STOP PROCRASTINATING, YOU CAN DO IT!">IF YOU STOP PROCRASTINATING, YOU CAN DO IT!</div>
-                
+                    <!--<p class="menu" style="position: absolute; top: 456px; left: 70px;"></p>-->
+                    <img style="position: absolute; top: 364px; left: -430px; width: 215px;" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/menu.png?raw=true" id="menu" draggable="false" >
+                    <img style="position: absolute; top: 684px; left: -431px; width: 45px; " onclick="power()" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/powerOff.png?raw=true" id="power" draggble="false" >
                 </td>
                 <td>
                     <table>
@@ -118,7 +131,7 @@
                                 <button id="actions" onclick="lookAt()">Look at</button>
                             </td>
                             <td>
-                                <button id="actions" onclick="">...</button>
+                                <!--<button id="actions" onclick="">...</button>-->
                             </td>
                         </tr>
                         
@@ -158,18 +171,50 @@
         //funciton that reads the type of cursor you have, and with that creates a 
         //temporal variable that is used to determined what text or actions should you have in response
     
-
-        function menu() {
+        var menuTemp = 0
+        function menuIco() {
             if (document.body.style.cursor == "help") {
                 document.getElementById('myComment').innerHTML = "The main menu button."
             } 
             if (document.body.style.cursor == "zoom-in") {
                 document.getElementById('myComment').innerHTML = "It's the logo of the famous software brand \"Squares\""
             } 
+
             if (document.body.style.cursor == "crosshair") {
                 //maybe create a image that moves onclick to create the main menu
-                document.getElementById('myComment').innerHTML = "Acces to main menu dissable due to time limit"
+
+                //document.getElementById('myComment').innerHTML = "Acces to main menu dissable due to time limit"
+                if (menuTemp == 0) {
+                    document.getElementById('menu').style.left = parseInt(document.getElementById('menu').style.left) + 500 + "px"
+                    document.getElementById('power').style.left = parseInt(document.getElementById('power').style.left) + 500 + "px"
+                    menuTemp = 1
+                } else {
+                    document.getElementById('menu').style.left = parseInt(document.getElementById('menu').style.left) - 500 + "px"
+                    document.getElementById('power').style.left = parseInt(document.getElementById('power').style.left) - 500 + "px"
+                    menuTemp = 0
+                }
+                
             } 
+        }
+        var powerTemp = 0
+        function power() {
+            if (document.body.style.cursor == "help") {
+                document.getElementById('myComment').innerHTML = "The power button."
+            } 
+            if (document.body.style.cursor == "zoom-in") {
+                document.getElementById('myComment').innerHTML = "Classic power button, representing a 1 and a 0."
+            } 
+
+            if (document.body.style.cursor == "crosshair") {
+                if (powerTemp == 0) {
+
+                    powerTemp = 1
+                } else {
+
+                    powerTemp = 0
+                }
+
+            }
         }
         var lolVar = 0
         function lol() {
@@ -180,7 +225,6 @@
                 document.getElementById('myComment').innerHTML = "It is the logo of the game LoL."
             } 
             if (document.body.style.cursor == "crosshair") {
-                //maybe create a image that moves onclick to create the main menu
                 document.getElementById("myComment").innerHTML = "No time to play."
                 if (lolVar == 0) {
                     document.getElementById('lol').style.left = parseInt(document.getElementById('lol').style.left) + 70 + 'px';
@@ -212,11 +256,10 @@
                 document.getElementById('myComment').innerHTML = "\"IF YOU STOP PROCASTINATING, YOU CAN DO IT!\". A strangely similar phrase to the well-known quote form Mr. E."
             } 
             if (document.body.style.cursor == "crosshair") {
-                //maybe create a image that moves onclick to create the main menu
                 document.getElementById('myComment').innerHTML = "Nothing to do here."
             } 
         }
 
-        //For the lol icon, onclick with press just move it around, so dbclock is impossible
+        
     </script>
 </html>

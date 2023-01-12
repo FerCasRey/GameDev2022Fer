@@ -23,10 +23,11 @@
         <p align=center style="color: #a5a5a5;  font-size:20pt ;">NOW RUN AWAY</p>
 
         <hr>
-
-        <img id="myDog" style="width: 150px; position: relative; left: 0px; " src="https://fercasrey.github.io/GameDev2022Fer/public/dogToRight.png"></img>
-        <img id="myCat" style="width: 100px; position: relative; left: 0px; " src="cat01.png"></img><br>
+      
+        <img id="myDog" style="height:80px; width: 150px; position: relative; left: 0px; top:0px; " src="https://fercasrey.github.io/GameDev2022Fer/public/dogToRight.png"></img>
+        <img id="myCat" style="height:80px; width: 100px; position: relative; left: 0px; top:0px; " src="cat01.png"></img><br>
         <button onclick="run()">RUN</button>
+        <p id="exit" style="position: absolute; top: 400px; left: 700px; border: 1px red; background-color: rgb(0, 0, 0);">Playing time limit reached</p>
     </body>
     <script>
         catPos = 0
@@ -37,6 +38,7 @@
 
         //Funciones
         function run() {
+            
             moveCat()
             mySteps++
             console.log(mySteps)
@@ -50,6 +52,7 @@
                 //switchSound++
                 //console.log('HAY')
             //}
+            
             myCheckHit()
         }
 
@@ -116,12 +119,11 @@
             }
         }
         function myCheckHit(){
-      if ( myHitOther('myCat','myDog') ){
-        alert('you lose')  
-        //document.getElementById('myCat').style.left = '20px'
-        location = 'game00/game00.html'  // go to your next level
-      }
-      // more if statements here like the above
-    }  // end of myCheckHit()
+            if ( myHitOther('myCat','myDog') ){
+                //create menu that appears on death to close the game and go to computer
+        
+            }
+      
+        } 
     </script>
 </html>

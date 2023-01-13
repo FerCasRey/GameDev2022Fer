@@ -45,7 +45,7 @@
                 width: 35px;
                 position: absolute;
                 top: 730px;
-                left: 75px;
+                left: 73px;
             }/*
             .menu{
                 width: 150px;
@@ -92,15 +92,46 @@
                 border-radius: 15px;
                 background-color: grey;
                 user-select: none;
-                
+            }
 
+            #note {
+                position: absolute;
+                top: 100px;
+                left: 1000px;
+                width: 200px;
+            }
+
+            #noteText {
+                position: absolute;
+                top: 120px;
+                left: 1050px;
+                color: black;
+            }
+
+            #poweroff {
+                width: 210px;
+                position: absolute;
+                /*top: 370px;
+                left: -450px;*/
+                font-family: 'Courier New', Courier, monospace;
+                color: red;
+                font-size: 18pt;
+                height: 2 0px;
+                border-radius: 5px;
+                background-color: black;
+                user-select: none;
+                align-content: space-around;
+                align-self:center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
 
             }
 
         </style>
     </head>
     <!--onload="{alert('This game is more enjoyable in full screen. \nPress F11')};-->
-    <body  >
+    <body onload="{document.getElementById('credits').disabled}"  >
         <table>
             <tr>
                 <td align="center">
@@ -113,8 +144,12 @@
                     <img id="lol" draggable="false" onclick="lol()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/256px-LoL_icon.svg.png" style="position: absolute; top: 100px; left: 100px; width: 40px;">
                     <div onclick="mot()" disabled id="mot" value="IF YOU STOP PROCRASTINATING, YOU CAN DO IT!">IF YOU STOP PROCRASTINATING, YOU CAN DO IT!</div>
                     <!--<p class="menu" style="position: absolute; top: 456px; left: 70px;"></p>-->
-                    <img style="position: absolute; top: 364px; left: -430px; width: 215px;" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/menu.png?raw=true" id="menu" draggable="false" >
+                    <img style="position: absolute; top: 362px; left: -430px; width: 215px; pointer-events: none" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/menu.png?raw=true" id="menu" draggable="false" >
                     <img style="position: absolute; top: 684px; left: -431px; width: 45px; " onclick="power()" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/powerOff.png?raw=true" id="power" draggble="false" >
+                    <div id="poweroff" onclick="shutDown()" style="left: -450px; top: 370px;">Shut down?</div>
+                    <img id="rain" style="position: absolute; top: 500px; left: -350px; width: 100px;" onclick="rain()" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/rainIco.png?raw=true">
+                    <p id="noteText"> - Have Dinner<br>  - Shut Down PC<br> - Check cryto</p>
+                    <img id="note" onclick="note()" src="https://github.com/FerCasRey/GameDev2022Fer/blob/main/public/game00/icons/note.png?raw=true">
                 </td>
                 <td>
                     <table>
@@ -131,7 +166,7 @@
                                 <button id="actions" onclick="lookAt()">Look at</button>
                             </td>
                             <td>
-                                <!--<button id="actions" onclick="">...</button>-->
+                                <button id="credits" onclick="credits()">Credits</button>
                             </td>
                         </tr>
                         
@@ -187,15 +222,18 @@
                 if (menuTemp == 0) {
                     document.getElementById('menu').style.left = parseInt(document.getElementById('menu').style.left) + 500 + "px"
                     document.getElementById('power').style.left = parseInt(document.getElementById('power').style.left) + 500 + "px"
+                    document.getElementById('rain').style.left = parseInt(document.getElementById('rain').style.left) + 500 + "px"
                     menuTemp = 1
                 } else {
                     document.getElementById('menu').style.left = parseInt(document.getElementById('menu').style.left) - 500 + "px"
                     document.getElementById('power').style.left = parseInt(document.getElementById('power').style.left) - 500 + "px"
+                    document.getElementById('rain').style.left = parseInt(document.getElementById('rain').style.left) - 500 + "px"
                     menuTemp = 0
                 }
                 
             } 
         }
+
         var powerTemp = 0
         function power() {
             if (document.body.style.cursor == "help") {
@@ -207,15 +245,16 @@
 
             if (document.body.style.cursor == "crosshair") {
                 if (powerTemp == 0) {
-
+                    document.getElementById('poweroff').style.left = parseInt(document.getElementById('poweroff').style.left) + 1000 + "px"
                     powerTemp = 1
                 } else {
-
+                    document.getElementById('poweroff').style.left = parseInt(document.getElementById('poweroff').style.left) - 1000 + "px"
                     powerTemp = 0
                 }
 
             }
         }
+
         var lolVar = 0
         function lol() {
             if (document.body.style.cursor == "help") {
@@ -260,6 +299,63 @@
             } 
         }
 
-        
+        function note() {
+            if (document.body.style.cursor == "help") {
+                document.getElementById('myComment').innerHTML = "A To-Do List."
+            } 
+            if (document.body.style.cursor == "zoom-in") {
+                document.getElementById('myComment').innerHTML = "\"Have dinner. Shut down PC. Check crypto\" can be read. Probably you should shut down the PC, and check cryto while having dinner."
+            } 
+            if (document.body.style.cursor == "crosshair") {
+                document.getElementById('myComment').innerHTML = "The note fell!"
+                document.getElementById('note').src = ""
+                document.getElementById('noteText').innerHTML = ""
+            } 
+        }
+
+        function rain() {
+            if (document.body.style.cursor == "help") {
+                document.getElementById('myComment').innerHTML = "A weather app widget."
+            } 
+            if (document.body.style.cursor == "zoom-in") {
+                document.getElementById('myComment').innerHTML = "It looks like it's goinig to rain..."
+            } 
+            if (document.body.style.cursor == "crosshair") {
+                document.getElementById('myComment').innerHTML = "Sadly, we cannot change the weather."
+            } 
+        }
+
+        function shutDown() {
+            if (document.body.style.cursor == "help") {
+                document.getElementById('myComment').innerHTML = "A system message"
+            } 
+            if (document.body.style.cursor == "zoom-in") {
+                document.getElementById('myComment').innerHTML = "\"SHUT DOWN?\" can be read. Probably will shut down the PC."
+            } 
+            if (document.body.style.cursor == "crosshair") {
+                document.getElementById('lol').style.left = parseInt(document.getElementById('lol').style.left) - 1000 + 'px';
+                document.getElementById('menu').style.left = parseInt(document.getElementById('menu').style.left) - 1000 + "px";
+                document.getElementById('power').style.left = parseInt(document.getElementById('power').style.left) - 1000 + "px";
+                document.getElementById('menuIco').src = "";
+                document.getElementById('mot').style.left = "-1000px";
+                document.getElementById('poweroff').style.left = parseInt(document.getElementById('poweroff').style.left) - 1000 + "px";
+                document.getElementById('myCanvas').style.backgroundImage = "url('')";
+                document.getElementById('myComment').innerHTML = "Good job! You scaped from the clutches of technology and procrastination. \nEnjoy your dinner, player :) \nCredits unlocked"
+                document.getElementById('credits').disabled = false;
+                document.getElementById('note').src = ""
+                document.getElementById('noteText').innerHTML = ""
+                document.getElementById('rain').style.left = parseInt(document.getElementById('rain').style.left) - 1000 + "px"
+                creditsTemp++
+            } 
+        }
+
+        var creditsTemp = 0
+        function credits() {
+            if (creditsTemp == 0) {
+                document.getElementById('myComment').innerHTML = "Looks broken..."
+            } else {
+                location = "credits.html"
+            }
+        }
     </script>
 </html>

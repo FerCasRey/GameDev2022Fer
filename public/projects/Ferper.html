@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <!--  ALL DONE WITH CHATGPT, NOT MY CODE (THIS IS TERRIFYING) -->
+    <head>
+        <title>Helper</title>
+        <style>
+            body {
+                background-color: #535353;
+                color: #888888;
+                font-family:'Courier New', Courier, monospace;
+                font-size: 15pt;
+                border: 2em;
+            }
+            h2 {
+                text-align: center;
+                
+            }
+            #button-container {
+  display: flex;
+}
+#timer-box {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#todo-box {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+           
+        </style>
+    </head>
+    <body>
+        <br>
+        <h2>Ferper</h2>
+        <br><br>
+        <h1>My Web Page</h1>
+    <div id="button-container">
+      <button id="timer-button">Timer</button>
+      <button id="todo-button">To-Do List</button>
+    </div>
+    <div id="timer-box" style="display: none;"></div>
+    <div id="todo-box" style="display: none;"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        Timer
+                    </div>
+                    <div class="card-body">
+                      <input type="datetime-local" id="timer-input">
+                      <p id="timer-output"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        To-Do List
+                    </div>
+                    <div class="card-body">
+                      <ul id="todo-list"></ul>
+                      <input type="text" id="todo-input" placeholder="Add an activity">
+                      <input type="text" id="todo-time" placeholder="Add time">
+                      <button id="todo-add-button">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+    </body>
+    <script>
+        const timerButton = document.getElementById("timer-button");
+const todoButton = document.getElementById("todo-button");
+const timerBox = document.getElementById("timer-box");
+const todoBox = document.getElementById("todo-box");
+
+timerButton.addEventListener("click", function() {
+  timerBox.style.display = "block";
+});
+
+todoButton.addEventListener("click", function() {
+  todoBox.style.display = "block";
+});
+    // Timer functionality
+const timerInput = document.createElement("input");
+timerInput.setAttribute("type", "datetime-local");
+timerBox.appendChild(timerInput);
+
+const timerOutput = document.createElement("p");
+timerBox.appendChild(timerOutput);
+
+timerInput.addEventListener("change", function() {
+  const inputDate = new Date(timerInput.value);
+  const currentDate = new Date();
+  const difference = inputDate - currentDate;
+  const minutes = Math.floor(difference / 1000 / 60);
+  timerOutput.innerHTML = `${minutes} minutes remaining`;
+});
+
+// To-Do List functionality
+const todoList = document.createElement("ul");
+todoBox.appendChild(todoList);
+
+const todoInput = document.createElement("input");
+todoInput.setAttribute("placeholder", "Add an activity");
+todoBox.appendChild(todoInput);
+
+const todoTime = document.createElement("input");
+todoTime.setAttribute("placeholder", "Add time");
+todoBox.appendChild(todoTime);
+
+const todoButton = document.createElement("button");
+todoButton.innerHTML = "Add";
+todoBox.appendChild(todoButton);
+
+todoButton.addEventListener("click", function() {
+  const activity = todoInput.value;
+  const time = todoTime.value;
+  const todoItem = document.createElement("li");
+  todoItem.innerHTML = `${activity} - ${time}`;
+  todoList.appendChild(todoItem);
+  todoInput.value = "";
+  todoTime.value = "";
+});
+
+    </script>
+</html>
